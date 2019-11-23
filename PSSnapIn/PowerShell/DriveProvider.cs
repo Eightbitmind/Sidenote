@@ -10,9 +10,78 @@ using System.Text.RegularExpressions;
 
 namespace Sidenote.PowerShell
 {
-	[CmdletProvider("OneNote_where_does_this_surface", ProviderCapabilities.None)]
+	[CmdletProvider(
+		"OneNote", // e.g. Provider name in the Get-PSDrive output
+		ProviderCapabilities.None
+	)]
 	public class DriveProvider : NavigationCmdletProvider
 	{
+		// Class Hierarchy:
+		//
+		// CmdletProvider
+		//     DriveCmdletProvider
+		//         ItemCmdletProvider
+		//             ContainerCmdletProvider
+		//                 NavigationCmdletProvider
+		//
+		// CmdletProvider:
+		// - ???
+		//
+		// DriveCmdletProvider:
+		// - create and remove drives, list of initial drives
+		// - members
+		//       protected virtual Collection<PSDriveInfo> InitializeDefaultDrives();
+		//       protected virtual PSDriveInfo NewDrive(PSDriveInfo drive);
+		//       protected virtual object NewDriveDynamicParameters();
+		//       protected virtual PSDriveInfo RemoveDrive(PSDriveInfo drive);
+		//
+		// ItemCmdletProvider:
+		// - set of commands for getting and setting data on one or more items
+		// - members
+		//       protected virtual void ClearItem(string path);
+		//       protected virtual object ClearItemDynamicParameters(string path);
+		//       protected virtual string[] ExpandPath(string path);
+		//       protected virtual void GetItem(string path);
+		//       protected virtual object GetItemDynamicParameters(string path);
+		//       protected virtual void InvokeDefaultAction(string path);
+		//       protected virtual object InvokeDefaultActionDynamicParameters(string path);
+		//       protected abstract bool IsValidPath(string path);
+		//       protected virtual bool ItemExists(string path);
+		//       protected virtual object ItemExistsDynamicParameters(string path);
+		//       protected virtual void SetItem(string path, object value);
+		//       protected virtual object SetItemDynamicParameters(string path, object value);
+		//
+		// ContainerCmdletProvider:
+		// - base class for providers that expose a single level of items.
+		// - members
+		//       protected virtual bool ConvertPath(string path, string filter, ref string updatedPath, ref string updatedFilter);
+		//       protected virtual void CopyItem(string path, string copyPath, bool recurse);
+		//       protected virtual object CopyItemDynamicParameters(string path, string destination, bool recurse);
+		//       protected virtual void GetChildItems(string path, bool recurse);
+		//       protected virtual void GetChildItems(string path, bool recurse, uint depth);
+		//       protected virtual object GetChildItemsDynamicParameters(string path, bool recurse);
+		//       protected virtual void GetChildNames(string path, ReturnContainers returnContainers);
+		//       protected virtual object GetChildNamesDynamicParameters(string path);
+		//       protected virtual bool HasChildItems(string path);
+		//       protected virtual void NewItem(string path, string itemTypeName, object newItemValue);
+		//       protected virtual object NewItemDynamicParameters(string path, string itemTypeName, object newItemValue);
+		//       protected virtual void RemoveItem(string path, bool recurse);
+		//       protected virtual object RemoveItemDynamicParameters(string path, bool recurse);
+		//       protected virtual void RenameItem(string path, string newName);
+		//       protected virtual object RenameItemDynamicParameters(string path, string newName);
+		//
+		// NavigationCmdletProvider:
+		// - base class for providers that expose a hierarch of item and containers.
+		// - members
+		//       protected virtual string GetChildName(string path);
+		//       protected virtual string GetParentPath(string path, string root);
+		//       protected virtual bool IsItemContainer(string path);
+		//       protected virtual string MakePath(string parent, string child);
+		//       protected string MakePath(string parent, string child, bool childIsLeaf);
+		//       protected virtual void MoveItem(string path, string destination);
+		//       protected virtual object MoveItemDynamicParameters(string path, string destination);
+		//       protected virtual string NormalizeRelativePath(string path, string basePath);
+
 		public DriveProvider()
 		{
 		}
@@ -85,11 +154,11 @@ namespace Sidenote.PowerShell
 		#region ItemCmdletProvider members
 
 		/// <summary>
-		/// 
+		/// Gets the item at the specified path.
 		/// </summary>
-		/// <param name="path"></param>
+		/// <param name="path">The path to the item to retrieve.</param>
 		/// <remarks>
-		/// Must be implemented (base method throws PSNotSupportedException).
+		/// Must be implemented (base method throws PSNotSupportedException). Needed to access to the provider objects using the Get-Item and Get-Childitem cmdlets.
 		/// </remarks>
 		protected override void GetItem(string path)
 		{
@@ -448,7 +517,7 @@ namespace Sidenote.PowerShell
 			@"^UI:(?:\\(?<pathItems>[\w.]+))*\\?$",
 			RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
-		private const string driveName = @"UI:";
+		private const string driveName = @"ON:";
 		private const string pathSeparator = @"\";
 
 	}
