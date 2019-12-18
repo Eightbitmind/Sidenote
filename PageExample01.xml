@@ -1,0 +1,167 @@
+﻿<?xml version="1.0"?>
+<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{76AA46BA-FE52-04DF-3F0D-271EEA117E51}{1}{E185791993583258919861977327512573360381771}" name="Notes" dateTime="2019-05-07T00:09:27.000Z" lastModifiedTime="2019-12-14T00:00:45.000Z" pageLevel="1" lang="en-US">
+  <one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Calibri Light" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0"/>
+  <one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Calibri" fontSize="11.0" spaceBefore="0.0" spaceAfter="0.0"/>
+  <one:PageSettings RTL="false" color="automatic">
+    <one:PageSize>
+      <one:Automatic/>
+    </one:PageSize>
+    <one:RuleLines visible="false"/>
+  </one:PageSettings>
+  <one:Title lang="en-US">
+    <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-05-07T00:09:30.000Z" lastModifiedTime="2019-05-18T17:58:41.000Z" objectID="{D58D941C-926A-0142-2DAD-E55B36FB4770}{17}{B0}" alignment="left" quickStyleIndex="0">
+      <one:T><![CDATA[Notes]]></one:T>
+    </one:OE>
+  </one:Title>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2019-12-14T00:00:45.000Z" objectID="{CE139F86-242A-3821-9124-609C06E7B87F}{10}{B0}">
+    <one:Position x="36.0" y="104.400001525879" z="0"/>
+    <one:Size width="338.6249389648437" height="590.81982421875" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE creationTime="2019-12-11T17:38:08.000Z" lastModifiedTime="2019-12-11T17:38:08.000Z" objectID="{9EA58585-9F69-4764-AD77-D7B46A0B0693}{29}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[1146]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-11T16:00:49.000Z" lastModifiedTime="2019-12-11T16:00:50.000Z" objectID="{3DF2894F-E11B-4F11-9D2C-0E0B8B3FE2ED}{27}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[1963]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-11T16:01:01.000Z" lastModifiedTime="2019-12-11T16:01:24.000Z" objectID="{3DF2894F-E11B-4F11-9D2C-0E0B8B3FE2ED}{30}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[0283]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-13T23:19:57.000Z" lastModifiedTime="2019-12-13T23:19:57.000Z" objectID="{CB4B06EB-EFF8-0BB2-08AF-F805A2877E5E}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-14T00:00:45.000Z" lastModifiedTime="2019-12-14T00:00:45.000Z" objectID="{CB4B06EB-EFF8-0BB2-08AF-F805A2877E5E}{19}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-27T02:24:06.000Z" lastModifiedTime="2019-11-27T02:24:08.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{25}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[-------------------------]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-27T02:24:29.000Z" lastModifiedTime="2019-11-27T02:25:55.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{91}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Seahawks 3 &amp; 4]]></one:T>
+        <one:OEChildren>
+          <one:OE creationTime="2019-11-27T02:25:58.000Z" lastModifiedTime="2019-11-27T02:26:29.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{97}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[3: Men's Nike Navy Seattle Seahawks Sideline Vapor Performance Short]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-11-27T02:26:47.000Z" lastModifiedTime="2019-11-27T02:26:47.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{100}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[Product ID: 2719448]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-11-27T02:31:49.000Z" lastModifiedTime="2019-11-27T02:31:49.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{133}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-11-27T02:31:55.000Z" lastModifiedTime="2019-11-27T02:32:05.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{130}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[U-V]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-11-27T02:27:04.000Z" lastModifiedTime="2019-11-27T02:27:34.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{106}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[4: Seattle Seahawks Nike Sideline Player Knit Performance Shorts - College Navy]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-11-27T02:27:49.000Z" lastModifiedTime="2019-11-27T02:27:49.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{112}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[Product ID: 3302072]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE creationTime="2019-12-10T17:38:19.000Z" lastModifiedTime="2019-12-10T17:38:19.000Z" objectID="{C7919DFA-81E7-0737-1671-E86CFBCDEC27}{109}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-05T09:14:37.000Z" lastModifiedTime="2019-12-05T09:14:38.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{15}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[--------------------------]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-05T09:14:39.000Z" lastModifiedTime="2019-12-05T09:14:39.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{30}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-05T09:14:45.000Z" lastModifiedTime="2019-12-05T10:34:47.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{36}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Bettwäsche]]></one:T>
+        <one:OEChildren>
+          <one:OE creationTime="2019-12-05T09:14:58.000Z" lastModifiedTime="2019-12-05T10:34:47.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{49}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[&quot;Biberna&quot;]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-12-05T09:15:08.000Z" lastModifiedTime="2019-12-05T09:15:08.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{54}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Amazon.de ]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2019-12-05T09:14:45.000Z" lastModifiedTime="2019-12-05T09:15:16.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{38}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Bestellung #028-8180977-4269154 ]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE creationTime="2019-12-05T09:14:45.000Z" lastModifiedTime="2019-12-05T09:14:45.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{44}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-06T12:19:05.000Z" lastModifiedTime="2019-12-06T12:19:30.000Z" objectID="{F61A8EB6-85A5-8329-B843-4E1FED1B321A}{20}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Didier eribon jenseits von rymes]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-06T12:19:57.000Z" lastModifiedTime="2019-12-06T12:20:14.000Z" objectID="{F61A8EB6-85A5-8329-B843-4E1FED1B321A}{22}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Edouard Louis ]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-05T09:14:31.000Z" lastModifiedTime="2019-12-13T15:17:27.000Z" objectID="{807C7ACF-7545-4AD9-B7E7-105BE778A9FD}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[---------------------]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-01T19:26:34.000Z" lastModifiedTime="2019-12-01T19:26:36.000Z" objectID="{F82B5AA2-6E2B-4259-9067-E737F2702CBB}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[---------------------]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-12-07T17:41:55.000Z" lastModifiedTime="2019-12-07T17:41:55.000Z" objectID="{17637896-EFE9-4923-B16B-ED34DA572A1D}{15}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-18T08:41:16.000Z" lastModifiedTime="2019-11-20T05:23:01.000Z" objectID="{243D263B-540B-4BCD-8393-8097656A3DDD}{12}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[currently have 4 GB Transcend 150x]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-18T08:38:48.000Z" lastModifiedTime="2019-11-18T08:39:14.000Z" objectID="{243D263B-540B-4BCD-8393-8097656A3DDD}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[SDXC Class 10 or UHS-I (1?) compatible memory card]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-21T06:33:32.000Z" lastModifiedTime="2019-11-21T06:33:32.000Z" objectID="{715D6632-65EA-4167-BFB1-F95D94A7BFD5}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-04T02:03:58.000Z" lastModifiedTime="2019-11-15T07:50:30.000Z" objectID="{E685A3CA-C531-41D7-B985-4DFCF68402DC}{46}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[2019-10-29 Uber bike ride ended 10:13]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-04T02:03:27.000Z" lastModifiedTime="2019-11-04T02:03:27.000Z" objectID="{5251EB37-4C67-1A21-BD0F-078EF141E54A}{17}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-10-05T06:11:22.000Z" lastModifiedTime="2019-10-16T02:58:33.000Z" objectID="{5FA9D385-DBBF-362D-8BD7-F51CCFFE3E0B}{17}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[425 624 4433 Kelly]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-11-15T07:50:32.000Z" lastModifiedTime="2019-11-15T07:50:32.000Z" objectID="{66278E81-86E3-41A6-8F50-70E883D919DF}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-09-13T01:06:47.000Z" lastModifiedTime="2019-09-13T01:06:53.000Z" objectID="{2A027E87-6509-026C-2590-D3F6E08B31E3}{36}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T>
+          <![CDATA[Karolina <a
+href="tel:425-979-1207">tel:425-979-1207</a>]]>
+        </one:T>
+      </one:OE>
+      <one:OE creationTime="2019-09-13T14:30:51.000Z" lastModifiedTime="2019-09-13T14:31:18.000Z" objectID="{32A27DFE-899E-252E-89F2-215CD8975800}{17}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[425-979-1207]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-29T19:35:04.000Z" lastModifiedTime="2019-08-29T19:35:09.000Z" objectID="{A10DEBD4-F0C4-772F-9027-A455CC582A56}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[The art of racing in the rain]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-29T19:34:59.000Z" lastModifiedTime="2019-11-18T08:06:03.000Z" objectID="{A10DEBD4-F0C4-772F-9027-A455CC582A56}{14}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Kruangbin Pandora station]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-21T22:57:02.000Z" lastModifiedTime="2019-08-21T22:57:02.000Z" objectID="{DBB3BB5D-5C74-0585-08AC-AEA9A3C20253}{33}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-22T15:14:00.000Z" lastModifiedTime="2019-08-22T15:14:00.000Z" objectID="{DBB3BB5D-5C74-0585-08AC-AEA9A3C20253}{30}{B0}" alignment="left" quickStyleIndex="1" lang="de">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-13T21:16:12.000Z" lastModifiedTime="2019-08-13T21:16:28.000Z" objectID="{B96BCFDD-26C9-3C2E-8066-BDBCDEF07662}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Akams/fabricpen]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-13T21:30:52.000Z" lastModifiedTime="2019-08-13T21:31:14.000Z" objectID="{B96BCFDD-26C9-3C2E-8066-BDBCDEF07662}{15}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Npm init uifabric]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2019-08-13T21:41:46.000Z" lastModifiedTime="2019-08-13T21:42:22.000Z" objectID="{B96BCFDD-26C9-3C2E-8066-BDBCDEF07662}{21}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Customise rendering by modifying various onRender* methods]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+</one:Page>

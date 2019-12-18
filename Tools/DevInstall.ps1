@@ -21,7 +21,16 @@ $InstallUtil = Get-Item (Join-Path (Split-Path ([int].GetType().Assembly.Locatio
 
 $SnapInBaseName = "Sidenote"
 $SnapInFileName = "$SnapInBaseName.dll"
-$SnapIn = Get-Item "$PSScriptRoot\..\_Target\$Platform\$Configuration\$SnapInFileName"
+
+$SnapInPath = "$PSScriptRoot\..\_Target\$Platform\$Configuration\$SnapInFileName"
+$SnapIn = $null
+
+if (Test-Path $SnapInPath) {
+	$SnapIn = Get-Item $SnapInPath
+} else {
+	Write-Error "Can't find snap-in at `"$SnapInPath`". Did the snap-in build succeed?"
+	return
+}
 
 $StartupScript = Get-Item "$PSScriptRoot\$SnapInBaseName.Startup.ps1"
 

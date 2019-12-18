@@ -1,4 +1,5 @@
 ﻿using Microsoft.Office.Interop.OneNote;
+using Sidenote.Serialization;
 using System;
 using System.Collections.Generic;
 
@@ -15,9 +16,16 @@ namespace Sidenote.DOM
 		{
 			get
 			{
-				throw new NotImplementedException();
+				if (this.children == null)
+				{
+					IFormatter<IList<INode>> formatter = FormatterManager.PageContentFormatter;
+					this.children = (IList<INode>)formatter.Deserialize(this.App, this);
+				}
+
+				return this.children;
 			}
 		}
+
 
 		#endregion
 

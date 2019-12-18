@@ -21,5 +21,10 @@ namespace Sidenote.Serialization
 		{
 			get { return new PagesFormatter(); }
 		}
+
+		public static IFormatter<IList<INode>> PageContentFormatter
+		{
+			get { return new PageContentFormatter(); }
+		}
 	}
 }

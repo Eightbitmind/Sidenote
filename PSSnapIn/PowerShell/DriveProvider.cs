@@ -1,4 +1,6 @@
-﻿using Sidenote.Utilities;
+﻿using Sidenote.DOM;
+using Sidenote.Serialization;
+using Sidenote.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -183,6 +185,47 @@ namespace Sidenote.PowerShell
 		/// <remarks>
 		protected override bool ItemExists(string path)
 		{
+			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+
+			if (pathParts.Length == 1)
+			{
+				return true;
+			}
+
+			var app = ApplicationManager.Application;
+			IFormatter<IRoot> notebooksFormatter = FormatterManager.NotebooksFormatter;
+			IRoot root = notebooksFormatter.Deserialize(app, null);
+
+			INode currentNode = null;
+
+			foreach (INotebook notebook in root.Notebooks)
+			{
+				if (string.Compare(pathParts[1], notebook.ID, StringComparison.OrdinalIgnoreCase) == 0)
+				{
+					currentNode = notebook;
+					break;
+				}
+			}
+
+			if (currentNode == null) return false;
+
+			for (int i = 2; i < pathParts.Length; ++i)
+			{
+				bool foundChild = false;
+				foreach (INode child in currentNode.Children)
+				{
+					if (string.Compare(pathParts[i], child.ID, StringComparison.OrdinalIgnoreCase) == 0)
+					{
+						currentNode = child;
+						foundChild = true;
+						break;
+					}
+				}
+				if (!foundChild) return false;
+			}
+
+			return true;
+
 #if YELLOWBOX_BONEYARD
 			bool returnValue = false;
 			IList<string> pathItems;
@@ -205,7 +248,9 @@ namespace Sidenote.PowerShell
 
 			return returnValue;
 #endif
-			return false;
+			bool returnValue = string.Compare(path, DriveProvider.driveName + DriveProvider.pathSeparator, StringComparison.OrdinalIgnoreCase) == 0;
+
+			return returnValue;
 		}
 
 		/// <summary>
@@ -243,6 +288,63 @@ namespace Sidenote.PowerShell
 		/// </remarks>
 		protected override void GetChildItems(string path, bool recurse)
 		{
+			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+
+			var app = ApplicationManager.Application;
+			IFormatter<IRoot> notebooksFormatter = FormatterManager.NotebooksFormatter;
+			IRoot root = notebooksFormatter.Deserialize(app, null);
+
+			if (pathParts.Length == 1)
+			{
+				foreach (INotebook notebook in root.Notebooks)
+				{
+					WriteItemObject(
+						item: notebook,
+						path: DriveProvider.driveName + DriveProvider.pathSeparator + notebook.ID,
+						isContainer: true);
+				}
+				return;
+			}
+
+			INode currentNode = null;
+			StringBuilder childPath = new StringBuilder(DriveProvider.driveName);
+
+			foreach (INotebook notebook in root.Notebooks)
+			{
+				if (string.Compare(pathParts[1], notebook.ID, StringComparison.OrdinalIgnoreCase) == 0)
+				{
+					childPath.Append(DriveProvider.pathSeparatorChar).Append(notebook.ID);
+					currentNode = notebook;
+					break;
+				}
+			}
+
+			Debug.Assert(currentNode != null);
+
+			for (int i = 2; i < pathParts.Length; ++i)
+			{
+				bool foundChild = false;
+				foreach (INode child in currentNode.Children)
+				{
+					if (string.Compare(pathParts[i], child.ID, StringComparison.OrdinalIgnoreCase) == 0)
+					{
+						childPath.Append(DriveProvider.pathSeparatorChar).Append(child.ID);
+						currentNode = child;
+						foundChild = true;
+						break;
+					}
+				}
+				Debug.Assert(foundChild);
+			}
+
+			foreach(INode child in currentNode.Children)
+			{
+				WriteItemObject(
+					item: child,
+					path: childPath + DriveProvider.pathSeparator + child.ID,
+					isContainer: true);
+			}
+
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -518,6 +620,9 @@ namespace Sidenote.PowerShell
 			RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
 		private const string driveName = @"ON:";
+
+
+		private const char pathSeparatorChar = '\\';
 		private const string pathSeparator = @"\";
 
 	}
