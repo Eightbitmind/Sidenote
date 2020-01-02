@@ -1,28 +1,25 @@
-﻿using Sidenote.DOM;
-using System.Collections.Generic;
-
-namespace Sidenote.Serialization
+﻿namespace Sidenote.Serialization
 {
 	static internal class FormatterManager
 	{
 		public const string Xml2013 = "http://schemas.microsoft.com/office/onenote/2013/onenote";
 
-		public static IFormatter<IRoot> NotebooksFormatter
+		public static IFormatter RootContentFormatter
 		{
-			get { return new NotebooksFormatter(); }
+			get { return new RootContentFormatter(); }
 		}
 
-		public static IFormatter<IList<INode>> SectionsFormatter
+		public static IFormatter NotebookContentFormatter
 		{
-			get { return new SectionsFormatter(); }
+			get { return new NotebookContentFormatter(); }
 		}
 
-		public static IFormatter<IList<INode>> PagesFormatter
+		public static IFormatter SectionContentFormatter
 		{
-			get { return new PagesFormatter(); }
+			get { return new SectionContentFormatter(); }
 		}
 
-		public static IFormatter<IList<INode>> PageContentFormatter
+		public static IFormatter PageContentFormatter
 		{
 			get { return new PageContentFormatter(); }
 		}

@@ -1,0 +1,742 @@
+﻿<?xml version="1.0"?>
+<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{76AA46BA-FE52-04DF-3F0D-271EEA117E51}{1}{E183315593607094714281979490928158520327961}" name="Monkey Bars" dateTime="2015-12-23T23:48:23.000Z" lastModifiedTime="2018-07-02T16:31:39.000Z" pageLevel="1" lang="x-none">
+  <one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Calibri Light" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0"/>
+  <one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Calibri" fontSize="11.0" spaceBefore="0.0" spaceAfter="0.0"/>
+  <one:PageSettings RTL="false" color="automatic">
+    <one:PageSize>
+      <one:Automatic/>
+    </one:PageSize>
+    <one:RuleLines visible="false"/>
+  </one:PageSettings>
+  <one:Title lang="x-none">
+    <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:04:03.000Z" lastModifiedTime="2015-12-24T00:04:03.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{92}{B0}" alignment="left" quickStyleIndex="0">
+      <one:T><![CDATA[Monkey Bars]]></one:T>
+    </one:OE>
+  </one:Title>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:54:02.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{37}{B0}">
+    <one:Position x="420.5338439941406" y="68.18740081787109" z="4"/>
+    <one:Size width="7.937004089355469" height="48.67086791992187"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{37}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{60}{B0}">
+    <one:Position x="468.0" y="68.4000015258789" z="22"/>
+    <one:Size width="72.0" height="13.4277172088623"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:57:37.000Z" lastModifiedTime="2015-12-23T23:57:37.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{61}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[90]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:54:07.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{47}{B0}">
+    <one:Position x="418.8330688476562" y="76.26614379882812" z="7"/>
+    <one:Size width="112.2519836425781" height="32.14487838745117"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{47}{B0}"/>
+  </one:InkDrawing>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:54:07.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{44}{B0}">
+    <one:Position x="532.4456787109375" y="77.11653900146484" z="6"/>
+    <one:Size width="6.548023223876953" height="74.52283477783203"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{44}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{111}{B0}">
+    <one:Position x="416.5936889648437" y="74.40944671630859" z="15"/>
+    <one:Size width="102.7275543212891" height="14.28661251068115" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:12.000Z" lastModifiedTime="2015-12-23T23:57:33.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{112}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:11.0pt">
+        <one:InkWord recognizedText=" " x="0.0" y="0.0" inkOriginX="-0.0283584594726562" inkOriginY="-11.99055099487305" width="24.29290008544922" height="14.28661251068115">
+          <one:Data>
+            AKEEHQJCKAFwWM9UiuaXxU+PBvi60uGbIvqHlTLy7BdBuMAWv/Mr9Hq/7HHMzCKxQYkOuxMs7nqh
+            xGZtpw2yWEmaHU5ANAZsEN67E4vlXrNInJuhJVq3URJFU4AsehjVRJllSjQGMVszKgAaH4tCcEWE
+            dYC+0EXZBAMLSBBEl/rZAUUjRiMFCTgLT2RlZmdoahkLOAkA/v8DAAAAAABPCQRpED6ARAAQAAGn
+            AAA1oAADnwAAagMVRgBACsIBJ4T4Vj4S3l83YhEhQUwR0RpgyWWYZ6a3vXPnhvCD/Hsfj2dbYydO
+            uGenTeEY68ow1164zmb3u9iH8Iv3gE/6z/iv+F+4H/jfuK/4/7jf+S+5D/kfuR/4P7hv79r+/Y/4
+            T7g/9fa/4n7h/59j+/z6fT/f+fur/6D7wh/+C37wQ/gJBAo/QCMsCbWj3dA6IAYWIoIgAAAAEgAR
+            IFKTAoGr6WpCvq/GkOsW2QIKABEgw+E8Qfp8DkAFFEYAAAAAAxVGAEAKogEdg4ljOtTwx04Y14iM
+            Ab3wnqCE+L0+L1xQy0zbcU5Y7XL2xxrfHaWOkJCH8PP3gh/77/kf+E+3/r7P/Jfcb/yH3H/879zX
+            /Lfct/xv3IA8CBwn9/n/Afb/n7sPek88fv4JBAo/QCMuRbe73dA6IAYWIoIoAAAAEgARIElS2Wnu
+            nClFsBHYsNsdTQUKABEgR/A4QedZA0AFFEYAAAAAAxVGAEA=
+          </one:Data>
+        </one:InkWord>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline lang="de" author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{81}{B0}">
+    <one:Position x="54.0" y="86.4000015258789" z="29"/>
+    <one:Size width="83.10006713867187" height="40.28314971923828"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE creationTime="2015-12-24T01:51:17.000Z" lastModifiedTime="2015-12-24T01:51:17.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{82}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[$20/10 Ft]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2015-12-24T01:52:24.000Z" lastModifiedTime="2015-12-24T01:52:24.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{86}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2015-12-24T01:52:50.000Z" lastModifiedTime="2015-12-24T01:52:50.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{88}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[86/12]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{171}{B0}">
+    <one:Position x="523.5448608398437" y="102.6992111206055" z="19"/>
+    <one:Size width="97.143310546875" height="90.45355224609375" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:55:36.000Z" lastModifiedTime="2015-12-23T23:55:36.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{172}{B0}" alignment="left">
+        <one:InkParagraph x="0.0425033569335937" y="0.0141706466674805" width="49.12440872192382" height="90.45354461669922">
+          <one:InkWord x="0.0425033569335937" y="0.0425205230712891" inkOriginX="-0.0425033569335937" inkOriginY="-0.0425205230712891" width="49.12443923950195" height="90.39684295654297">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{175}{B0}"/>
+          </one:InkWord>
+        </one:InkParagraph>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:55:13.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{57}{B0}">
+    <one:Position x="342.8362426757812" y="121.5921249389648" z="10"/>
+    <one:Size width="79.54015350341796" height="260.9858093261719"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{57}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{63}{B0}">
+    <one:Position x="402.0235900878906" y="118.5307159423828" z="11"/>
+    <one:Size width="72.0" height="24.63307189941406" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:49:33.000Z" lastModifiedTime="2015-12-23T23:55:37.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{64}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:11.0pt">
+        <one:InkWord recognizedText="E" x="0.0" y="0.0" inkOriginX="-402.0377807617187" inkOriginY="-118.5732269287109" width="21.74173736572266" height="24.63307189941406">
+          <one:Data>
+            AKIHHQI6RAFwWM9UiuaXxU+PBvi60uGbIvqHlTLy7BdBuMAWv/Mr9Hq/7HHMzCKxQYkOuxMs7nqh
+            xGZtpw2yWEmaHU5ANAZsEN67E4vlXrNInJuhJVq3URJFU4AsehjVRJllSjQGMVszKgAaH4tCcEWE
+            dYC+0EXZBAMGSBBFI0YjBQk4C09kZWZnaGoZCzgJAP7/AwAAAAAATwkEaRA+gEd2cAAQVwADpmAA
+            E7wAAEoLOEUAPwBaAHoAowAAagMVRgBACscBLIP+XZ7+XZ/W2M620xGM4zjTRPkcUTGG87b3njlk
+            g/4T1P4Tz9YzgeFnDMwb1uN7uY2G4mG8+HjyWIfofuO/4j/X/D/cJ/wn3B/8X9xP/C/cL/r7gP+I
+            +4f/hfuE/4T7hf8fa/4z7iv+D+4P/jfuL/Z/z9r/H2P79f8fz6fMf97/2P3hJ/AJBAoAESBZVNiQ
+            3D3RAQUURgRAAAASABEgBkbTxe0vwkC4KBewaUa9VQoAESDAeTJBEe9tQAUURgAAAAADFUYAQAqf
+            AlqD/l5M/l5NYhvWwAbNA1vSY1MTE51MTwl53GHGNsyjjExMJiYmJieum2pjbTxAg/4TpP4TpWcZ
+            mExuJc8bvj2bIlz5MsIqJhieEoqEwwAY1MJgmNxLOpyM7ZCH8Bv3Tf8x/wf/I/cX/w33C/8J9wv/
+            C/cL/wX3B/8N9wv/FfcT/xH3Ef8J9wn9+1/wP3A/z9Pp/wP3Afz9n7P/CfcF/fs/4/n2fsfp9n7P
+            +v+B+x/P59PwcD9v/iP+E+T7H0/n8+n0/n8+z/fp8v0/n8+n0/x/Puz/6f7wo/+Dj7p/wAkECgAR
+            ICgCSoPcPdEBBRRGAMAAABIAESCFXj7b0smsSbE4efWZF0XECgARIFiSM0E76lFABRRGAAAAAAMV
+            RgBACvMBSoP+Y5j+Y5+dG2t6ZwN621mWZ0iXXpuJiYnUSaAA1vTbGQZ4gIP+EA7+EBXAAZxuMAxE
+            olEolrHPfhcvH8DLKYTDet6TGBnGeWWWwIfwE/dF/zH/B/8p9xv9/n+/t/37H+vtf8P9wn/BfcH/
+            xP3Ef8B/j6fz4v0/x/Pp819n/gvuE/v1+x+n0/a+z/j+/cD9v/gP9fT+fX6f4/n2fsfp9Pp/j+fZ
+            +x/f59n7H/bf9T94M/wJBAoAESDjQ5yR3D3RAQUURgSAAAARP0AjFwoPuUVIAljnioUItIoeCgAR
+            IKUFOkFH8FRABRRGAAAAAAMVRgBA
+          </one:Data>
+        </one:InkWord>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:50:37.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{30}{B0}">
+    <one:Position x="433.1480407714844" y="128.5086517333984" z="2"/>
+    <one:Size width="109.2472229003906" height="50.9669303894043"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{30}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{84}{B0}">
+    <one:Position x="301.3086547851562" y="126.651969909668" z="13"/>
+    <one:Size width="98.87245178222656" height="118.1763763427734" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:07.000Z" lastModifiedTime="2015-12-23T23:54:07.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{85}{B0}" alignment="left">
+        <one:InkParagraph x="0.07086181640625" y="0.0141792297363281" width="50.91023635864258" height="118.1763763427734">
+          <one:InkWord x="0.07086181640625" y="0.0992116928100586" inkOriginX="-0.07086181640625" inkOriginY="-0.0992116928100586" width="50.91023254394531" height="118.0913314819336">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{88}{B0}"/>
+          </one:InkWord>
+        </one:InkParagraph>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{183}{B0}">
+    <one:Position x="54.0" y="158.4000091552734" z="20"/>
+    <one:Size width="290.4471130371094" height="113.9862976074219"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:55:59.000Z" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{184}{B0}" alignment="left">
+        <one:Table bordersVisible="true" hasHeaderRow="true" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{185}{B0}">
+          <one:Columns>
+            <one:Column index="0" width="37.11000061035156"/>
+            <one:Column index="1" width="54.2246437072754"/>
+            <one:Column index="2" width="59.52054977416992"/>
+            <one:Column index="3" width="37.11000061035156"/>
+            <one:Column index="4" width="37.32189178466797"/>
+            <one:Column index="5" width="37.11000061035156"/>
+          </one:Columns>
+          <one:Row objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{186}{B0}" lastModifiedTime="2016-10-22T19:39:53.000Z">
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{187}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:55:57.000Z" lastModifiedTime="2015-12-23T23:55:57.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{188}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Desc]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{191}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:04.000Z" lastModifiedTime="2015-12-23T23:56:04.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{192}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Length (cm)]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{194}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:11.000Z" lastModifiedTime="2015-12-23T23:56:11.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{195}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Length (inch)]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{197}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:16.000Z" lastModifiedTime="2015-12-23T23:56:16.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{198}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Count]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{200}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:35.000Z" lastModifiedTime="2015-12-23T23:59:35.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{201}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Price pp]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{203}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:49.000Z" lastModifiedTime="2015-12-23T23:59:49.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{204}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Price all]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+          </one:Row>
+          <one:Row objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{206}{B0}" lastModifiedTime="2016-10-22T19:39:53.000Z">
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{207}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:01:32.000Z" lastModifiedTime="2015-12-24T00:01:32.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{208}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[L-Bar]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{210}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:26.000Z" lastModifiedTime="2015-12-23T23:56:26.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{211}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[220]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{213}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:00:25.000Z" lastModifiedTime="2015-12-24T00:00:25.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{214}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[86.6]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{216}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:27.000Z" lastModifiedTime="2015-12-23T23:56:27.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{217}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[2]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{219}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:27.000Z" lastModifiedTime="2015-12-23T23:59:27.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{220}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{222}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:41.000Z" lastModifiedTime="2015-12-23T23:59:41.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{223}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+          </one:Row>
+          <one:Row objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{225}{B0}" lastModifiedTime="2016-10-22T19:39:53.000Z">
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{226}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:01:34.000Z" lastModifiedTime="2015-12-24T00:01:34.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{227}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[M-Bar]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{229}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:53.000Z" lastModifiedTime="2015-12-23T23:56:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{230}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[90]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{232}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:02:11.000Z" lastModifiedTime="2015-12-24T00:02:11.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{233}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[35.5]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{235}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:56:55.000Z" lastModifiedTime="2015-12-23T23:56:55.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{236}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[3]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{238}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:27.000Z" lastModifiedTime="2015-12-23T23:59:27.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{239}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{241}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:41.000Z" lastModifiedTime="2015-12-23T23:59:41.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{242}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+          </one:Row>
+          <one:Row objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{244}{B0}" lastModifiedTime="2016-10-22T19:39:53.000Z">
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{245}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:01:36.000Z" lastModifiedTime="2015-12-24T00:01:36.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{246}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[S-Bar]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{248}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:57:53.000Z" lastModifiedTime="2015-12-23T23:57:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{249}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[50]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{251}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:02:46.000Z" lastModifiedTime="2015-12-24T00:02:46.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{252}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[20]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{254}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:57:59.000Z" lastModifiedTime="2015-12-23T23:57:59.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{255}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[4]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{11}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:27.000Z" lastModifiedTime="2015-12-23T23:59:27.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{12}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{14}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:41.000Z" lastModifiedTime="2015-12-23T23:59:41.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{15}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+          </one:Row>
+          <one:Row objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{17}{B0}" lastModifiedTime="2016-10-22T19:39:53.000Z">
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{18}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:13.000Z" lastModifiedTime="2015-12-23T23:58:13.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{19}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[Knee]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{21}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:19.000Z" lastModifiedTime="2015-12-23T23:58:19.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{22}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[-]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{24}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:21.000Z" lastModifiedTime="2015-12-23T23:58:21.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{25}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[-]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{27}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:32.000Z" lastModifiedTime="2015-12-23T23:58:32.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{28}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[6]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{30}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:27.000Z" lastModifiedTime="2015-12-23T23:59:27.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{31}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{33}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:41.000Z" lastModifiedTime="2015-12-23T23:59:41.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{34}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+          </one:Row>
+          <one:Row objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{36}{B0}" lastModifiedTime="2016-10-22T19:39:53.000Z">
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{37}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:38.000Z" lastModifiedTime="2015-12-23T23:58:38.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{38}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[T-junct]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{40}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:42.000Z" lastModifiedTime="2015-12-23T23:58:42.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{41}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:List>
+                    <one:Bullet bullet="25" fontSize="11.0"/>
+                  </one:List>
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{44}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:43.000Z" lastModifiedTime="2015-12-23T23:58:43.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{45}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:List>
+                    <one:Bullet bullet="25" fontSize="11.0"/>
+                  </one:List>
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{48}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:58:56.000Z" lastModifiedTime="2015-12-23T23:58:56.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{49}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[2]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{51}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:27.000Z" lastModifiedTime="2015-12-23T23:59:27.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{52}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+            <one:Cell lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{54}{B0}" lastModifiedByInitials="AE">
+              <one:OEChildren>
+                <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:59:41.000Z" lastModifiedTime="2015-12-23T23:59:41.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{55}{B0}" alignment="left" quickStyleIndex="1">
+                  <one:T><![CDATA[]]></one:T>
+                </one:OE>
+              </one:OEChildren>
+            </one:Cell>
+          </one:Row>
+        </one:Table>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{63}{B0}">
+    <one:Position x="468.0" y="158.4000091552734" z="23"/>
+    <one:Size width="72.0" height="13.42771339416504"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:00:43.000Z" lastModifiedTime="2015-12-24T00:00:43.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{64}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[M-Bar]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:51:50.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{34}{B0}">
+    <one:Position x="402.4771728515625" y="167.3716430664062" z="3"/>
+    <one:Size width="8.475608825683593" height="210.8409423828125"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{34}{B0}"/>
+  </one:InkDrawing>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:50:28.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{23}{B0}">
+    <one:Position x="518.4425048828125" y="167.6551055908203" z="1"/>
+    <one:Size width="103.1243667602539" height="257.1874084472656"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{23}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{69}{B0}">
+    <one:Position x="378.0" y="248.4000091552734" z="25"/>
+    <one:Size width="72.0" height="13.42771339416504"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:00:57.000Z" lastModifiedTime="2015-12-24T00:00:57.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{70}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[L-Bar]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{66}{B0}">
+    <one:Position x="567.0" y="302.3999938964844" z="24"/>
+    <one:Size width="72.0" height="13.42773056030273"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:00:51.000Z" lastModifiedTime="2015-12-24T00:00:51.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{67}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[L-Bar]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{73}{B0}">
+    <one:Position x="324.6944580078125" y="342.1984252929687" z="12"/>
+    <one:Size width="87.53384399414062" height="115.9653625488281" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:07.000Z" lastModifiedTime="2015-12-23T23:54:07.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{74}{B0}" alignment="left">
+        <one:InkParagraph x="0.0141792297363281" y="0.0141792297363281" width="39.54330444335937" height="115.9653549194336">
+          <one:InkWord x="0.0141792297363281" y="0.127544403076172" inkOriginX="-0.0141792297363281" inkOriginY="-0.127544403076172" width="39.54329681396484" height="115.8236389160156">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{77}{B0}"/>
+          </one:InkWord>
+        </one:InkParagraph>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{95}{B0}">
+    <one:Position x="482.6255798339844" y="358.951171875" z="14"/>
+    <one:Size width="193.2094421386719" height="65.70709991455078" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+      <one:Indent level="2" indent="0.75"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:02.000Z" lastModifiedTime="2015-12-23T23:54:02.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{96}{B0}" alignment="left">
+        <one:InkParagraph x="0.00120162963867187" y="0.0141792297363281" width="145.1905517578125" height="65.70708465576171">
+          <one:InkWord x="0.0141792297363281" y="-0.0141792297363281" inkOriginX="-0.0141792297363281" inkOriginY="0.0141792297363281" width="36.68029403686523" height="17.716552734375">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{99}{B0}"/>
+          </one:InkWord>
+          <one:InkWord x="114.0803451538086" y="40.57793426513672" inkOriginX="-114.0803451538086" inkOriginY="-40.57793426513672" width="31.12440490722656" height="25.11498641967773">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{105}{B0}"/>
+          </one:InkWord>
+        </one:InkParagraph>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{138}{B0}">
+    <one:Position x="402.1086730957031" y="372.9259948730469" z="17"/>
+    <one:Size width="132.7181396484375" height="39.77006149291992" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:20.000Z" lastModifiedTime="2015-12-23T23:54:20.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{139}{B0}" alignment="left">
+        <one:InkParagraph x="0.0141448974609375" y="0.0141792297363281" width="84.78424835205078" height="39.77007675170898">
+          <one:InkWord x="0.0141792297363281" y="10.10549926757812" inkOriginX="-0.0141792297363281" inkOriginY="-10.10549926757812" width="36.25512313842773" height="29.67874145507812">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{142}{B0}"/>
+          </one:InkWord>
+          <one:InkWord x="38.53701782226562" y="0.0992202758789062" inkOriginX="-38.53701782226562" inkOriginY="-0.0992202758789062" width="46.28976058959961" height="18.45352935791016">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{148}{B0}"/>
+          </one:InkWord>
+        </one:InkParagraph>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:54:02.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{40}{B0}">
+    <one:Position x="340.4834594726562" y="400.1527709960937" z="5"/>
+    <one:Size width="61.79528045654297" height="37.16218185424805"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{40}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{78}{B0}">
+    <one:Position x="351.0" y="410.3999938964844" z="28"/>
+    <one:Size width="72.0" height="13.42773056030273"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:01:23.000Z" lastModifiedTime="2015-12-24T00:01:23.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{79}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[S-Bar]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{117}{B0}">
+    <one:Position x="427.1952514648437" y="416.9480285644531" z="16"/>
+    <one:Size width="245.2252044677734" height="102.5291519165039" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:07.000Z" lastModifiedTime="2015-12-23T23:54:07.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{118}{B0}" alignment="left">
+        <one:InkParagraph x="0.0141792297363281" y="0.0" width="197.2346496582031" height="102.5291366577148">
+          <one:InkWord x="0.0141792297363281" y="78.61888122558594" inkOriginX="-0.0141792297363281" inkOriginY="-78.61888122558594" width="42.54802322387695" height="23.92441177368164">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{121}{B0}"/>
+          </one:InkWord>
+          <one:InkWord x="107.4756088256836" y="-0.0141792297363281" inkOriginX="-107.4756088256836" inkOriginY="0.0141792297363281" width="89.77320098876953" height="35.26298904418945">
+            <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{127}{B0}"/>
+          </one:InkWord>
+        </one:InkParagraph>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:54:07.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{50}{B0}">
+    <one:Position x="468.3259887695312" y="451.9984130859375" z="8"/>
+    <one:Size width="70.01573181152344" height="49.71969223022461"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{50}{B0}"/>
+  </one:InkDrawing>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:49:58.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{16}{B0}">
+    <one:Position x="348.080322265625" y="453.8976440429687" z="0"/>
+    <one:Size width="87.33543395996094" height="69.19367980957031"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{16}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{152}{B0}">
+    <one:Position x="277.6393737792969" y="457.9795532226562" z="18"/>
+    <one:Size width="343.6724243164062" height="78.00945281982422" isSetByUser="true"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+      <one:Indent level="2" indent="230.4425201416016"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:54:24.000Z" lastModifiedTime="2015-12-23T23:57:21.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{153}{B0}" alignment="left" quickStyleIndex="1">
+        <one:InkWord recognizedText="Taos" style="font-family:Calibri;font-size:11.0pt" x="0.0" y="0.0" inkOriginX="-277.6535339355469" inkOriginY="-457.9936828613281" width="91.27561187744141" height="65.33860778808594">
+          <one:Data>
+            AJwKHQT2AbgBAXBYz1SK5pfFT48G+LrS4Zsi+oeVMvLsF0G4wBa/8yv0er/scczMIrFBiQ67Eyzu
+            eqHEZm2nDbJYSZodTkA0BmwQ3rsTi+Ves0icm6ElWrdREkVTgCx6GNVEmWVKNAYxWzMqABofi0Jw
+            RYR1gL7QRdkEAwtIEESX+tkBRSNGIwUJOAtPZGVmZ2hqGQs4CQD+/wMAAAAAAE8JBGkRP0AimQwA
+            A/HQAAy1wABIHgAAShc2qYd/MBUw71wCpv3rgFTDvWAKm/esAABqAxVGAEAK8wE7hPx9Jfj6r52/
+            MpW0a0hdGrLGty94YYRhTNakKWzRzWtSEbZqYIq4a3y57oT86u351V7cjn4rUqre871vVl11x7Vc
+            UI2Upa0oUUtG1pWWvWML1VRsh/Bj93X/Sf8R/xH3B/6+3/j7H8/n0+n/A/cB/yP3G/3+/4+z/yX3
+            G/6/cH9wX/A/cB/yH3G/839y//EfcZ/j7gP79j+fz6fT/X2vyfjgft/9D/y/3hZ/8Hf3gw/ACQQJ
+            PoBEjB+Ivd0HRAYWIoJgAAAAEgARIAu4+3nN4+tKh1uxMHwsKWIKABEgfYv6QIvFVkEFFEYAAAAA
+            AxVGAEAK9wE7hPyJVfkR17vV4mWuFDPS0Iww1MlrWyWtTBRa5eEb4MMKKowohG8L3uqAhPz36fnw
+            R4VWXLXLWlLWlktwMlKWarwvjvfDh08kpS1sVMlLKZMVslF64714YIfw8/eCH/vv+R/4T7f/CfcF
+            /x/3F/8V9xf/AfcF/Psf4/n1/v3Bfb/19v/H9+4T7gv8fZ/v1/n8+z/fs/Y/T7P9+1/r7H1/4r7h
+            v+F+4T/H8/n6/T/wM/+AT7xK/gkECT6ARLY/zb3dB0QGFiKCaAAAABIAESBy9gBtfER3Rqi4Agpn
+            wUq7CgARIBC7BEErfGBBBRRGAAAAAAMVRgBACtUBLoT8jYX5Grcq5dXDjwq72CWimbJm4WBSyEV4
+            Z7323rnz5acshPz4Vfnxb5Fl1aQla0tlEJM0rUteuu+PXyeHW0YRhe2W9lCH8Pv3gl/77/kf+o+5
+            v/H+PuA/4L7gf8/37X2fyfr9P+P+4v/hfuF/19wH+/t/8R9w/+ft/5/v2vs/8D/r7P1/7n/q/vF9
+            /4j/uH+ACQQKABEg3farP9090QEGFiKCcAAAABIAESDNLg/FgFi+SKBmHEPk1idDCgARIIX1CUGb
+            zWJBBRRGAAAAAAMVRgBACrwBH4fyQbeSCeHwaDkHhsPjsdks7isXksOQ6CQCNR6KRSVSaVUqOIT8
+            2g35tDcULlLU1amzBglPPwtasclceeuvGIfwu/eBL/tP+N/677oP+U+5T/jfuQ/4H7hP+F+4X/gv
+            uD/v2f79f+E+4P9P59P+b/5P7wd/+CT7wrfgCQQJPoBHEz7bfd0HRAYWIoJAAAAAEgARIOaliVPM
+            Q1ZLsjT8gutj1m4KP0AjcuYHtVEIKWAFFEYAAAAAAxVGAEAKvgErhPykjflJVyFqQotZaODDVder
+            DXLn35a8ctmowRLgg/59FP59KejBhrGqjBnpUZ3neczfe++szGGInFiH8LP3gR/7L/jP+p+53+fb
+            /4H/P2Pr/yH3F/z7P+ftf4/v2Psf6/z8n2P79v7P5n7P+Psf36/36/8x/yH3iT/ACQQKABEgfvCS
+            Pd090QEGFiKCWAAAABIAESAkjgLFbIRCQZ2RIJk6na1KCgARIGzpG0EEAmVBBRRGAAAAAAMVRgBA
+
+          </one:Data>
+        </one:InkWord>
+        <one:InkWord width="106.4976348876953" height="65.25354766845703">
+          <one:Space/>
+        </one:InkWord>
+        <one:InkWord recognizedText="of" style="font-family:Calibri;font-size:11.0pt" x="198.1984100341797" y="0.0" inkOriginX="-193.4645538330078" inkOriginY="25.73859786987305" width="97.48347473144531" height="65.33860778808594">
+          <one:Data>
+            AJcIHQSGArwBAXBYz1SK5pfFT48G+LrS4Zsi+oeVMvLsF0G4wBa/8yv0er/scczMIrFBiQ67Eyzu
+            eqHEZm2nDbJYSZodTkA0BmwQ3rsTi+Ves0icm6ElWrdREkVTgCx6GNVEmWVKNAYxWzMqABofi0Jw
+            RYR1gL7QRdkEAwtIEESX+tkBRSNGIwUJOAtPZGVmZ2hqGQs4CQD+/wMAAAAAAE8JBGkSABEgqRoA
+            AHT8//8YKAAAdQUAAEoONt+YBpzAJYDWuASei4AAagMVRgBACrgBH4X41tPjXhyU9FM0ElmOhwFV
+            Fk1mEosTz3Ty343D2oXxuPjapCSCGWyqCK6rLLLE9ktUsuDwuBxeRIfwY/d1/0n/Ef859yf/Pfc1
+            /0n3Q/8l9yv/D/cX/v7gv+C+4L/i/uJ/z9wH9+x/fr/yH/FfeEb/wV/eGD8JBAo/QCJSGuxz3dA6
+            IAYWIoKAAAAAEgARIIad3FFScZFMka4RYLuWMxoJFiKAmj3wf4yfBAUURgAAAAADFUYAQArSATCE
+            /EkJ+JKPZy+UWLXva1owowYoUtbNTNsWvesa3zRytt89c9yE+R6+SJpYAtelqU2RscAyWxaqMd8d
+            8d65a3rWt74wh/Ar91f/Nf8J/wf3Af9N9zv/YfdV/zP3O/8Z9xX/Bf8D9wf/B/cH/fs/4/n0+HA/
+            b/z/ftfZ/4L7gf9fb/J9P79f8fz7tv/BF/4NvgkECj9AIvBq6Evd0DogBhYigngAAAASABEg6QwM
+            SbIPc0uoreUSOk2opQoAESB9PlNBAs5fQQUURgAAAAADFUYAQAroAUGD/ixY/ixv8TetxLW9NMR4
+            hjhjpwxoBoxE+N1kzjq3tHg53njneeOd9YP9nN+zn1KN4ZZbRtMZbz1zvPk41vEVHXW8eTrv25Y1
+            y1iJNTrEVp0nQIfwQ/dn/z3/Cf8H9wH/BfcD/1v3R/8z9zP+fuE/x/P5+NfZ/J+L9P79f8fz7P2P
+            0+n4v0/4b7g/9/cB/Psfz+fZ+z/j+/Y+x+n0/df/0n3iN/AJBAoAESDAhzNf3T3RAQYWIoKIAAAA
+            EgARIHdmfT1s9JFFjgsLNOGaUp8KABEgvRFgQfz9WkEFFEYAAAAAAxVGAEAKzQEvg/45ov45o+md
+            9pieGDU8NYNx323nu3143Pi4iYY0RICD/EffiRcAzjcb1tEoq51MYdJ01yxExMbZmN2Ah/BD92H/
+            Qf8L/1v3Q/8f9yH/G/cf/w/3E/8J9wn+P5/Pp/r7X+Psf8J9wf+Ps/36/36/z+fT9w/3Cf8N/wX2
+            P79r7H+/tf+AL/svvEH+CQQKABEg67m6X9090QEGFiKCkAAAABIAESCI73yYiWGlT6xUmlubFOIY
+            CgARIHTtdUEjK1tBBRRGAAAAAAMVRgBA
+          </one:Data>
+        </one:InkWord>
+        <one:OEChildren>
+          <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:55:36.000Z" lastModifiedTime="2015-12-23T23:57:21.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{154}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:11.0pt">
+            <one:InkWord recognizedText=" " x="230.4425201416016" y="65.33857727050781" inkOriginX="-508.0819091796875" inkOriginY="-523.332275390625" width="11.67874145507812" height="12.69919967651367">
+              <one:Data>
+                AO4DHQIiKgFwWM9UiuaXxU+PBvi60uGbIvqHlTLy7BdBuMAWv/Mr9Hq/7HHMzCKxQYkOuxMs7nqh
+                xGZtpw2yWEmaHU5ANAZsEN67E4vlXrNInJuhJVq3URJFU4AsehjVRJllSjQGMVszKgAaH4tCcEWE
+                dYC+0EXZBAMLSBBEl/rZAUUjRiMFCTgLT2RlZmdoahkLOAkA/v8DAAAAAABPCQRpET9AIxgQAASB
+                4AAR6AAASd4AAGoDFUYAQAqzAl2D/nuq/nuz1reMjMsyicp4TwlprfSJ4Y1jtE6NuvHPXvvxduqe
+                E601MalE8J1qeGNa1OTbee++u9iD/oKI/oKJb0degynQAAAMphMJuWphgAbhtE5HXPXO/BnprHLp
+                rl08ryCH8BP3Rf8x/wf/Nfcl/zf3L/839zX/Q/dB/xv3I/z/X9/n2f79v7P+/t/7+3+cH9wX+Ps/
+                8J9wf+P59j7H+Pr/j+fZ+x/j6/6+1/wX3A/5/v2vs/nAf6+x9f7/Ps/Y/T7P2f+C+4H/g/uC/z9r
+                +fs/aBgDjvuK/z9wH/A/cD/n+/cV/w33g498D/nil/AJBAoAESBE4U9g3T3RAQYWIoKYAAAAEgAR
+                IDXbRV6KrLZKvb+VzP31YaAKABEg/ZdhQeA8Z0EFFEYAAAAAAxVGAEA=
+              </one:Data>
+            </one:InkWord>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{72}{B0}">
+    <one:Position x="360.0" y="464.3999938964844" z="26"/>
+    <one:Size width="72.0" height="13.42773056030273"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:01:04.000Z" lastModifiedTime="2015-12-24T00:01:04.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{73}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[M-Bar]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:InkDrawing lastModifiedTime="2015-12-23T23:54:20.000Z" objectID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{54}{B0}">
+    <one:Position x="287.0503845214844" y="483.0661315917969" z="9"/>
+    <one:Size width="79.42677307128906" height="39.91181945800781"/>
+    <one:CallbackID callbackID="{8C1E2095-3CAE-070F-2A78-13D4E100A23B}{54}{B0}"/>
+  </one:InkDrawing>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{75}{B0}">
+    <one:Position x="486.0" y="482.3999938964844" z="27"/>
+    <one:Size width="72.0" height="13.42773056030273"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-24T00:01:11.000Z" lastModifiedTime="2015-12-24T00:01:11.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{76}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[S-Bar]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2016-10-22T19:39:53.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{57}{B0}">
+    <one:Position x="540.0" y="518.3999633789062" z="21"/>
+    <one:Size width="72.0" height="13.42773056030273"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-12-23T23:57:24.000Z" lastModifiedTime="2015-12-23T23:57:24.000Z" objectID="{F5A6C35F-3BA4-0A99-160D-245304F306CF}{58}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[50]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+  <one:Outline lang="en-US" author="Andreas" authorInitials="A" lastModifiedBy="Andreas" lastModifiedByInitials="A" lastModifiedTime="2018-07-02T16:31:46.000Z" objectID="{D8E41A30-3A25-4DAB-BBA5-5BDE44BD0E8A}{10}{B0}">
+    <one:Position x="54.0" y="626.3999633789062" z="30"/>
+    <one:Size width="305.495361328125" height="26.85546112060547"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE creationTime="2018-07-02T16:30:47.000Z" lastModifiedTime="2018-07-02T16:31:20.000Z" objectID="{D8E41A30-3A25-4DAB-BBA5-5BDE44BD0E8A}{11}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Floor Mat Placement:]]></one:T>
+        <one:OEChildren>
+          <one:OE creationTime="2018-07-02T16:30:57.000Z" lastModifiedTime="2018-07-02T16:31:46.000Z" objectID="{D8E41A30-3A25-4DAB-BBA5-5BDE44BD0E8A}{15}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[55 cm from hallway wall, 130 cm from bathroom wall]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+</one:Page>

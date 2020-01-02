@@ -2,7 +2,7 @@
 
 namespace Sidenote.DOM
 {
-	public interface IPage : INode
+	public interface IPage
 	{
 		DateTime DateTime { get; }
 		uint PageLevel { get; }

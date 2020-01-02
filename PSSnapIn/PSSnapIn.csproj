@@ -52,29 +52,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="DOM\INamedObject.cs" />
+    <Compile Include="DOM\IOutlineElement.cs" />
+    <Compile Include="DOM\IUserCreatedObject.cs" />
+    <Compile Include="DOM\IIdentifiableObject.cs" />
     <Compile Include="DOM\INode.cs" />
     <Compile Include="DOM\INotebook.cs" />
-    <Compile Include="DOM\IRoot.cs" />
     <Compile Include="DOM\IPage.cs" />
     <Compile Include="DOM\ISection.cs" />
     <Compile Include="DOM\Node.cs" />
     <Compile Include="DOM\Notebook.cs" />
-    <Compile Include="DOM\Root.cs" />
+    <Compile Include="DOM\Outline.cs" />
+    <Compile Include="DOM\OutlineElement.cs" />
+    <Compile Include="DOM\Title.cs" />
     <Compile Include="DOM\Page.cs" />
     <Compile Include="DOM\Section.cs" />
     <Compile Include="PowerShell\DriveProvider.cs" />
     <Compile Include="PowerShell\GetNotebookRootCmdlet.cs" />
     <Compile Include="PowerShell\TestCmdlet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\ImageParser.cs" />
+    <Compile Include="Serialization\InkWordParser.cs" />
+    <Compile Include="Serialization\InkParagraphParser.cs" />
+    <Compile Include="Serialization\InkDrawingParser.cs" />
+    <Compile Include="Serialization\TableParser.cs" />
+    <Compile Include="Serialization\TagParser.cs" />
+    <Compile Include="Serialization\PageParser.cs" />
+    <Compile Include="Serialization\OutlineParser.cs" />
+    <Compile Include="Serialization\IndentsParser.cs" />
+    <Compile Include="Serialization\ListParser.cs" />
+    <Compile Include="Serialization\TagDefParser.cs" />
+    <Compile Include="Serialization\SizeParser.cs" />
+    <Compile Include="Serialization\PositionParser.cs" />
+    <Compile Include="Serialization\PageSettingsParser.cs" />
+    <Compile Include="Serialization\QuickStyleDefParser.cs" />
+    <Compile Include="Serialization\TitleParser.cs" />
+    <Compile Include="Serialization\OEParser.cs" />
+    <Compile Include="Serialization\TextParser.cs" />
+    <Compile Include="Serialization\OEChildrenParser.cs" />
     <Compile Include="Serialization\PageContentFormatter.cs" />
+    <Compile Include="Serialization\ParserBase.cs" />
     <Compile Include="SnapIn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Serialization\FormatterManager.cs" />
     <Compile Include="Serialization\IFormatter.cs" />
-    <Compile Include="Serialization\NotebooksFormatter.cs" />
-    <Compile Include="Serialization\PagesFormatter.cs" />
-    <Compile Include="Serialization\SectionsFormatter.cs" />
+    <Compile Include="Serialization\RootContentFormatter.cs" />
+    <Compile Include="Serialization\SectionContentFormatter.cs" />
+    <Compile Include="Serialization\NotebookContentFormatter.cs" />
     <Compile Include="Utilities\Validator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

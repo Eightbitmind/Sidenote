@@ -1,6 +1,6 @@
 ﻿namespace Sidenote.DOM
 {
-	public interface INotebook : INode
+	public interface INotebook
 	{
 		string Nickname { get; }
 		string Path { get; }

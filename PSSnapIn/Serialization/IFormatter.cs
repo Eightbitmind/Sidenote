@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Sidenote.Serialization
 {
-	interface IFormatter<T>
+	interface IFormatter
 	{
-		void Serialize(T obj, StringBuilder xml);
-		T Deserialize(Application app, INode parent);
+		void Serialize(INode node, StringBuilder xml);
+		bool Deserialize(Application app, INode parent);
 	}
 }

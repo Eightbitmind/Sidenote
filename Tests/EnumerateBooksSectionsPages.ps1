@@ -1,4 +1,4 @@
-﻿foreach ($notebook in (Get-NotebookRoot).Notebooks)
+﻿foreach ($notebook in (Get-NotebookRoot).Children)
 {
 	Write-Host "notebook `"$($notebook.Name)`""
 

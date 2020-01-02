@@ -193,14 +193,17 @@ namespace Sidenote.PowerShell
 			}
 
 			var app = ApplicationManager.Application;
-			IFormatter<IRoot> notebooksFormatter = FormatterManager.NotebooksFormatter;
-			IRoot root = notebooksFormatter.Deserialize(app, null);
+			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
+
+			INode root = new Node(ApplicationManager.Application, null);
+			bool success = notebooksFormatter.Deserialize(app, root);
+			Debug.Assert(success);
 
 			INode currentNode = null;
 
-			foreach (INotebook notebook in root.Notebooks)
+			foreach (INode notebook in root.Children)
 			{
-				if (string.Compare(pathParts[1], notebook.ID, StringComparison.OrdinalIgnoreCase) == 0)
+				if (string.Compare(pathParts[1], ((IIdentifiableObject)notebook).ID, StringComparison.OrdinalIgnoreCase) == 0)
 				{
 					currentNode = notebook;
 					break;
@@ -214,7 +217,7 @@ namespace Sidenote.PowerShell
 				bool foundChild = false;
 				foreach (INode child in currentNode.Children)
 				{
-					if (string.Compare(pathParts[i], child.ID, StringComparison.OrdinalIgnoreCase) == 0)
+					if (string.Compare(pathParts[i], ((IIdentifiableObject)child).ID, StringComparison.OrdinalIgnoreCase) == 0)
 					{
 						currentNode = child;
 						foundChild = true;
@@ -248,9 +251,6 @@ namespace Sidenote.PowerShell
 
 			return returnValue;
 #endif
-			bool returnValue = string.Compare(path, DriveProvider.driveName + DriveProvider.pathSeparator, StringComparison.OrdinalIgnoreCase) == 0;
-
-			return returnValue;
 		}
 
 		/// <summary>
@@ -291,12 +291,15 @@ namespace Sidenote.PowerShell
 			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
 
 			var app = ApplicationManager.Application;
-			IFormatter<IRoot> notebooksFormatter = FormatterManager.NotebooksFormatter;
-			IRoot root = notebooksFormatter.Deserialize(app, null);
+
+			INode root = new Node(ApplicationManager.Application, null);
+			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
+			bool success = notebooksFormatter.Deserialize(app, root);
+			Debug.Assert(success);
 
 			if (pathParts.Length == 1)
 			{
-				foreach (INotebook notebook in root.Notebooks)
+				foreach (IIdentifiableObject notebook in root.Children)
 				{
 					WriteItemObject(
 						item: notebook,
@@ -309,11 +312,12 @@ namespace Sidenote.PowerShell
 			INode currentNode = null;
 			StringBuilder childPath = new StringBuilder(DriveProvider.driveName);
 
-			foreach (INotebook notebook in root.Notebooks)
+			foreach (INode notebook in root.Children)
 			{
-				if (string.Compare(pathParts[1], notebook.ID, StringComparison.OrdinalIgnoreCase) == 0)
+				string id = ((IIdentifiableObject)notebook).ID;
+				if (string.Compare(pathParts[1], id, StringComparison.OrdinalIgnoreCase) == 0)
 				{
-					childPath.Append(DriveProvider.pathSeparatorChar).Append(notebook.ID);
+					childPath.Append(DriveProvider.pathSeparatorChar).Append(id);
 					currentNode = notebook;
 					break;
 				}
@@ -326,9 +330,10 @@ namespace Sidenote.PowerShell
 				bool foundChild = false;
 				foreach (INode child in currentNode.Children)
 				{
-					if (string.Compare(pathParts[i], child.ID, StringComparison.OrdinalIgnoreCase) == 0)
+					string id = ((IIdentifiableObject)child).ID;
+					if (string.Compare(pathParts[i], id, StringComparison.OrdinalIgnoreCase) == 0)
 					{
-						childPath.Append(DriveProvider.pathSeparatorChar).Append(child.ID);
+						childPath.Append(DriveProvider.pathSeparatorChar).Append(id);
 						currentNode = child;
 						foundChild = true;
 						break;
@@ -337,7 +342,7 @@ namespace Sidenote.PowerShell
 				Debug.Assert(foundChild);
 			}
 
-			foreach(INode child in currentNode.Children)
+			foreach(IIdentifiableObject child in currentNode.Children)
 			{
 				WriteItemObject(
 					item: child,

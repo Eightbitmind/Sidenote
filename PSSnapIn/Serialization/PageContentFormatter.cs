@@ -1,7 +1,5 @@
 ﻿using Microsoft.Office.Interop.OneNote;
 using Sidenote.DOM;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -9,73 +7,36 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PageContentFormatter : IFormatter<IList<INode>>
+	internal class PageContentFormatter : IFormatter
 	{
-		public void Serialize(IList<INode> sections, StringBuilder xml)
+		public void Serialize(INode parent, StringBuilder xml)
 		{
 			// TODO: implement
 		}
 
-		public IList<INode> Deserialize(Application app, INode parent)
+		public bool Deserialize(Application app, INode page)
 		{
 			string pageXml;
-			// app.GetHierarchy(parent.ID, HierarchyScope.hsChildren, out childrenXml);
-			
 			app.GetPageContent(
-				parent.ID,
+				((IIdentifiableObject)page).ID,
 				out pageXml,
 				PageInfo.piBasic, // 'piBasic' is the default
 				XMLSchema.xs2013);
 
 			Debug.Assert(!string.IsNullOrEmpty(pageXml));
 			var textReader = new StringReader(pageXml);
-			XmlReader xmlReader = XmlReader.Create(textReader);
 
-			// ---
+			var xmlReaderSettings = new XmlReaderSettings();
+			xmlReaderSettings.IgnoreComments = true;
+			xmlReaderSettings.IgnoreWhitespace = true;
+			xmlReaderSettings.IgnoreProcessingInstructions = true;
+			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			List<INode> pageContent = new List<INode>();
-
-			Debug.Assert(xmlReader.IsStartElement() && string.CompareOrdinal(xmlReader.LocalName, "Section") == 0);
-			bool expectEndElement = !xmlReader.IsEmptyElement;
-			Debug.Assert(xmlReader.Read());
-
-			while (true)
+			if (!PageParser.Instance.Parse(xmlReader, app, page))
 			{
-				INode contentItem;
-
-				if (
-					ParseQuickStyleDef(xmlReader, app, parent, out contentItem)
-					// || ParsePageSettings()
-					)
-				{
-
-					pageContent.Add(contentItem);
-				}
-				else
-				{
-					break;
-				}
-			}
-
-			if (expectEndElement) xmlReader.ReadEndElement();
-
-			return pageContent;
-		}
-
-		private bool ParseQuickStyleDef(XmlReader xmlReader, Application app, INode parent, out INode quickStyleDef)
-		{
-			quickStyleDef = null;
-
-			if (!xmlReader.IsStartElement() || string.CompareOrdinal(xmlReader.LocalName, "QuickStyleDef") != 0)
-			{
+				Debug.Assert(false, "unexpected page content");
 				return false;
 			}
-
-			bool expectEndElement = !xmlReader.IsEmptyElement;
-
-			// ignore QuickStyleDefs for now
-
-			if (expectEndElement) xmlReader.ReadEndElement();
 
 			return true;
 		}
