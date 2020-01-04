@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public ImageParser() : base("Image") { }
 
-		internal override bool Parse(XmlReader reader, Application app, INode parent)
+		internal override bool Parse(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
 			{

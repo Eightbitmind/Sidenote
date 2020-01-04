@@ -15,10 +15,10 @@ namespace Sidenote.Serialization
 			// TODO: implement
 		}
 
-		public bool Deserialize(Application app, INode section)
+		public bool Deserialize(INode section)
 		{
 			string childrenXml;
-			app.GetHierarchy(((IIdentifiableObject)section).ID, HierarchyScope.hsChildren, out childrenXml);
+			ApplicationManager.Application.GetHierarchy(((IIdentifiableObject)section).ID, HierarchyScope.hsChildren, out childrenXml);
 			Debug.Assert(!string.IsNullOrEmpty(childrenXml));
 			var textReader = new StringReader(childrenXml);
 
@@ -28,7 +28,7 @@ namespace Sidenote.Serialization
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!ParseSectionContent(xmlReader, app, section))
+			if (!ParseSectionContent(xmlReader, section))
 			{
 				Debug.Assert(false, "unexpected section content");
 				return false;
@@ -38,7 +38,7 @@ namespace Sidenote.Serialization
 		}
 
 		// Replace with SectionContentParser?
-		private static bool ParseSectionContent(XmlReader reader, Application app, INode parent)
+		private static bool ParseSectionContent(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Section") != 0)
 			{
@@ -49,7 +49,7 @@ namespace Sidenote.Serialization
 
 			reader.ReadStartElement();
 
-			while (ParsePage(reader, app, parent)) ;
+			while (ParsePage(reader, parent)) ;
 
 			if (expectEndElement) reader.ReadEndElement();
 
@@ -57,7 +57,7 @@ namespace Sidenote.Serialization
 		}
 
 		// TODO: Replace with PageParser?
-		private static bool ParsePage(XmlReader reader, Application app, INode parent)
+		private static bool ParsePage(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Page") != 0)
 			{
@@ -74,7 +74,7 @@ namespace Sidenote.Serialization
 
 			reader.ReadStartElement();
 
-			parent.Children.Add(new Page(app, parent, name, id, lastModifiedTime, dateTime, pageLevel));
+			parent.Children.Add(new Page(parent, name, id, lastModifiedTime, dateTime, pageLevel));
 
 			if (expectEndElement) reader.ReadEndElement();
 

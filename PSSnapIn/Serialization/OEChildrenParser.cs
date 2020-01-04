@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System;
 using System.Xml;
 
@@ -9,12 +8,12 @@ namespace Sidenote.Serialization
 	{
 		public OEChildrenParser() : base("OEChildren") { }
 
-		protected override bool ParseChildren(XmlReader reader, Application app, INode parent)
+		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					OEParser.Instance.Parse(reader, app, parent)
+					OEParser.Instance.Parse(reader, parent)
 				))
 				{
 					throw new Exception("unexpected OEChildren child element " + reader.LocalName);

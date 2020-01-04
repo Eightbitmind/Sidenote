@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System;
 using System.Xml;
 
@@ -9,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public OEParser() : base("OE") { }
 
-		protected override bool ParseAttributes(XmlReader reader, Application app, INode parent)
+		protected override bool ParseAttributes(XmlReader reader, INode parent)
 		{
 			string id = reader.GetAttribute("objectID");
 			string author = reader.GetAttribute("author");
@@ -23,7 +22,6 @@ namespace Sidenote.Serialization
 			string alignment = reader.GetAttribute("alignment");
 
 			this.outlineElement = new OutlineElement(
-				app,
 				parent,
 				id,
 				author,
@@ -45,19 +43,19 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool ParseChildren(XmlReader reader, Application app, INode parent)
+		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					TextParser.Instance.Parse(reader, app, this.outlineElement) ||
-					ListParser.Instance.Parse(reader, app, this.outlineElement) ||
-					TagParser.Instance.Parse(reader, app, this.outlineElement) ||
-					TableParser.Instance.Parse(reader, app, this.outlineElement) ||
-					ImageParser.Instance.Parse(reader, app, this.outlineElement) ||
-					InkParagraphParser.Instance.Parse(reader, app, this.outlineElement) ||
-					InkWordParser.Instance.Parse(reader, app, this.outlineElement) ||
-					OEChildrenParser.Instance.Parse(reader, app, this.outlineElement)
+					TextParser.Instance.Parse(reader, this.outlineElement) ||
+					ListParser.Instance.Parse(reader, this.outlineElement) ||
+					TagParser.Instance.Parse(reader, this.outlineElement) ||
+					TableParser.Instance.Parse(reader, this.outlineElement) ||
+					ImageParser.Instance.Parse(reader, this.outlineElement) ||
+					InkParagraphParser.Instance.Parse(reader, this.outlineElement) ||
+					InkWordParser.Instance.Parse(reader, this.outlineElement) ||
+					OEChildrenParser.Instance.Parse(reader, this.outlineElement)
 				))
 				{
 					throw new Exception("unexpected OE child " + reader.LocalName);

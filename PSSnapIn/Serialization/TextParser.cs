@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System.Xml;
 
 namespace Sidenote.Serialization
@@ -8,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public TextParser() : base("T") { }
 
-		protected override bool ParseChildren(XmlReader reader, Application app, INode parent)
+		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
 			((OutlineElement)parent).SetText(reader.ReadContentAsString());
 			return true;

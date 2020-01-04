@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System;
 using System.Xml;
 
@@ -14,11 +13,11 @@ namespace Sidenote.Serialization
 		//	// Do something with 'lang' attribute?
 		// }
 
-		protected override bool ParseChildren(XmlReader reader, Application app, INode parent)
+		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
-			Title title = new Title(app, parent);
+			Title title = new Title(parent);
 
-			if (!OEParser.Instance.Parse(reader, app, title))
+			if (!OEParser.Instance.Parse(reader, title))
 			{
 				throw new Exception("Title element missing OE");
 			}

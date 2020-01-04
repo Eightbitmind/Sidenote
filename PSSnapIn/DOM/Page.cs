@@ -18,7 +18,7 @@ namespace Sidenote.DOM
 				{
 					this.children = new List<INode>();
 					IFormatter formatter = FormatterManager.PageContentFormatter;
-					bool success = formatter.Deserialize(this.App, this);
+					bool success = formatter.Deserialize(this);
 					Debug.Assert(success);
 				}
 
@@ -56,8 +56,8 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Page(Application app, INode parent, string name, string id, DateTime lastModifiedTime, DateTime dateTime, uint pageLevel)
-			: base(app, parent)
+		internal Page(INode parent, string name, string id, DateTime lastModifiedTime, DateTime dateTime, uint pageLevel)
+			: base(parent)
 		{
 			this.ID = id;
 			this.Name = name;

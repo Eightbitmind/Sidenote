@@ -18,7 +18,7 @@ namespace Sidenote.DOM
 				{
 					this.children = new List<INode>();
 					IFormatter formatter = FormatterManager.SectionContentFormatter;
-					bool success = formatter.Deserialize(this.App, this);
+					bool success = formatter.Deserialize(this);
 					Debug.Assert(success);
 				}
 
@@ -56,8 +56,8 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Section(Application app, INode parent, string name, string id, DateTime lastModifiedTime, string path, string Color)
-			: base(app, parent)
+		internal Section(INode parent, string name, string id, DateTime lastModifiedTime, string path, string Color)
+			: base(parent)
 		{
 			this.ID = id;
 			this.Name = name;

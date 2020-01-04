@@ -15,10 +15,10 @@ namespace Sidenote.Serialization
 			// TODO: implement
 		}
 
-		public bool Deserialize(Application app, INode notebook)
+		public bool Deserialize(INode notebook)
 		{
 			string childrenXml;
-			app.GetHierarchy(((IIdentifiableObject)notebook).ID, HierarchyScope.hsChildren, out childrenXml);
+			ApplicationManager.Application.GetHierarchy(((IIdentifiableObject)notebook).ID, HierarchyScope.hsChildren, out childrenXml);
 			Debug.Assert(!string.IsNullOrEmpty(childrenXml));
 			var textReader = new StringReader(childrenXml);
 
@@ -28,7 +28,7 @@ namespace Sidenote.Serialization
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!ParseNotebookContent(xmlReader, app, notebook))
+			if (!ParseNotebookContent(xmlReader, notebook))
 			{
 				Debug.Assert(false, "unexpected notebook content");
 				return false;
@@ -37,7 +37,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		private static bool ParseNotebookContent(XmlReader reader, Application app, INode notebook)
+		private static bool ParseNotebookContent(XmlReader reader, INode notebook)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Notebook") != 0)
 			{
@@ -48,8 +48,8 @@ namespace Sidenote.Serialization
 			reader.ReadStartElement();
 
 			while (
-				ParseSection(reader, app, notebook) ||
-				ParseSectionGroup(reader, app)
+				ParseSection(reader, notebook) ||
+				ParseSectionGroup(reader)
 			) ;
 
 			if (expectEndElement) reader.ReadEndElement();
@@ -57,7 +57,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		private static bool ParseSection(XmlReader reader, Application app, INode parent)
+		private static bool ParseSection(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Section") != 0)
 			{
@@ -76,14 +76,14 @@ namespace Sidenote.Serialization
 
 			reader.ReadStartElement();
 
-			parent.Children.Add(new Section(app, parent, name, id, lastModifiedTime, path, color));
+			parent.Children.Add(new Section(parent, name, id, lastModifiedTime, path, color));
 
 			if (expectEndElement) reader.ReadEndElement();
 
 			return true;
 		}
 
-		private static bool ParseSectionGroup(XmlReader reader, Application app)
+		private static bool ParseSectionGroup(XmlReader reader)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "SectionGroup") != 0)
 			{
@@ -94,8 +94,8 @@ namespace Sidenote.Serialization
 			reader.ReadStartElement();
 
 			// ignore content of section groups for now
-			Node unused = new Node(app, null);
-			while (ParseSection(reader, null, unused)) ;
+			Node unused = new Node(null);
+			while (ParseSection(reader, unused)) ;
 
 			if (expectEndElement) reader.ReadEndElement();
 			return true;

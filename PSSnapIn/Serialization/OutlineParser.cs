@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System;
 using System.Xml;
 
@@ -9,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public OutlineParser() : base("Outline") { }
 
-		protected override bool ParseAttributes(XmlReader reader, Application app, INode parent)
+		protected override bool ParseAttributes(XmlReader reader, INode parent)
 		{
 			string id = reader.GetAttribute("objectID");
 			string author = reader.GetAttribute("author");
@@ -22,7 +21,6 @@ namespace Sidenote.Serialization
 			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 
 			this.outline = new Outline(
-				app,
 				parent,
 				id,
 				author,
@@ -35,15 +33,15 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool ParseChildren(XmlReader reader, Application app, INode parent)
+		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					PositionParser.Instance.Parse(reader, app, this.outline) ||
-					SizeParser.Instance.Parse(reader, app, this.outline) ||
-					IndentsParser.Instance.Parse(reader, app, this.outline) ||
-					OEChildrenParser.Instance.Parse(reader, app, this.outline)
+					PositionParser.Instance.Parse(reader, this.outline) ||
+					SizeParser.Instance.Parse(reader, this.outline) ||
+					IndentsParser.Instance.Parse(reader, this.outline) ||
+					OEChildrenParser.Instance.Parse(reader, this.outline)
 				))
 				{
 					throw new Exception("unexpected Outline child " + reader.LocalName);

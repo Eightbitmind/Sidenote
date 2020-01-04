@@ -1,12 +1,11 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
 	internal abstract class ParserBase<TDerived> where TDerived : new()
 	{
-		internal virtual bool Parse(XmlReader reader, Application app, INode parent)
+		internal virtual bool Parse(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
 			{
@@ -15,14 +14,14 @@ namespace Sidenote.Serialization
 
 			bool expectEndElement = !reader.IsEmptyElement;
 
-			if (!ParseAttributes(reader, app, parent))
+			if (!ParseAttributes(reader, parent))
 			{
 				return false;
 			}
 
 			reader.ReadStartElement();
 
-			if (!ParseChildren(reader, app, parent))
+			if (!ParseChildren(reader, parent))
 			{
 				return false;
 			}
@@ -31,12 +30,12 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected virtual bool ParseAttributes(XmlReader reader, Application app, INode parent)
+		protected virtual bool ParseAttributes(XmlReader reader, INode parent)
 		{
 			return true;
 		}
 
-		protected virtual bool ParseChildren(XmlReader reader, Application app, INode parent)
+		protected virtual bool ParseChildren(XmlReader reader, INode parent)
 		{
 			return true;
 		}

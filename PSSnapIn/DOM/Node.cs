@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Sidenote.DOM
 {
@@ -23,13 +22,11 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Node (Application app, INode parent)
+		internal Node (INode parent)
 		{
-			this.App = app;
 			this.Parent = parent;
 		}
 
-		protected Application App { get; }
 		protected IList<INode> children;
 	}
 }

@@ -9,9 +9,9 @@ namespace Sidenote.Client
 	{
 		protected override void ProcessRecord()
 		{
-			INode root = new Node(ApplicationManager.Application, null);
+			INode root = new Node(null);
 			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
-			notebooksFormatter.Deserialize(ApplicationManager.Application, root);
+			notebooksFormatter.Deserialize(root);
 			WriteObject(root);
 		}
 	}

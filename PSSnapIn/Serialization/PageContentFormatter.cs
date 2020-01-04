@@ -14,10 +14,10 @@ namespace Sidenote.Serialization
 			// TODO: implement
 		}
 
-		public bool Deserialize(Application app, INode page)
+		public bool Deserialize(INode page)
 		{
 			string pageXml;
-			app.GetPageContent(
+			ApplicationManager.Application.GetPageContent(
 				((IIdentifiableObject)page).ID,
 				out pageXml,
 				PageInfo.piBasic, // 'piBasic' is the default
@@ -32,7 +32,7 @@ namespace Sidenote.Serialization
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!PageParser.Instance.Parse(xmlReader, app, page))
+			if (!PageParser.Instance.Parse(xmlReader, page))
 			{
 				Debug.Assert(false, "unexpected page content");
 				return false;

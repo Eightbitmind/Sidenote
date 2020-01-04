@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System.Xml;
 
 namespace Sidenote.Serialization
@@ -8,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public TableParser() : base("Table") { }
 
-		internal override bool Parse(XmlReader reader, Application app, INode parent)
+		internal override bool Parse(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
 			{

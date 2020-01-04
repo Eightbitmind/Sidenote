@@ -15,10 +15,10 @@ namespace Sidenote.Serialization
 			// TODO: implement
 		}
 
-		public bool Deserialize(Application app, INode root)
+		public bool Deserialize(INode root)
 		{
 			string childrenXml;
-			app.GetHierarchy(null, HierarchyScope.hsChildren, out childrenXml);
+			ApplicationManager.Application.GetHierarchy(null, HierarchyScope.hsChildren, out childrenXml);
 			Debug.Assert(!string.IsNullOrEmpty(childrenXml));
 			var textReader = new StringReader(childrenXml);
 
@@ -28,7 +28,7 @@ namespace Sidenote.Serialization
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!ParseNotebooks(xmlReader, app, root))
+			if (!ParseNotebooks(xmlReader, root))
 			{
 				Debug.Assert(false, "unexpected root content");
 				return false;
@@ -38,7 +38,7 @@ namespace Sidenote.Serialization
 		}
 
 		// TODO: Replace with NotebookParser?
-		private static bool ParseNotebooks(XmlReader reader, Application app, INode root)
+		private static bool ParseNotebooks(XmlReader reader, INode root)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Notebooks") != 0)
 			{
@@ -50,7 +50,7 @@ namespace Sidenote.Serialization
 
 			bool parsedAtLeastOneNotebook = false;
 
-			while (ParseNotebook(reader, app, root))
+			while (ParseNotebook(reader, root))
 			{
 				parsedAtLeastOneNotebook = true;
 			}
@@ -62,7 +62,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		private static bool ParseNotebook(XmlReader reader, Application app, INode root)
+		private static bool ParseNotebook(XmlReader reader, INode root)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Notebook") != 0)
 			{
@@ -76,7 +76,7 @@ namespace Sidenote.Serialization
 			string id = reader.GetAttribute("ID");
 			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 
-			var notebook = new Notebook(app, root, name, id, lastModifiedTime);
+			var notebook = new Notebook(root, name, id, lastModifiedTime);
 			root.Children.Add(notebook);
 
 			reader.ReadStartElement();

@@ -12,6 +12,8 @@ using System.Text.RegularExpressions;
 
 namespace Sidenote.PowerShell
 {
+	// Get-Content : Cannot use interface. The IContentCmdletProvider interface is not implemented by this provider.
+
 	[CmdletProvider(
 		"OneNote", // e.g. Provider name in the Get-PSDrive output
 		ProviderCapabilities.None
@@ -164,6 +166,7 @@ namespace Sidenote.PowerShell
 		/// </remarks>
 		protected override void GetItem(string path)
 		{
+			throw new Exception("when is it used");
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -195,8 +198,8 @@ namespace Sidenote.PowerShell
 			var app = ApplicationManager.Application;
 			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
 
-			INode root = new Node(ApplicationManager.Application, null);
-			bool success = notebooksFormatter.Deserialize(app, root);
+			INode root = new Node(null);
+			bool success = notebooksFormatter.Deserialize(root);
 			Debug.Assert(success);
 
 			INode currentNode = null;
@@ -292,9 +295,9 @@ namespace Sidenote.PowerShell
 
 			var app = ApplicationManager.Application;
 
-			INode root = new Node(ApplicationManager.Application, null);
+			INode root = new Node(null);
 			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
-			bool success = notebooksFormatter.Deserialize(app, root);
+			bool success = notebooksFormatter.Deserialize(root);
 			Debug.Assert(success);
 
 			if (pathParts.Length == 1)

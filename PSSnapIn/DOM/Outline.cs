@@ -21,14 +21,13 @@ namespace Sidenote.DOM
 		#endregion
 
 		internal Outline(
-			Application app,
 			INode parent,
 			string id,
 			string author,
 			string authorInitials,
 			DateTime creationTime,
 			DateTime lastModifiedTime)
-			: base(app, parent)
+			: base(parent)
 		{
 			this.ID = id;
 

@@ -18,7 +18,7 @@ namespace Sidenote.DOM
 				{
 					this.children = new List<INode>();
 					IFormatter formatter = FormatterManager.NotebookContentFormatter;
-					bool success = formatter.Deserialize(this.App, this);
+					bool success = formatter.Deserialize(this);
 					Debug.Assert(success);
 				}
 
@@ -58,8 +58,8 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Notebook(Application app, INode parent, string name, string id, DateTime lastModifiedTime)
-			: base(app, parent)
+		internal Notebook(INode parent, string name, string id, DateTime lastModifiedTime)
+			: base(parent)
 		{
 			this.Name = name;
 			this.ID = id;
