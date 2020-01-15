@@ -179,9 +179,21 @@ namespace Sidenote.PowerShell
 		/// <remarks>
 		/// Must be implemented (base method throws PSNotSupportedException). Needed to access to the provider objects using the Get-Item and Get-Childitem cmdlets.
 		/// </remarks>
+		/// <example>
+		/// Get-Item 'ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}'
+		/// 	GetItem(@"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}")
+		/// </example>
 		protected override void GetItem(string path)
 		{
-			throw new Exception("When is this method used?");
+			INode node = this.GetNode(path);
+
+			if (node == null) return;
+
+			WriteItemObject(
+				item: node,
+				path: path,
+				isContainer: /* TODO: Calculate? */ true);
+
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -226,8 +238,6 @@ namespace Sidenote.PowerShell
 			}
 
 			return currentNode;
-
-
 		}
 
 		/// <summary>
