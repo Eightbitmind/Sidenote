@@ -14,6 +14,21 @@ namespace Sidenote.PowerShell
 {
 	// Get-Content : Cannot use interface. The IContentCmdletProvider interface is not implemented by this provider.
 
+	// Commands and the provider calls they generate
+	//
+	// ls on:
+	// 		ItemExists(path @"ON:\")
+	// 		IsItemContainer(path: @"ON:\")
+	// 		GetChildItems(path: @"ON:\", recurse: false)
+	// 			GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+	// 		
+	// ls "on:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+	// 		GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+	// 		ItemExists(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+	// 		IsItemContainer(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+	// 		GetChildItems(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}", recurse: false)
+
 	[CmdletProvider(
 		"OneNote", // e.g. Provider name in the Get-PSDrive output
 		ProviderCapabilities.None
@@ -166,7 +181,7 @@ namespace Sidenote.PowerShell
 		/// </remarks>
 		protected override void GetItem(string path)
 		{
-			throw new Exception("when is it used");
+			throw new Exception("When is this method used?");
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -180,57 +195,97 @@ namespace Sidenote.PowerShell
 #endif
 		}
 
+		private INode GetNode(string path)
+		{
+			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+
+			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
+
+			INode currentNode = new Node(null);
+			bool success = notebooksFormatter.Deserialize(currentNode);
+			Debug.Assert(success);
+
+			for (int i = 1; i < pathParts.Length; ++i)
+			{
+				bool foundChild = false;
+				foreach (INode child in currentNode.Children)
+				{
+					var identifiableChild = child as IIdentifiableObject;
+
+					if (identifiableChild != null)
+					{
+						if (string.Compare(pathParts[i], identifiableChild.ID, StringComparison.OrdinalIgnoreCase) == 0)
+						{
+							currentNode = child;
+							foundChild = true;
+							break;
+						}
+					}
+				}
+				if (!foundChild) return null;
+			}
+
+			return currentNode;
+
+
+		}
+
 		/// <summary>
 		/// 
 		/// </summary>
 		/// <param name="path"></param>
 		/// <returns></returns>
-		/// <remarks>
+		/// <example>
+		/// ls on:
+		/// 	ItemExists(path: @"ON:\")
+		/// 	
+		/// 	The drive name has been capitalized and a path separator has been
+		/// 	appended.
+		/// 	
+		/// ls "on:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+		/// 	ItemExists(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+		/// 	
+		/// 	The drive name has been capitalized.
+		/// 	
+		/// </example>
 		protected override bool ItemExists(string path)
 		{
-			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+			//string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
 
-			if (pathParts.Length == 1)
-			{
-				return true;
-			}
+			//if (pathParts.Length == 1)
+			//{
+			//	return true;
+			//}
 
-			var app = ApplicationManager.Application;
-			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
+			//IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
 
-			INode root = new Node(null);
-			bool success = notebooksFormatter.Deserialize(root);
-			Debug.Assert(success);
+			//INode currentNode = new Node(null);
+			//bool success = notebooksFormatter.Deserialize(currentNode);
+			//Debug.Assert(success);
 
-			INode currentNode = null;
+			//for (int i = 1; i < pathParts.Length; ++i)
+			//{
+			//	bool foundChild = false;
+			//	foreach (INode child in currentNode.Children)
+			//	{
+			//		var identifiableChild = child as IIdentifiableObject;
 
-			foreach (INode notebook in root.Children)
-			{
-				if (string.Compare(pathParts[1], ((IIdentifiableObject)notebook).ID, StringComparison.OrdinalIgnoreCase) == 0)
-				{
-					currentNode = notebook;
-					break;
-				}
-			}
+			//		if (identifiableChild != null)
+			//		{
+			//			if (string.Compare(pathParts[i], identifiableChild.ID, StringComparison.OrdinalIgnoreCase) == 0)
+			//			{
+			//				currentNode = child;
+			//				foundChild = true;
+			//				break;
+			//			}
+			//		}
+			//	}
+			//	if (!foundChild) return false;
+			//}
 
-			if (currentNode == null) return false;
+			//return true;
 
-			for (int i = 2; i < pathParts.Length; ++i)
-			{
-				bool foundChild = false;
-				foreach (INode child in currentNode.Children)
-				{
-					if (string.Compare(pathParts[i], ((IIdentifiableObject)child).ID, StringComparison.OrdinalIgnoreCase) == 0)
-					{
-						currentNode = child;
-						foundChild = true;
-						break;
-					}
-				}
-				if (!foundChild) return false;
-			}
-
-			return true;
+			return this.GetNode(path) != null;
 
 #if YELLOWBOX_BONEYARD
 			bool returnValue = false;
@@ -266,8 +321,7 @@ namespace Sidenote.PowerShell
 		/// </remarks>
 		protected override bool IsValidPath(string path)
 		{
-			Debug.Assert(false, "In what scenario is this method being hit?");
-			return true;
+			throw new Exception("When is this method used?");
 		}
 
 		#endregion
@@ -286,71 +340,69 @@ namespace Sidenote.PowerShell
 		/// current drive's 'root' path.
 		/// This method is called with commands like "ls abc". However, a command like
 		/// "ls *" will invoke the 'GetChildNames' instead.
-		/// 
-		/// "ls n:" ==> path = @"\2A.1B0D08\"
 		/// </remarks>
+		/// <example>
+		/// ls on:
+		/// 	GetChildItems(path: @"ON:\", recurse: false)
+		/// 	
+		/// 	The drive name has been capitalized and a trailing path separator has been appended
+		/// 	even though it was not specified in the 'ls' command.
+		/// 	
+		/// ls "ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+		/// 	GetChildItems(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}", recurse: false)
+		/// 	
+		/// 	Note the absence of a trailing path separator.
+		/// 	
+		/// </example>
 		protected override void GetChildItems(string path, bool recurse)
 		{
-			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+			//string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
 
-			var app = ApplicationManager.Application;
+			//INode currentNode = new Node(null);
+			//IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
+			//bool success = notebooksFormatter.Deserialize(currentNode);
+			//Debug.Assert(success);
 
-			INode root = new Node(null);
-			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
-			bool success = notebooksFormatter.Deserialize(root);
-			Debug.Assert(success);
+			//StringBuilder childPath = new StringBuilder(DriveProvider.driveName);
 
-			if (pathParts.Length == 1)
+			//for (int i = 1; i < pathParts.Length; ++i)
+			//{
+			//	bool foundChild = false;
+			//	foreach (INode child in currentNode.Children)
+			//	{
+			//		var identifiableChild = child as IIdentifiableObject;
+			//		if (identifiableChild != null)
+			//		{
+			//			string id = identifiableChild.ID;
+			//			if (string.Compare(pathParts[i], id, StringComparison.OrdinalIgnoreCase) == 0)
+			//			{
+			//				childPath.Append(DriveProvider.pathSeparatorChar).Append(id);
+			//				currentNode = child;
+			//				foundChild = true;
+			//				break;
+			//			}
+			//		}
+			//	}
+			//	Debug.Assert(foundChild);
+			//}
+
+			INode node = this.GetNode(path);
+
+			if (node == null) return;
+
+			string childPathPrefix = path.EndsWith(DriveProvider.pathSeparator) ? path : path + DriveProvider.pathSeparator;
+
+			foreach (INode child in node.Children)
 			{
-				foreach (IIdentifiableObject notebook in root.Children)
+				var identifiableChild = child as IIdentifiableObject;
+				if (identifiableChild != null)
 				{
+					string childPath = childPathPrefix + identifiableChild.ID;
 					WriteItemObject(
-						item: notebook,
-						path: DriveProvider.driveName + DriveProvider.pathSeparator + notebook.ID,
+						item: child,
+						path: childPath,
 						isContainer: true);
 				}
-				return;
-			}
-
-			INode currentNode = null;
-			StringBuilder childPath = new StringBuilder(DriveProvider.driveName);
-
-			foreach (INode notebook in root.Children)
-			{
-				string id = ((IIdentifiableObject)notebook).ID;
-				if (string.Compare(pathParts[1], id, StringComparison.OrdinalIgnoreCase) == 0)
-				{
-					childPath.Append(DriveProvider.pathSeparatorChar).Append(id);
-					currentNode = notebook;
-					break;
-				}
-			}
-
-			Debug.Assert(currentNode != null);
-
-			for (int i = 2; i < pathParts.Length; ++i)
-			{
-				bool foundChild = false;
-				foreach (INode child in currentNode.Children)
-				{
-					string id = ((IIdentifiableObject)child).ID;
-					if (string.Compare(pathParts[i], id, StringComparison.OrdinalIgnoreCase) == 0)
-					{
-						childPath.Append(DriveProvider.pathSeparatorChar).Append(id);
-						currentNode = child;
-						foundChild = true;
-						break;
-					}
-				}
-				Debug.Assert(foundChild);
-			}
-
-			foreach(IIdentifiableObject child in currentNode.Children)
-			{
-				WriteItemObject(
-					item: child,
-					path: childPath + DriveProvider.pathSeparator + child.ID,
-					isContainer: true);
 			}
 
 #if YELLOWBOX_BONEYARD
@@ -394,6 +446,7 @@ namespace Sidenote.PowerShell
 		/// </remarks>
 		protected override void GetChildNames(string path, ReturnContainers returnContainers)
 		{
+			throw new Exception("When is this method used?");
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -426,6 +479,7 @@ namespace Sidenote.PowerShell
 		/// </remarks>
 		protected override bool HasChildItems(string path)
 		{
+			throw new Exception("When is this method used?");
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -438,17 +492,33 @@ namespace Sidenote.PowerShell
 			bool returnValue = UIAManager.CurrentTreeWalker.GetFirstChildElement(parent) != null;
 			return returnValue;
 #endif
-			return false;
 		}
 
 		#endregion
 
 		#region NavigationCmdletProvider members
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
+		/// <example>
+		/// ls on:
+		/// 	GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+		/// 	
+		///	ls "on:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+		/// 	GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+		/// 	
+		/// </example>
 		protected override string GetChildName(string path)
 		{
-			//Debug.Assert(pathPattern.IsMatch(path));
-			string childName = path.Substring(path.LastIndexOf(pathSeparator) + 1);
+			int separatorPos = path.LastIndexOf(pathSeparator);
+
+			Debug.Assert(separatorPos > 0);
+			Debug.Assert(separatorPos < path.Length - 1);
+
+			string childName = path.Substring(separatorPos + 1);
 			return childName;
 		}
 
@@ -457,17 +527,23 @@ namespace Sidenote.PowerShell
 		/// </summary>
 		/// <param name="path"></param>
 		/// <returns>True if the item is a container.</returns>
-		/// <remarks>
-		/// I guess that since every UI element can have child UI elements this method is
-		/// irrelevant for our UIA provider. This method might matter for something like
-		/// a registry provider where keys are containers (they can contain other keys or
-		/// values) while values are not.
-		/// </remarks>
+		/// <example>
+		/// ls on:
+		/// 	IsItemContainer(path: @"ON:\")
+		/// 	
+		/// ls "on:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+		/// 	IsItemContainer(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+		/// </example>
 		protected override bool IsItemContainer(string path)
 		{
+			INode node = this.GetNode(path);
+			if (node == null) return false;
+			return node.Children.Count > 0;
+
+			// throw new Exception("When is this method used?");
 			// 'base.IsItemContainer(path);' throws NotSupported exception
 			// return HasChildItems(path); // wouldn't allow us to cd into a leave UI element
-			return true;
+			// return true;
 		}
 
 		#endregion

@@ -28,6 +28,7 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="EnumerateBooksSectionsPages.ps1" />
+    <Compile Include="TestOneNoteDrive.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
