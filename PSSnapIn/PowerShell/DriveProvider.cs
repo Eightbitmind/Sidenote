@@ -16,18 +16,119 @@ namespace Sidenote.PowerShell
 
 	// Commands and the provider calls they generate
 	//
-	// ls on:
+	// State:
+	// 		current location on file system drive
+	// Command:
+	// 		ls on:
+	// Resulting Provider Calls:
 	// 		ItemExists(path @"ON:\")
 	// 		IsItemContainer(path: @"ON:\")
 	// 		GetChildItems(path: @"ON:\", recurse: false)
 	// 			GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
-	// 		
-	// ls "on:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+	//
+	// State:
+	// 		current location on file system drive
+	// Command:
+	// 		ls "on:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}"
+	// Resulting Provider Calls:
 	// 		GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
 	// 		GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
 	// 		ItemExists(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
 	// 		IsItemContainer(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
 	// 		GetChildItems(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}", recurse: false)
+	//
+	// State:
+	// 		current location on file system drive
+	// Command:
+	//		cd on:\
+	// Resulting Provider Calls:
+	// 		ItemExists(path: @"ON:\")
+	// 		IsItemContainer(path: @"ON:\")
+	//
+	// State:
+	// 		current location "ON:\"
+	// Command:
+	// 		ls
+	// Resulting Provider Calls:
+	// 		Sidenote.dll!Sidenote.PowerShell.DriveProvider.ItemExists(path: @"ON:\")
+	// 		Sidenote.dll!Sidenote.PowerShell.DriveProvider.IsItemContainer(path: @"ON:\")
+	// 		Sidenote.dll!Sidenote.PowerShell.DriveProvider.GetChildItems(path: @"ON:\", recurse: false)
+	// 			Sidenote.dll!Sidenote.PowerShell.DriveProvider.GetChildName(path: @"ON:\{3496EC60-2025-4F0E-93EB-3F832AB9702C}{1}{B0}")
+	// 			Sidenote.dll!Sidenote.PowerShell.DriveProvider.GetChildName(path: @"ON:\{C5A8663C-AE9E-4490-9B34-2097252EFF5D}{1}{B0}")
+	// 			Sidenote.dll!Sidenote.PowerShell.DriveProvider.GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	//
+	// State:
+	// 		current location "C:\..."
+	// Command:
+	// 		cd 'on:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}'
+	// Resulting Provider Calls:
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		ItemExists(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	// 		GetChildName(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	//		...
+	// 		IsItemContainer(path: @"ON:\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}")
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
+	// State:
+	// 		
+	// Command:
+	// 		
+	// Resulting Provider Calls:
+	// 		
+	//
 
 	[CmdletProvider(
 		"OneNote", // e.g. Provider name in the Get-PSDrive output
