@@ -1,3 +1,10 @@
+# Drive Provider and Drive Rules
+
+- It seems PowerShell automatically upper-cases the drive name part of a path ("on:\..." -> "ON:\...")
+  before it passes the path as an argument to a drive provider method.
+- The drive name followed by nothing else but a colon (e.g. "on:") is being automatically expanded to
+  the current folder within the respective drive.
+ 
 # Considerations
 
 ## Identifiable Nodes as Drive Element
