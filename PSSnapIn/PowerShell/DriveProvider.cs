@@ -361,41 +361,6 @@ namespace Sidenote.PowerShell
 		/// </example>
 		protected override bool ItemExists(string path)
 		{
-			//string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
-
-			//if (pathParts.Length == 1)
-			//{
-			//	return true;
-			//}
-
-			//IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
-
-			//INode currentNode = new Node(null);
-			//bool success = notebooksFormatter.Deserialize(currentNode);
-			//Debug.Assert(success);
-
-			//for (int i = 1; i < pathParts.Length; ++i)
-			//{
-			//	bool foundChild = false;
-			//	foreach (INode child in currentNode.Children)
-			//	{
-			//		var identifiableChild = child as IIdentifiableObject;
-
-			//		if (identifiableChild != null)
-			//		{
-			//			if (string.Compare(pathParts[i], identifiableChild.ID, StringComparison.OrdinalIgnoreCase) == 0)
-			//			{
-			//				currentNode = child;
-			//				foundChild = true;
-			//				break;
-			//			}
-			//		}
-			//	}
-			//	if (!foundChild) return false;
-			//}
-
-			//return true;
-
 			return this.GetNode(path) != null;
 
 #if YELLOWBOX_BONEYARD
@@ -467,36 +432,6 @@ namespace Sidenote.PowerShell
 		/// </example>
 		protected override void GetChildItems(string path, bool recurse)
 		{
-			//string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
-
-			//INode currentNode = new Node(null);
-			//IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
-			//bool success = notebooksFormatter.Deserialize(currentNode);
-			//Debug.Assert(success);
-
-			//StringBuilder childPath = new StringBuilder(DriveProvider.driveName);
-
-			//for (int i = 1; i < pathParts.Length; ++i)
-			//{
-			//	bool foundChild = false;
-			//	foreach (INode child in currentNode.Children)
-			//	{
-			//		var identifiableChild = child as IIdentifiableObject;
-			//		if (identifiableChild != null)
-			//		{
-			//			string id = identifiableChild.ID;
-			//			if (string.Compare(pathParts[i], id, StringComparison.OrdinalIgnoreCase) == 0)
-			//			{
-			//				childPath.Append(DriveProvider.pathSeparatorChar).Append(id);
-			//				currentNode = child;
-			//				foundChild = true;
-			//				break;
-			//			}
-			//		}
-			//	}
-			//	Debug.Assert(foundChild);
-			//}
-
 			INode node = this.GetNode(path);
 
 			if (node == null) return;
@@ -731,7 +666,6 @@ namespace Sidenote.PowerShell
 
 			return current;
 		}
-#endif
 
 		private static string JoinPath(string path1, string path2)
 		{
@@ -813,6 +747,7 @@ namespace Sidenote.PowerShell
 		private static Regex pathPattern = new Regex(
 			@"^UI:(?:\\(?<pathItems>[\w.]+))*\\?$",
 			RegexOptions.Compiled | RegexOptions.CultureInvariant);
+#endif
 
 		private const string driveName = @"ON:";
 
