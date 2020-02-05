@@ -433,21 +433,33 @@ namespace Sidenote.PowerShell
 		protected override void GetChildItems(string path, bool recurse)
 		{
 			INode node = this.GetNode(path);
-
 			if (node == null) return;
 
-			string childPathPrefix = path.EndsWith(DriveProvider.pathSeparator) ? path : path + DriveProvider.pathSeparator;
+			uint maxDepth = recurse ? uint.MaxValue : 1;
+			path = path.EndsWith(DriveProvider.pathSeparator) ? path : path + DriveProvider.pathSeparator;
+			var queue = new Queue<Tuple<INode /* node */, string /* path */, uint /* depth */>>();
+			queue.Enqueue(new Tuple<INode, string, uint>(node, path, 0));
 
-			foreach (INode child in node.Children)
+			while (queue.Count > 0)
 			{
-				var identifiableChild = child as IIdentifiableObject;
-				if (identifiableChild != null)
+				Tuple<INode, string, uint> current = queue.Dequeue();
+
+				foreach (INode child in GetIdentifiableChildren(current.Item1))
 				{
-					string childPath = childPathPrefix + identifiableChild.ID;
+					string childPath = current.Item2 + ((IIdentifiableObject)child).ID;
+					uint childDepth = current.Item3 + 1;
+
+					IList<INode> grandChildren = GetIdentifiableChildren(child);
+
 					WriteItemObject(
 						item: child,
 						path: childPath,
-						isContainer: true);
+						isContainer: grandChildren.Count > 0);
+
+					if (childDepth < maxDepth && grandChildren.Count > 0)
+					{
+						queue.Enqueue(new Tuple<INode, string, uint>(child, childPath, childDepth));
+					}
 				}
 			}
 
@@ -749,8 +761,21 @@ namespace Sidenote.PowerShell
 			RegexOptions.Compiled | RegexOptions.CultureInvariant);
 #endif
 
-		private const string driveName = @"ON:";
+		private static IList<INode> GetIdentifiableChildren(INode node)
+		{
+			var identifiableChildren = new List<INode>();
+			foreach (INode child in node.Children)
+			{
+				IIdentifiableObject identifiableChild = child as IIdentifiableObject;
+				if (identifiableChild != null)
+				{
+					identifiableChildren.Add(identifiableChild);
+				}
+			}
+			return identifiableChildren;
+		}
 
+		private const string driveName = @"ON:";
 
 		private const char pathSeparatorChar = '\\';
 		private const string pathSeparator = @"\";

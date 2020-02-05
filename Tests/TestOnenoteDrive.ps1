@@ -71,6 +71,31 @@ class DriveTests {
 	}
 
 	[TestMethod()]
+	[void] GetChildItem_OutlineRecurse_YieldsExpectedOutlineElements() {
+		$outlineElements = Get-ChildItem -Recurse (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+		Test @(
+				@{Text = "USA"},
+				@{Text = "Oregon"},
+				@{Text = "Washington"},
+				@{Text = "Columbia County"},
+				@{Text = "Multnomah County"},
+				@{Text = "King County"},
+				@{Text = "Snohomish County"},
+				@{Text = "Clatskanie"},
+				@{Text = "Prescott"},
+				@{Text = "Portland"},
+				@{Text = "Troutdale"},
+				@{Text = "Bellevue"},
+				@{Text = "Issaquah"},
+				@{Text = "Seattle"},
+				@{Text = "Arlington"},
+				@{Text = "Edmonds"},
+				@{Text = "Everett"}
+			) `
+			$outlineElements
+	}
+
+	[TestMethod()]
 	[void] SetLocation_AbsolutePathToRoot() {
 		Push-Location
 		try {
