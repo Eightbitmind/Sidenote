@@ -92,9 +92,6 @@
     <Compile Include="Serialization\OEChildrenParser.cs" />
     <Compile Include="Serialization\PageContentFormatter.cs" />
     <Compile Include="Serialization\ParserBase.cs" />
-    <Compile Include="SnapIn.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Serialization\FormatterManager.cs" />
     <Compile Include="Serialization\IFormatter.cs" />
     <Compile Include="Serialization\RootContentFormatter.cs" />
