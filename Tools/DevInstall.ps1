@@ -12,7 +12,8 @@ param(
 	[string] $TargetDir = "$HOME\Tools\WindowsPowerShell\Modules\Sidenote"
 	)
 
-$SourceDir = (Get-Item "$PSScriptRoot\..\_Target\$Platform\$Configuration")
+$ProjectRootDir = (Get-Item "$PSScriptRoot\..")
+$BuildOutputDir = (Get-Item "$ProjectRootDir\_Target\$Platform\$Configuration")
 
 function MakeDirIfNotExisting($Path) {
 	if (!(Test-Path $TargetDir)) {
@@ -71,12 +72,14 @@ switch ($Action) {
 	"Install" {
 		UnloadModule "SideNote"
 		MakeDirIfNotExisting $TargetDir
-		CopyIfTargetNotExistingOrIsOlder "$SourceDir\Sidenote.dll" "$TargetDir\Sidenote.dll"
+		CopyIfTargetNotExistingOrIsOlder "$ProjectRootDir\Sidenote.psd1" "$TargetDir\Sidenote.psd1"
+		CopyIfTargetNotExistingOrIsOlder "$BuildOutputDir\Sidenote.dll"  "$TargetDir\Sidenote.dll"
 	}
 
 	"Uninstall" {
 		UnloadModule "Sidenote"
 		RemoveFileIfExisting "$TargetDir\Sidenote.dll"
+		RemoveFileIfExisting "$TargetDir\Sidenote.psd1"
 		RemoveDirIfExistingAndNotEmpty $TargetDir
 	}
 }
