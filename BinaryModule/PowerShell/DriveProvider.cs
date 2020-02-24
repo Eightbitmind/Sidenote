@@ -7,8 +7,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Management.Automation;
 using System.Management.Automation.Provider;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Sidenote.PowerShell
 {
@@ -134,7 +132,7 @@ namespace Sidenote.PowerShell
 		"OneNote", // e.g. Provider name in the Get-PSDrive output
 		ProviderCapabilities.None
 	)]
-	public class DriveProvider : NavigationCmdletProvider
+	public class DriveProvider : NavigationCmdletProvider, IContentCmdletProvider
 	{
 		// Class Hierarchy:
 		//
@@ -290,10 +288,12 @@ namespace Sidenote.PowerShell
 
 			if (node == null) return;
 
+			IList<INode> children = GetIdentifiableChildren(node);
+
 			WriteItemObject(
 				item: node,
 				path: path,
-				isContainer: /* TODO: Calculate? */ true);
+				isContainer: children.Count > 0);
 
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
@@ -502,9 +502,29 @@ namespace Sidenote.PowerShell
 		/// <remarks>
 		/// Must be implemented (base method throws PSNotSupportedException).
 		/// </remarks>
+		/// <example>
+		/// cd path_to_page
+		/// ls *
+		///		GetChildNames(path: path_to_page, returnContainers: ReturnContainers.ReturnMatchingContainers)
+		/// 	
+		/// </example>
 		protected override void GetChildNames(string path, ReturnContainers returnContainers)
 		{
-			throw new Exception("When is this method used?");
+			// Find out under what conditions a different value is being passed
+			Debug.Assert(returnContainers == ReturnContainers.ReturnMatchingContainers);
+
+			INode node = this.GetNode(path);
+
+			foreach (INode child in GetIdentifiableChildren(node))
+			{
+				IList<INode> grandChildren = GetIdentifiableChildren(child);
+
+				WriteItemObject(
+					item: ((IIdentifiableObject)child).ID,
+					path: path, //  + pathSeparator + item,
+					isContainer: grandChildren.Count > 0);
+			}
+
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -535,9 +555,17 @@ namespace Sidenote.PowerShell
 		/// <remarks>
 		/// Must be implemented (base method throws PSNotSupportedException).
 		/// </remarks>
+		/// <example>
+		/// cd path_of_outline
+		/// ls *
+		/// 	HasChildItems(path: path_of_outline)
+		/// </example>
 		protected override bool HasChildItems(string path)
 		{
-			throw new Exception("When is this method used?");
+			INode node = this.GetNode(path);
+			if (node == null) return false;
+
+			return GetIdentifiableChildren(node).Count > 0;
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
 
@@ -596,12 +624,51 @@ namespace Sidenote.PowerShell
 		{
 			INode node = this.GetNode(path);
 			if (node == null) return false;
-			return node.Children.Count > 0;
 
-			// throw new Exception("When is this method used?");
-			// 'base.IsItemContainer(path);' throws NotSupported exception
-			// return HasChildItems(path); // wouldn't allow us to cd into a leave UI element
-			// return true;
+			return GetIdentifiableChildren(node).Count > 0;
+		}
+
+		#endregion
+
+		#region IContentCmdletProvider members
+
+		public void ClearContent(string path)
+		{
+			throw new NotImplementedException();
+		}
+
+		public object ClearContentDynamicParameters(string path)
+		{
+			throw new NotImplementedException();
+		}
+
+		public IContentReader GetContentReader(string path)
+		{
+			INode node = this.GetNode(path);
+
+			var outline = node as Outline;
+			if (outline != null)
+			{
+				return new OutlineContentReader(outline);
+			}
+	
+			throw new NotImplementedException("content reading currently only supported for outlines");
+		}
+
+		public object GetContentReaderDynamicParameters(string path)
+		{
+			// called in the course of running Get-Content
+			return null;
+		}
+
+		public IContentWriter GetContentWriter(string path)
+		{
+			throw new NotImplementedException();
+		}
+
+		public object GetContentWriterDynamicParameters(string path)
+		{
+			throw new NotImplementedException();
 		}
 
 		#endregion

@@ -1,5 +1,7 @@
-using module Path
-using module TestUtils
+using module Gumby.Path
+using module Gumby.Test
+
+using module Sidenote
 
 # Shorthands for the GUID-based path elements
 $PathElements = @{

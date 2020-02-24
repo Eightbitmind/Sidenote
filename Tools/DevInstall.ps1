@@ -1,4 +1,8 @@
-﻿
+﻿using module File
+using module Gumby.Log
+using module Gumby.Path
+using module Install
+
 param(
 	[ValidateSet("Install", "Uninstall")]
 	[string] $Action = "Install",
@@ -9,53 +13,11 @@ param(
 	[ValidateSet("Debug", "Release")]
 	[string] $Configuration = "Debug",
 
-	[string] $TargetDir = "$HOME\Tools\WindowsPowerShell\Modules\Sidenote"
-	)
+	[string] $TargetDir = "$([System.Environment]::GetFolderPath(`"MyDocuments`"))\WindowsPowerShell\Modules\Sidenote"
+)
 
 $ProjectRootDir = (Get-Item "$PSScriptRoot\..")
 $BuildOutputDir = (Get-Item "$ProjectRootDir\_Target\$Platform\$Configuration")
-
-function MakeDirIfNotExisting($Path) {
-	if (!(Test-Path $TargetDir)) {
-		[void](mkdir $TargetDir)
-		Write-Host "created directory `"$Path`""
-	}
-}
-
-function RemoveDirIfExistingAndNotEmpty($Path) {
-	if (Test-Path $Path) {
-		$dirInfo = Get-Item $Path
-		if (($dirInfo.GetDirectories().Count + $dirInfo.GetFiles().Count) -eq 0) {
-			rmdir $Path
-			Write-Host "removed directory `"$Path`""
-		}
-	}
-}
-
-function RemoveFileIfExisting($Path) {
-	if (Test-Path $Path) {
-		Remove-Item $Path
-		Write-Host "removed file '$Path'"
-	}
-}
-
-function CopyIfTargetNotExistingOrIsOlder($Source, $Target) {
-	if (!(Test-Path $Source)) {
-		throw "source of copy operation `"$Source`" does not exist, did the build succeed?"
-	}
-
-	if (!(Test-Path $Target)) {
-		Copy-Item $Source $TargetDir
-		Write-Host "copied `"$Source`" to `"$Target`""
-	} else {
-		$sourceTime = (Get-Item $Source).LastWriteTime
-		$targetTime = (Get-Item $Target).LastWriteTime
-		if ($sourceTime -gt $targetTime) {
-			Copy-Item $Source $TargetDir
-			Write-Host "copied `"$Source`" to `"$Target`""
-		}
-	}
-}
 
 function UnloadModule($ModuleName) {
 	# TODO:
@@ -68,18 +30,35 @@ function UnloadModule($ModuleName) {
 	}
 }
 
-switch ($Action) {
-	"Install" {
-		UnloadModule "SideNote"
-		MakeDirIfNotExisting $TargetDir
-		CopyIfTargetNotExistingOrIsOlder "$ProjectRootDir\Sidenote.psd1" "$TargetDir\Sidenote.psd1"
-		CopyIfTargetNotExistingOrIsOlder "$BuildOutputDir\Sidenote.dll"  "$TargetDir\Sidenote.dll"
+# [string] $logFilePath = "$env:TEMP\$(PathBaseName $PSCommandPath).log")
+# if (Test-Path $logFilePath) { Remove-Item $logFilePath }
+# $fileLogListener = [FileLogListener]::new($logFilePath)
+
+$consoleLogListener = [ConsoleLogListener]::new()
+
+try {
+	[void]([Log]::Listeners.Add($consoleLogListener))
+
+	switch ($Action) {
+		"Install" {
+			if (!(IsCurrentUserAdmin)) {
+				Write-Error "This script action needs to be run with administrative privileges."
+				return
+			}
+			UnloadModule "SideNote"
+			CreateDirectoryIfNotExisting $TargetDir
+			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\Sidenote.psd1" -Link "$TargetDir\Sidenote.psd1"
+			CreateSymbolicLinkIfNotExisting -Target "$BuildOutputDir\Sidenote.dll"  -Link "$TargetDir\Sidenote.dll"
+		}
+
+		"Uninstall" {
+			UnloadModule "Sidenote"
+			RemoveFileIfExisting "$TargetDir\Sidenote.dll"
+			RemoveFileIfExisting "$TargetDir\Sidenote.psd1"
+			RemoveDirectoryIfExistingAndEmpty $TargetDir
+		}
 	}
 
-	"Uninstall" {
-		UnloadModule "Sidenote"
-		RemoveFileIfExisting "$TargetDir\Sidenote.dll"
-		RemoveFileIfExisting "$TargetDir\Sidenote.psd1"
-		RemoveDirIfExistingAndNotEmpty $TargetDir
-	}
+} finally {
+	[Log]::Listeners.Remove($consoleLogListener)
 }

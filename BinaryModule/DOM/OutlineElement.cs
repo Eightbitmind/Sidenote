@@ -28,6 +28,12 @@ namespace Sidenote.DOM
 
 		#endregion
 
+		// Called when Get-Content processes an OutlineElement.
+		public override string ToString()
+		{
+			return this.Text;
+		}
+
 		internal OutlineElement(
 			INode parent,
 			string id,

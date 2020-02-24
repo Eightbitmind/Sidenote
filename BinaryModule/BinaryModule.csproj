@@ -67,6 +67,7 @@
     <Compile Include="DOM\Title.cs" />
     <Compile Include="DOM\Page.cs" />
     <Compile Include="DOM\Section.cs" />
+    <Compile Include="PowerShell\OutlineContentReader.cs" />
     <Compile Include="PowerShell\DriveProvider.cs" />
     <Compile Include="PowerShell\GetNotebookRootCmdlet.cs" />
     <Compile Include="PowerShell\TestCmdlet.cs" />
