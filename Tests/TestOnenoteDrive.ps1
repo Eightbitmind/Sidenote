@@ -5,18 +5,21 @@ using module Sidenote
 
 # Shorthands for the GUID-based path elements
 $PathElements = @{
-	drive                    = 'ON:'
-	  SidenoteTest           = "{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}"
-	    Section1             = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}"
-	      Page1              = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}"
-	        Outline1         = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{10}{B0}"
-	          USA            = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{52}{B0}"
-	            Oregon       = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{54}{B0}"
-	            Washington   = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{59}{B0}"
-	        Outline2         = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{14}{B0}"
-	          Germany        = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{64}{B0}"
-	            Brandenburg  = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{40}{B0}"
-	            Sachsen      = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{15}{B0}"
+	drive                      = 'ON:'
+	  SidenoteTest             = "{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}"
+	    Section1               = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}"
+	      Page1                = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}"
+	        Outline1           = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{10}{B0}"
+	          USA              = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{52}{B0}"
+	            Oregon         = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{54}{B0}"
+	            Washington     = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{59}{B0}"
+	        Outline2           = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{14}{B0}"
+	          Germany          = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{64}{B0}"
+	            Brandenburg    = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{40}{B0}"
+	            Sachsen        = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{15}{B0}"
+	      Page2                = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1950332892422071365901913002503383206122461}"
+	      Wikipedia_2020_01_02 = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E19504986836828639411420151256186268821782351}"
+	    Section2               = "{1D9410FF-2441-4C34-9919-88C047E9A38A}{1}{B0}"
 }
 
 function GetPath() {

@@ -4,8 +4,8 @@ using System.Management.Automation;
 
 namespace Sidenote.Client
 {
-	[Cmdlet("Get", "NotebookRoot")]
-	public class GetNotebookRootCmdlet : Cmdlet
+	[Cmdlet("Get", "ONRoot")]
+	public class GetONRootCmdlet : Cmdlet
 	{
 		protected override void ProcessRecord()
 		{
