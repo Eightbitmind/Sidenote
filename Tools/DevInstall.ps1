@@ -49,6 +49,7 @@ try {
 			CreateDirectoryIfNotExisting $TargetDir
 			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\Sidenote.psd1" -Link "$TargetDir\Sidenote.psd1"
 			CreateSymbolicLinkIfNotExisting -Target "$BuildOutputDir\Sidenote.dll"  -Link "$TargetDir\Sidenote.dll"
+			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\ScriptModule\Sidenote.psm1"  -Link "$TargetDir\Sidenote.psm1"
 		}
 
 		"Uninstall" {
