@@ -1,7 +1,7 @@
-﻿using module File
+﻿using module Gumby.File
+using module Gumby.Install
 using module Gumby.Log
 using module Gumby.Path
-using module Install
 
 param(
 	[ValidateSet("Install", "Uninstall")]

@@ -1,3 +1,5 @@
+using module Sidenote
+
 param(
 	$Notebook
 )

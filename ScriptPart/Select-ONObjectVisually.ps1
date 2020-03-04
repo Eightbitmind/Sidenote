@@ -1,7 +1,7 @@
 using module Gumby.Log
 using module Gumby.Path
 using module Gumby.String
-using module Object
+using module Sidenote # script doesn't seem to load if we haven't imported this module beforehand
 using module TreeView
 using module Window
 
@@ -51,7 +51,7 @@ class OneNoteTVItem : TVItemBase {
 	[Collections.Generic.IList`1[TVItemBase]] Children() {
 		if ($this._children -eq $null) {
 
-			$this._children = [Collections.Generic.List`1[TVItemBase]]::new()
+			$this._children = [System.Collections.Generic.List`1[TVItemBase]]::new()
 
 			foreach ($child in $this.node.Children) {
 				if ($child -is [Sidenote.DOM.IIdentifiableObject]) {
@@ -68,7 +68,7 @@ class OneNoteTVItem : TVItemBase {
 	}
 
 	hidden [Sidenote.DOM.INode] $node
-	hidden [Collections.Generic.IList`1[TVItemBase]] $_children = $null
+	hidden [System.Collections.Generic.IList`1[TVItemBase]] $_children = $null
 }
 
 function Select-ONObjectVisually() {
@@ -104,4 +104,3 @@ function Select-ONObjectVisually() {
 }
 
 Select-ONObjectVisually
-

@@ -1,6 +1,5 @@
 using module Gumby.Log
 using module Gumby.Path
-using module Object
 using module TreeView
 using module Window
 
@@ -47,7 +46,7 @@ class OneNoteTVItem : TVItemBase {
 	}
 
 	hidden [Sidenote.DOM.INode] $node
-	hidden [Collections.Generic.IList`1[TVItemBase]] $_children = $null
+	hidden [System.Collections.Generic.IList`1[TVItemBase]] $_children = $null
 }
 
 
@@ -76,9 +75,7 @@ function Select-ONObjectVisually() {
 		$tv = [TreeView]::new($items, ([OneNoteTVItem]), $left, $top, $width, $height, ([console]::BackgroundColor), ([console]::ForegroundColor))
 		$tv.Title = 'Select OneNote Object'
 
-		$tv.Run()
-
-		echo "Hi there!"
+		[void]($tv.Run())
 
 	} finally {
 		if ($fll -ne $null) { [Log]::Listeners.Remove($fll) }
