@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace Sidenote.DOM
 {
-	internal class Notebook : Node, IIdentifiableObject, INamedObject, IUserCreatedObject, INotebook
+	internal class Page : Node, IIdentifiableObject, INamedObject, IUserCreatedObject, IPage
 	{
 		#region INode members
 
@@ -17,7 +17,7 @@ namespace Sidenote.DOM
 				if (this.children == null)
 				{
 					this.children = new List<INode>();
-					IFormatter formatter = FormatterManager.NotebookContentFormatter;
+					IFormatter formatter = FormatterManager.PageContentFormatter;
 					bool success = formatter.Deserialize(this);
 					Debug.Assert(success);
 				}
@@ -49,21 +49,28 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		#region INotebook members
+		#region IPage members
 
-		public string Nickname { get; }
-		public string Path { get; }
-		public string Color { get; }
-		public bool IsCurrentlyViewed { get; }
+		public DateTime DateTime { get; }
+		public uint PageLevel { get; }
 
 		#endregion
 
-		internal Notebook(INode parent, string name, string id, DateTime lastModifiedTime)
-			: base(parent)
+		internal Page(
+			uint depth,
+			INode parent,
+			string name,
+			string id,
+			DateTime lastModifiedTime,
+			DateTime dateTime,
+			uint pageLevel)
+			: base(type: "Page", depth: depth, parent: parent)
 		{
-			this.Name = name;
 			this.ID = id;
+			this.Name = name;
 			this.LastModifiedTime = lastModifiedTime;
+			this.DateTime = dateTime;
+			this.PageLevel = pageLevel;
 		}
 	}
 }

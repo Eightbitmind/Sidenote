@@ -84,6 +84,3 @@ function Select-ONObjectVisually() {
 		if ($fll -ne $null) { [Log]::Listeners.Remove($fll) }
 	}
 }
-
-Select-ONObjectVisually
-

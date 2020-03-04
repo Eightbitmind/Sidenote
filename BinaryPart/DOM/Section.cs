@@ -56,8 +56,15 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Section(INode parent, string name, string id, DateTime lastModifiedTime, string path, string Color)
-			: base(parent)
+		internal Section(
+			uint depth,
+			INode parent,
+			string name,
+			string id,
+			DateTime lastModifiedTime,
+			string path,
+			string Color)
+			: base(type: "Section", depth: depth, parent: parent)
 		{
 			this.ID = id;
 			this.Name = name;

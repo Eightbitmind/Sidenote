@@ -6,6 +6,8 @@ namespace Sidenote.DOM
 	{
 		#region INode members
 
+		public string Type { get; }
+		public uint Depth { get; }
 		public INode Parent { get; }
 		public virtual IList<INode> Children
 		{
@@ -22,8 +24,10 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Node (INode parent)
+		internal Node (string type, uint depth, INode parent)
 		{
+			this.Type = type;
+			this.Depth = depth;
 			this.Parent = parent;
 		}
 

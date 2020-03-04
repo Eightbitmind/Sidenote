@@ -35,6 +35,7 @@ namespace Sidenote.DOM
 		}
 
 		internal OutlineElement(
+			uint depth,
 			INode parent,
 			string id,
 			string author,
@@ -42,7 +43,7 @@ namespace Sidenote.DOM
 			DateTime creationTime,
 			DateTime lastModifiedTime,
 			string alignment)
-			: base(parent)
+			: base(type: "OutlineElement", depth: depth, parent: parent)
 		{
 			this.ID = id;
 

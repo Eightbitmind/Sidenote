@@ -314,7 +314,7 @@ namespace Sidenote.PowerShell
 
 			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
 
-			INode currentNode = new Node(null);
+			INode currentNode = new Node(type: "Root", depth: 0, parent: null);
 			bool success = notebooksFormatter.Deserialize(currentNode);
 			Debug.Assert(success);
 

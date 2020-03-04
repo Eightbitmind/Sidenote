@@ -76,7 +76,7 @@ namespace Sidenote.Serialization
 
 			reader.ReadStartElement();
 
-			parent.Children.Add(new Section(parent, name, id, lastModifiedTime, path, color));
+			parent.Children.Add(new Section(parent.Depth + 1, parent, name, id, lastModifiedTime, path, color));
 
 			if (expectEndElement) reader.ReadEndElement();
 
@@ -94,7 +94,7 @@ namespace Sidenote.Serialization
 			reader.ReadStartElement();
 
 			// ignore content of section groups for now
-			Node unused = new Node(null);
+			Node unused = new Node(type: "SectionGroup", depth: 0, parent: null);
 			while (ParseSection(reader, unused)) ;
 
 			if (expectEndElement) reader.ReadEndElement();

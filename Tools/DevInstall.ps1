@@ -47,15 +47,16 @@ try {
 			}
 			UnloadModule "SideNote"
 			CreateDirectoryIfNotExisting $TargetDir
-			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\Sidenote.psd1" -Link "$TargetDir\Sidenote.psd1"
-			CreateSymbolicLinkIfNotExisting -Target "$BuildOutputDir\Sidenote.dll"  -Link "$TargetDir\Sidenote.dll"
-			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\ScriptModule\Sidenote.psm1"  -Link "$TargetDir\Sidenote.psm1"
+			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\Sidenote.psd1"                       -Link "$TargetDir\Sidenote.psd1"
+			CreateSymbolicLinkIfNotExisting -Target "$BuildOutputDir\Sidenote.BinaryPart.dll"             -Link "$TargetDir\Sidenote.BinaryPart.dll"
+			CreateSymbolicLinkIfNotExisting -Target "$ProjectRootDir\ScriptPart\Sidenote.ScriptPart.psm1" -Link "$TargetDir\Sidenote.ScriptPart.psm1"
 		}
 
 		"Uninstall" {
 			UnloadModule "Sidenote"
-			RemoveFileIfExisting "$TargetDir\Sidenote.dll"
 			RemoveFileIfExisting "$TargetDir\Sidenote.psd1"
+			RemoveFileIfExisting "$TargetDir\Sidenote.BinaryPart.dll"
+			RemoveFileIfExisting "$TargetDir\Sidenote.ScriptPart.psm1"
 			RemoveDirectoryIfExistingAndEmpty $TargetDir
 		}
 	}

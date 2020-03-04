@@ -21,6 +21,7 @@ namespace Sidenote.Serialization
 			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 
 			this.outline = new Outline(
+				parent.Depth + 1,
 				parent,
 				id,
 				author,

@@ -22,6 +22,7 @@ namespace Sidenote.Serialization
 			string alignment = reader.GetAttribute("alignment");
 
 			this.outlineElement = new OutlineElement(
+				parent.Depth + 1,
 				parent,
 				id,
 				author,

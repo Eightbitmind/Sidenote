@@ -21,13 +21,14 @@ namespace Sidenote.DOM
 		#endregion
 
 		internal Outline(
+			uint depth,
 			INode parent,
 			string id,
 			string author,
 			string authorInitials,
 			DateTime creationTime,
 			DateTime lastModifiedTime)
-			: base(parent)
+			: base(type: "Outline", depth: depth, parent: parent)
 		{
 			this.ID = id;
 

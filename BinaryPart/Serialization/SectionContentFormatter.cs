@@ -74,7 +74,7 @@ namespace Sidenote.Serialization
 
 			reader.ReadStartElement();
 
-			parent.Children.Add(new Page(parent, name, id, lastModifiedTime, dateTime, pageLevel));
+			parent.Children.Add(new Page(parent.Depth + 1, parent, name, id, lastModifiedTime, dateTime, pageLevel));
 
 			if (expectEndElement) reader.ReadEndElement();
 

@@ -4,7 +4,8 @@ namespace Sidenote.DOM
 {
 	internal class Title : Node
 	{
-		internal Title(INode parent) : base(parent)
+		internal Title(uint depth, INode parent)
+			: base(type: "Title", depth: depth, parent: parent)
 		{
 		}
 	}

@@ -15,7 +15,7 @@ namespace Sidenote.Serialization
 
 		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
-			Title title = new Title(parent);
+			Title title = new Title(parent.Depth + 1, parent);
 
 			if (!OEParser.Instance.Parse(reader, title))
 			{
