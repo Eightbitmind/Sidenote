@@ -9,6 +9,11 @@ Sidenote is in an early experimental state.
 
 # Development Prerequisites
 
+Sidenote development needs OneNote 2016 (i.e. the classic or Win32 version of OneNote) to be installed.
+[This site](https://support.office.com/en-us/article/Install-or-reinstall-OneNote-2016-for-Windows-c08068d8-b517-4464-9ff2-132cb9c45c08)
+provides instructions on how to install OneNote 2016 if it is missing from your current Office
+installation.
+
 Development (devinstall, test) requires the following modules to be installed from the PowerShell
 gallery:
 - Gumby.File
@@ -17,6 +22,11 @@ gallery:
 - Gumby.Path
 
 # Usage Prerequisites
+
+Sidenote usage needs OneNote 2016 (i.e. the classic or Win32 version of OneNote) to be installed.
+[This site](https://support.office.com/en-us/article/Install-or-reinstall-OneNote-2016-for-Windows-c08068d8-b517-4464-9ff2-132cb9c45c08)
+provides instructions on how to install OneNote 2016 if it is missing from your current Office
+installation.
 
 Usage (i.e. the stuff in the ScriptPart directory) requires the following modules to be installed
 from the PowerShell gallery:
