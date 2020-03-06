@@ -293,7 +293,7 @@ namespace Sidenote.PowerShell
 			WriteItemObject(
 				item: node,
 				path: path,
-				isContainer: children.Count > 0);
+				isContainer: true);
 
 #if YELLOWBOX_BONEYARD
 			IList<string> pathItems = SplitPath(path);
@@ -454,7 +454,7 @@ namespace Sidenote.PowerShell
 					WriteItemObject(
 						item: child,
 						path: childPath,
-						isContainer: grandChildren.Count > 0);
+						isContainer: true);
 
 					if (childDepth < maxDepth && grandChildren.Count > 0)
 					{
@@ -522,7 +522,7 @@ namespace Sidenote.PowerShell
 				WriteItemObject(
 					item: ((IIdentifiableObject)child).ID,
 					path: path, //  + pathSeparator + item,
-					isContainer: grandChildren.Count > 0);
+					isContainer: true);
 			}
 
 #if YELLOWBOX_BONEYARD
@@ -622,10 +622,16 @@ namespace Sidenote.PowerShell
 		/// </example>
 		protected override bool IsItemContainer(string path)
 		{
-			INode node = this.GetNode(path);
-			if (node == null) return false;
+			// INode node = this.GetNode(path);
+			// if (node == null) return false;
+			// bool returnValue = GetIdentifiableChildren(node).Count > 0;
+			// return returnValue;
 
-			return GetIdentifiableChildren(node).Count > 0;
+			// We need to be able to set the location to containers regardless of whether they have
+			// children or not.
+			// Assuming we're only exposing identifiable nodes, aren't they all (potential)
+			// containers?
+			return true;
 		}
 
 		#endregion
