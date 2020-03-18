@@ -1,4 +1,5 @@
 ﻿using Sidenote.DOM;
+using System;
 using System.Xml;
 
 namespace Sidenote.Serialization
@@ -7,15 +8,15 @@ namespace Sidenote.Serialization
 	{
 		public ListParser() : base("List") { }
 
-		internal override bool Parse(XmlReader reader, INode parent)
+		protected override bool ParseChildren(XmlReader reader, INode parent)
 		{
-			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
+			if (!(
+				BulletListItemParser.Instance.Parse(reader, parent) ||
+				NumberedListItemParser.Instance.Parse(reader, parent)
+			))
 			{
-				return false;
+				throw new Exception("unexpected List child " + reader.LocalName);
 			}
-
-			// ignore List elements for now
-			reader.Skip();
 
 			return true;
 		}

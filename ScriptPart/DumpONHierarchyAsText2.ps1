@@ -1,8 +1,11 @@
+using module Gumby.String
 using module Sidenote
 
 param(
 	$StartNode
 )
+
+$text = [TextArray]::new()
 
 function DumpNode($node) {
 	switch ($node.Type) {

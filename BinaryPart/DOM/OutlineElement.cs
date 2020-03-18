@@ -22,6 +22,7 @@ namespace Sidenote.DOM
 
 		#region IOutlineElement members
 
+		public IListItem ListItem { get; internal set; }
 		public string Alignment { get; }
 		public int QuickStyleIndex { get; set; }
 		public string Text { get; private set; }
@@ -60,5 +61,10 @@ namespace Sidenote.DOM
 		{
 			this.Text = text;
 		}
+
+		//internal void SetListItem(IListItem listItem)
+		//{
+		//	this.ListItem = listItem;
+		//}
 	}
 }
