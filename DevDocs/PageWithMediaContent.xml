@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0"?>
+<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{62827A6E-4C34-0877-3A09-110E33F90A04}{4}{E1954784423302673010021954844320937352327021}" name="People-D" dateTime="2011-12-27T05:29:49.000Z" lastModifiedTime="2020-03-19T07:41:44.000Z" pageLevel="1" lang="en-US">
+  <one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Calibri" fontSize="17.0" spaceBefore="0.0" spaceAfter="0.0"/>
+  <one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Calibri" fontSize="11.0" spaceBefore="0.0" spaceAfter="0.0"/>
+  <one:MediaPlaylist>
+    <one:MediaReference mediaID="{ABE85BF0-A9AE-4643-BE13-CFDCCC2DE52C}"/>
+  </one:MediaPlaylist>
+  <one:PageSettings RTL="false" color="automatic">
+    <one:PageSize>
+      <one:Automatic/>
+    </one:PageSize>
+    <one:RuleLines visible="false"/>
+  </one:PageSettings>
+  <one:Title lang="en-US">
+    <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:29:59.000Z" lastModifiedTime="2011-12-27T05:29:59.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{95}{B0}" alignment="left" quickStyleIndex="0">
+      <one:T><![CDATA[People-D]]></one:T>
+    </one:OE>
+  </one:Title>
+  <one:Outline author="Andreas" authorInitials="A" lastModifiedBy="Andreas" lastModifiedByInitials="A" lastModifiedTime="2020-03-19T07:41:44.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{15}{B0}">
+    <one:Position x="36.0" y="97.9199981689453" z="0"/>
+    <one:Size width="432.3600158691406" height="2356.42822265625"/>
+    <one:Indents>
+      <one:Indent level="0" indent="18.0"/>
+    </one:Indents>
+    <one:OEChildren>
+      <one:OE creationTime="2016-11-26T02:03:37.000Z" lastModifiedTime="2016-11-26T02:03:37.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{11}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Danzig, Mike]]></one:T>
+        <one:OEChildren>
+          <one:OE lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-11-26T02:03:55.000Z" lastModifiedTime="2019-04-06T21:20:48.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{16}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Birthdate: 1972-04-26]]></one:T>
+          </one:OE>
+          <one:OE lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-11-26T02:04:28.000Z" lastModifiedTime="2019-04-06T21:20:56.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{20}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Date of death: 1990-03-06]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2016-11-26T02:04:49.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{23}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Parents: Jutta Danzig; Bernd Danzig]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2016-11-26T02:05:01.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{26}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Siblings: Silke Danzig]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:25:12.000Z" lastModifiedTime="2020-03-19T07:25:12.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{29}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Leisnig #POS #ApianSchule #MeineKlasse]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2016-11-26T02:03:29.000Z" lastModifiedTime="2016-11-26T02:03:29.000Z" objectID="{29C57CE6-AF83-4FAE-9D05-8FD777076947}{14}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-11T23:02:19.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{16}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Dauser, Heike]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-11T23:03:13.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{17}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private E-Mail: HeikeDauser@bigfoot.com]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-11T23:03:27.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{22}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private E-Mail: HeikeDauser@csi.com]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-11T23:03:02.000Z" lastModifiedTime="2014-09-04T08:10:16.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{25}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Spouse/Partner: Martin Regen]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:05:51.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{28}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Seattle #Microsoft #MS #MartinRegen]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2011-12-11T23:02:31.000Z" lastModifiedTime="2017-10-02T08:27:01.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{31}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:24:02.000Z" lastModifiedTime="2015-02-17T03:24:02.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{35}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:22:26.000Z" lastModifiedTime="2015-02-17T03:22:26.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{39}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[David, Willson]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:23:25.000Z" lastModifiedTime="2015-02-17T03:23:25.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{40}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Mobile Phone: +1.425.894.9121]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:23:59.000Z" lastModifiedTime="2015-02-17T03:23:59.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{43}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work Address: willsonr@microsoft.com; T+1.425.703.0022]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:08:20.000Z" lastModifiedTime="2017-10-02T08:24:32.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{46}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Seattle #Microsoft #MS]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:22:53.000Z" lastModifiedTime="2017-10-02T08:24:36.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{49}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:23:03.000Z" lastModifiedTime="2015-02-17T03:23:03.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{50}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Chepa used to work for him]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2015-02-17T03:22:37.000Z" lastModifiedTime="2015-02-17T03:22:37.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{55}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:55:41.000Z" lastModifiedTime="2011-12-27T05:55:41.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{58}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Debernitz, Volker]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:57:09.000Z" lastModifiedTime="2011-12-27T05:57:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{59}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: Hauptstr. 156a; 09603 Großschirma; Germany; +49.37328.5938]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:56:38.000Z" lastModifiedTime="2011-12-27T05:56:38.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{62}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work Address: +49.3731.788642; v.debernitz@arcadis.de]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:08:31.000Z" lastModifiedTime="2017-10-02T08:24:41.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{65}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Freiberg #Climbing]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:55:42.000Z" lastModifiedTime="2011-12-27T05:55:42.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{69}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-03-12T19:09:51.000Z" lastModifiedTime="2014-09-04T08:10:16.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{71}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Debrot, Chuck]]></one:T>
+        <one:OEChildren>
+          <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;bHAvzI74s57ImfHMUn5c3g==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-07-10T01:35:44.000Z" lastModifiedTime="2019-12-21T21:57:42.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{72}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[Spouse/Partner: <a
+href="onenote:#People-B&amp;section-id={67D5D617-9BA1-42DF-A8B8-4161E4A36A09}&amp;page-id={D22A3E9D-D225-4E9D-95F9-8EE8623BD451}&amp;object-id={20F7F7DB-5B11-09BF-3F8B-CB5C596A4768}&amp;D&amp;base-path=https://d.docs.live.net/af0dac0f0ee7dfec/Notebooks/People/Data.one">Susann Bort</a>]]>
+            </one:T>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:18:19.000Z" lastModifiedTime="2017-10-02T08:18:19.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{126}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Mobile Phone: +1.206.829.8458]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-18T05:28:38.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{76}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: 4114 35th Ave SW Seattle, WA 98126]]></one:T>
+          </one:OE>
+          <one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;bHAvzI74s57ImfHMUn5c3g==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;bHAvzI74s57ImfHMUn5c3g==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2012-07-10T01:35:26.000Z" lastModifiedTime="2012-07-10T01:35:26.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{79}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private Address: 1322 SW Webster St; Seattle, WA 98106-1922; USA; +1.206.763.4584]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2011-12-11T23:11:39.000Z" lastModifiedTime="2017-10-02T08:17:42.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{82}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private E-Mail: ccdebrot@comcast.net]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2011-12-18T05:28:55.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{88}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Seattle #CarlLarson]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2018-12-16T18:57:06.000Z" lastModifiedTime="2018-12-16T18:57:12.000Z" objectID="{3434C4BD-6AD0-4447-8C21-398A36BEB9DC}{21}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Presents for:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2018-12-16T18:57:24.000Z" lastModifiedTime="2018-12-16T18:57:38.000Z" objectID="{3434C4BD-6AD0-4447-8C21-398A36BEB9DC}{24}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[2018-12-15 Key Tool]]></one:T>
+                <one:OEChildren>
+                  <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2018-12-16T18:57:44.000Z" lastModifiedTime="2018-12-16T18:57:54.000Z" objectID="{3434C4BD-6AD0-4447-8C21-398A36BEB9DC}{30}{B0}" alignment="left" quickStyleIndex="1">
+                    <one:List>
+                      <one:Bullet bullet="13" fontSize="11.0"/>
+                    </one:List>
+                    <one:T><![CDATA[Key Multi Tool (15.00 USD @ REI)]]></one:T>
+                  </one:OE>
+                </one:OEChildren>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:17:45.000Z" lastModifiedTime="2017-10-02T08:17:52.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{101}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes: ]]></one:T>
+            <one:OEChildren>
+              <one:OE creationTime="2017-10-02T08:17:52.000Z" lastModifiedTime="2017-10-02T08:17:52.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{111}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Friend of Carl Larson]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:17:59.000Z" lastModifiedTime="2017-10-02T08:18:06.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{115}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Band &quot;Shivering Denizens&quot;]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T21:56:58.000Z" lastModifiedTime="2019-12-21T21:57:05.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{10}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Band &quot;Hardwood&quot;]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-03-12T19:09:52.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{96}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:58:08.000Z" lastModifiedTime="2011-12-27T05:58:08.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{98}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Demetz, Frieda]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:59:17.000Z" lastModifiedTime="2011-12-27T05:59:17.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{99}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: St. Christina (Wolkenstein/Selva), Südtirol; Italien; +39.471.793238]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:58:55.000Z" lastModifiedTime="2019-12-21T21:58:41.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{102}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[Children: <a
+href="onenote:#People-D&amp;section-id={67D5D617-9BA1-42DF-A8B8-4161E4A36A09}&amp;page-id={98A6F5C1-E001-4B77-A7F2-83F2B55EECF3}&amp;object-id={419B1879-A208-08A4-2278-6B387614767E}&amp;79&amp;base-path=https://d.docs.live.net/af0dac0f0ee7dfec/Notebooks/People/Data.one">Ingrid Demetz</a>]]>
+            </one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-08-20T21:08:49.000Z" lastModifiedTime="2019-12-21T21:58:17.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{105}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Climbing #Dolomites #Dolomiten]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:58:42.000Z" lastModifiedTime="2011-12-27T05:58:42.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{108}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:58:19.000Z" lastModifiedTime="2011-12-27T05:58:19.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{111}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Demetz, Ingrid]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T06:00:55.000Z" lastModifiedTime="2019-12-21T21:59:01.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{115}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[Parents: <a
+href="onenote:#People-D&amp;section-id={67D5D617-9BA1-42DF-A8B8-4161E4A36A09}&amp;page-id={98A6F5C1-E001-4B77-A7F2-83F2B55EECF3}&amp;object-id={419B1879-A208-08A4-2278-6B387614767E}&amp;6E&amp;base-path=https://d.docs.live.net/af0dac0f0ee7dfec/Notebooks/People/Data.one">Frieda Demetz</a>]]>
+            </one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2011-12-27T06:00:22.000Z" lastModifiedTime="2017-10-02T08:18:28.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{131}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: St. Christina (Wolkenstein/Selva), Südtirol; Italien; +39.471.790026]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:08:54.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{118}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Climbing #Dolomiten #Dolomites]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-12-27T05:58:03.000Z" lastModifiedTime="2011-12-27T05:58:03.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{122}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-02-12T20:28:54.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{124}{B0}" alignment="left">
+        <one:T style="font-family:Calibri;font-size:11.0pt"><![CDATA[Deva, Rupal]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2011-05-05T18:39:19.000Z" lastModifiedTime="2017-10-02T08:17:02.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{125}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private E-Mail: Rupaldeva@hotmail.com]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-05-05T18:39:38.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{131}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work E-Mail: Rupal.deva@charite.de]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:17:06.000Z" lastModifiedTime="2017-10-02T08:17:31.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{85}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes: ]]></one:T>
+            <one:OEChildren>
+              <one:OE creationTime="2017-10-02T08:17:11.000Z" lastModifiedTime="2017-10-02T08:17:25.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{96}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[I met Deva on my flight toBerlin]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE creationTime="2017-10-02T08:11:11.000Z" lastModifiedTime="2017-10-02T08:11:12.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{10}{B0}" alignment="left" style="font-family:Calibri;font-size:11.0pt">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE creationTime="2017-10-02T08:11:13.000Z" lastModifiedTime="2017-10-02T08:11:20.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{22}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Diab, Hala]]></one:T>
+        <one:OEChildren>
+          <one:OE creationTime="2017-10-02T08:11:20.000Z" lastModifiedTime="2017-10-02T08:11:42.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{31}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Parents: Lafie Diab (father), Mary (mother)]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:11:43.000Z" lastModifiedTime="2017-10-02T08:11:54.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{35}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Spouse/Partner: Nizar Almoussa]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:16:46.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{81}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Seattle #NizarAlmoussa]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:11:58.000Z" lastModifiedTime="2017-10-02T08:12:03.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{38}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE creationTime="2017-10-02T08:13:44.000Z" lastModifiedTime="2017-10-02T08:14:02.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{75}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Mortally afraid of pets (dogs, cats) :-)]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:13:01.000Z" lastModifiedTime="2017-10-02T08:13:17.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{69}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Works in the Windows Shell team at Microsoft]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:12:30.000Z" lastModifiedTime="2017-10-02T08:12:41.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{62}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[I attended Nizar &amp; Hala's wedding in LA]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:12:42.000Z" lastModifiedTime="2017-10-02T08:13:31.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{66}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Dinner party at Nizar &amp; Hala 2017-09-30]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE creationTime="2017-10-02T08:11:13.000Z" lastModifiedTime="2017-10-02T08:11:13.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{24}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:16:47.000Z" lastModifiedTime="2012-04-28T21:16:47.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{138}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Diamond, Gerald Xavier]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:19:02.000Z" lastModifiedTime="2012-04-28T21:19:02.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{139}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: 535 13th Ave. E., #106; Seattle, WA  98102; USA; T+1.206.324.3523]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:18:45.000Z" lastModifiedTime="2012-04-28T21:18:45.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{142}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work Address: T+1.206.726.4843]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:17:59.000Z" lastModifiedTime="2012-04-28T21:17:59.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{145}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private E-Mail: 328-1350@mcimail.com]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:21:53.000Z" lastModifiedTime="2012-04-28T21:21:53.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{148}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[Spouse/Partner: Fathia Atallah (<a
+href="http://www.feacc.org">http://www.feacc.org</a>; <a
+href="http://www.fathiainseattle.com">http://www.fathiainseattle.com</a>)]]>
+            </one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:09:15.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{152}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Seattle #ParkManor]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:17:51.000Z" lastModifiedTime="2017-10-02T08:12:18.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{155}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes: ]]></one:T>
+            <one:OEChildren>
+              <one:OE creationTime="2017-10-02T08:12:18.000Z" lastModifiedTime="2017-10-02T08:12:18.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{58}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Apartment building on 13th]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-06-23T21:01:43.000Z" lastModifiedTime="2019-06-23T21:01:57.000Z" objectID="{FC89D36E-962F-42A7-8757-6970EC5B9513}{10}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T>
+                  <![CDATA[<a
+href="http://seattlecafe.com/gxd">http://seattlecafe.com/gxd</a>]]>
+                </one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:17:05.000Z" lastModifiedTime="2012-04-28T21:17:05.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{158}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:27:54.000Z" lastModifiedTime="2014-09-04T08:10:17.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{161}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Dietze, Holger]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:39:16.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{162}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private E-Mail: holger.dietze@munich.netsurf.de]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:38:49.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{165}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: Kreuzerweg 29; 81825 München - Trudering ; Germany]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:29:15.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{168}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Home Phone: +49.89.6881145]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:29:09.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{171}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work Phone: +49.89.501019]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:42:14.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{174}{B0}" alignment="left" style="margin:0in">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[<span style='font-family:Calibri;
+font-size:11.0pt' lang=en-US>Work Address: Gollierstr. 70;  80339 München; Germany; </span><span
+style='font-family:Arial;font-size:10.0pt' lang=de>Gewerbehof, Eingang D, 4 Etage, nahe Donnersberger Brücke</span>]]>
+            </one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:30:29.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{178}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work E-Mail: hdietze@iqproducts.de]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:31:17.000Z" lastModifiedTime="2019-04-06T21:21:21.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{181}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Birthdate: 1968-04-07 Sun]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:31:05.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{184}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Parents (Mother): Kantstr. 59a; 04275 Leipzig ; Deutschland; +49.341.323707]]></one:T>
+          </one:OE>
+          <one:OE author="aeulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-06-05T20:28:45.000Z" lastModifiedTime="2014-09-04T08:10:17.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{187}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Spouse/Partner: Jeannette Pöschel]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:33:08.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{190}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Children:  Tatjana (born ~1999-06)]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:30:54.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{193}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Nickname: Paps]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:33:41.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{196}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private Address:  Vetterstr. 66/Zi. 19; 09126 Chemnitz; Deutschland]]></one:T>
+          </one:OE>
+          <one:OE author="aeulitz" authorInitials="AE" creationTime="2011-06-05T20:28:34.000Z" lastModifiedTime="2018-05-11T02:23:41.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{199}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE creationTime="2018-05-11T02:23:37.000Z" lastModifiedTime="2018-05-11T02:23:37.000Z" objectID="{5709AE4D-1652-41F9-B3A4-4E26FB05D3CE}{10}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Studiengruppe 04REF90]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:09:31.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{202}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Chemnitz #TUCh #Leipzig]]></one:T>
+          </one:OE>
+          <one:OE author="aeulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-06-05T20:28:39.000Z" lastModifiedTime="2011-12-27T05:30:31.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{206}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Presents:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-04-06T21:21:37.000Z" lastModifiedTime="2020-03-19T07:24:38.000Z" objectID="{8B67EA9B-F34F-45A7-8DBA-765E4552F7A9}{19}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T>
+                  <![CDATA[<span
+lang=en-US>1997-12-19: </span><span lang=de>Bild mit Schannedd</span>]]>
+                </one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2011-04-10T22:34:15.000Z" lastModifiedTime="2019-04-06T21:21:34.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{213}{B0}" alignment="left" quickStyleIndex="1">
+            <one:T><![CDATA[]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-07T08:30:04.000Z" lastModifiedTime="2016-08-07T08:30:04.000Z" objectID="{A72C4FBF-932A-4E1B-8034-63C1F2DDBDDB}{12}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Dodoye-Alali, Bala]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-30T06:17:50.000Z" lastModifiedTime="2016-08-30T06:17:50.000Z" objectID="{A72C4FBF-932A-4E1B-8034-63C1F2DDBDDB}{28}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Parents: Anthony, Sharon (?)]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-07T08:30:57.000Z" lastModifiedTime="2016-08-07T08:30:57.000Z" objectID="{A72C4FBF-932A-4E1B-8034-63C1F2DDBDDB}{22}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Siblings: Tokini (Toh-ke-nih)]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-08-07T08:31:12.000Z" lastModifiedTime="2019-12-21T22:05:00.000Z" objectID="{A72C4FBF-932A-4E1B-8034-63C1F2DDBDDB}{33}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[Spouse/Partner: <a
+href="onenote:#People-L&amp;section-id={67D5D617-9BA1-42DF-A8B8-4161E4A36A09}&amp;page-id={46CDE076-6F8F-4957-98A8-3F59FF2F8A58}&amp;object-id={ED76202F-50D4-0924-2222-6B177C4A545C}&amp;6D&amp;base-path=https://d.docs.live.net/af0dac0f0ee7dfec/Notebooks/People/Data.one">Carl Larson</a>]]>
+            </one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T22:05:38.000Z" lastModifiedTime="2019-12-21T22:06:37.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{35}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T>
+              <![CDATA[Private E-Mail: <a
+href="mailto:badodoye@gmail.com">mailto:badodoye@gmail.com</a>]]>
+            </one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-08-20T21:09:51.000Z" lastModifiedTime="2018-12-16T18:55:25.000Z" objectID="{6909C45F-F108-4C32-A0AD-309C86458867}{17}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Seattle #CarlLarson]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2018-12-16T18:55:28.000Z" lastModifiedTime="2018-12-16T18:55:30.000Z" objectID="{3434C4BD-6AD0-4447-8C21-398A36BEB9DC}{10}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Presents for]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T22:01:17.000Z" lastModifiedTime="2019-12-21T22:01:27.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{22}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[2019-12-20: Tea light]]></one:T>
+                <one:OEChildren>
+                  <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T22:01:42.000Z" lastModifiedTime="2019-12-21T22:01:47.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{29}{B0}" alignment="left" quickStyleIndex="1">
+                    <one:List>
+                      <one:Bullet bullet="13" fontSize="11.0"/>
+                    </one:List>
+                    <one:T><![CDATA[for both Bala and Carl]]></one:T>
+                  </one:OE>
+                  <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T22:01:59.000Z" lastModifiedTime="2019-12-21T22:04:19.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{32}{B0}" alignment="left" quickStyleIndex="1">
+                    <one:List>
+                      <one:Bullet bullet="13" fontSize="11.0"/>
+                    </one:List>
+                    <one:T><![CDATA[&quot;Frauenkirche&quot; motif (shows other Dresden sights, e.g. August der Starke statue)]]></one:T>
+                  </one:OE>
+                  <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T22:01:31.000Z" lastModifiedTime="2019-12-21T22:01:55.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{25}{B0}" alignment="left" quickStyleIndex="1">
+                    <one:List>
+                      <one:Bullet bullet="13" fontSize="11.0"/>
+                    </one:List>
+                    <one:T><![CDATA[bought at Freiberg Christmas market]]></one:T>
+                  </one:OE>
+                </one:OEChildren>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2018-12-16T18:55:32.000Z" lastModifiedTime="2019-04-06T21:21:55.000Z" objectID="{3434C4BD-6AD0-4447-8C21-398A36BEB9DC}{13}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[2018-12-15: Luggage Tag]]></one:T>
+                <one:OEChildren>
+                  <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2018-12-16T18:55:40.000Z" lastModifiedTime="2018-12-16T18:56:15.000Z" objectID="{3434C4BD-6AD0-4447-8C21-398A36BEB9DC}{17}{B0}" alignment="left" quickStyleIndex="1">
+                    <one:List>
+                      <one:Bullet bullet="13" fontSize="11.0"/>
+                    </one:List>
+                    <one:T><![CDATA[Reusable Luggage Tag (~10.00 USD @ REI)]]></one:T>
+                  </one:OE>
+                </one:OEChildren>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-07T08:30:09.000Z" lastModifiedTime="2017-10-02T08:18:57.000Z" objectID="{A72C4FBF-932A-4E1B-8034-63C1F2DDBDDB}{14}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-07T08:30:30.000Z" lastModifiedTime="2016-08-07T08:30:30.000Z" objectID="{A72C4FBF-932A-4E1B-8034-63C1F2DDBDDB}{18}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Subaru, license 444-UAH]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-30T06:17:20.000Z" lastModifiedTime="2016-08-30T06:17:20.000Z" objectID="{A7C83AF1-D6D1-4221-AA2C-90FA0A17C351}{10}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Aunt Matilda (made the bridesmaid and groomsmen dresses) an uncle Gabriel from Chicago]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-09-02T20:08:28.000Z" lastModifiedTime="2016-09-02T20:08:28.000Z" objectID="{98EE6C13-4966-4DB8-ACB0-7D887FCCC083}{23}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Feynba - aunt?]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-09-02T20:08:43.000Z" lastModifiedTime="2016-09-02T20:08:43.000Z" objectID="{98EE6C13-4966-4DB8-ACB0-7D887FCCC083}{26}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[cousin Olu  (wife Jennifer)]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-28T02:17:48.000Z" lastModifiedTime="2016-09-02T20:08:05.000Z" objectID="{98EE6C13-4966-4DB8-ACB0-7D887FCCC083}{14}{B0}" alignment="left">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:MediaFile pathCache="C:\Users\aeulitz\AppData\Local\Microsoft\OneNote\16.0\cache\000001D7.bin" preferredName="Audio Recording.wav">
+                  <one:MediaReference mediaID="{ABE85BF0-A9AE-4643-BE13-CFDCCC2DE52C}"/>
+                </one:MediaFile>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-12-21T22:06:24.000Z" lastModifiedTime="2019-12-21T22:06:24.000Z" objectID="{97CA74F8-25F4-4B50-A620-50F9A7571870}{60}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T>
+                  <![CDATA[<a
+href="http://www.flickr.com/bdaphotos">http://www.flickr.com/bdaphotos</a>]]>
+                </one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:40:32.000Z" lastModifiedTime="2020-03-19T07:40:32.000Z" objectID="{EBA1C168-956E-412E-A9EB-2EDF4E5DA37A}{10}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:41:23.000Z" lastModifiedTime="2020-03-19T07:41:23.000Z" objectID="{EBA1C168-956E-412E-A9EB-2EDF4E5DA37A}{12}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Döge, André]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:40:58.000Z" lastModifiedTime="2020-03-19T07:40:58.000Z" objectID="{EBA1C168-956E-412E-A9EB-2EDF4E5DA37A}{14}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #POS #ApianSchule #MeineKlasse]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:41:01.000Z" lastModifiedTime="2020-03-19T07:41:01.000Z" objectID="{EBA1C168-956E-412E-A9EB-2EDF4E5DA37A}{18}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:41:28.000Z" lastModifiedTime="2020-03-19T07:41:28.000Z" objectID="{EBA1C168-956E-412E-A9EB-2EDF4E5DA37A}{21}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Vormals André Lauber]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-19T07:41:44.000Z" lastModifiedTime="2020-03-19T07:41:44.000Z" objectID="{EBA1C168-956E-412E-A9EB-2EDF4E5DA37A}{40}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Verstorben; Autounfall, unklar ob mit Moped oder Auto [Quelle: Ariane Winkel]]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:22:18.000Z" lastModifiedTime="2012-04-28T21:22:18.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{220}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:25:01.000Z" lastModifiedTime="2016-01-02T23:10:17.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{222}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Dorf, Sven]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:30:31.000Z" lastModifiedTime="2019-04-06T21:22:10.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{149}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Birthdate: Sat 1970-10-17]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:27:49.000Z" lastModifiedTime="2017-10-02T08:20:22.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{152}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Siblings: Ute]]></one:T>
+          </one:OE>
+          <one:OE creationTime="2017-10-02T08:20:21.000Z" lastModifiedTime="2017-10-02T08:20:21.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{144}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: Kommendenstr. 3; 52249 Eschweiler ; Deutschland; T+49.2403.54985; T+49.2403.800829]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:31:39.000Z" lastModifiedTime="2012-04-28T21:31:39.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{226}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private Address: Feldenendstr. 20; 52249 Eschweiler; Deutschland]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:26:18.000Z" lastModifiedTime="2012-04-28T21:26:18.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{229}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Work Address: sven.dorf@prosys.de; T+49.241.1683292]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:26:43.000Z" lastModifiedTime="2012-04-28T21:26:43.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{232}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private Address: Vetterstr. 66/Zi. 431; 09126 Chemnitz; Deutschland]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:27:12.000Z" lastModifiedTime="2012-04-28T21:27:12.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{235}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private Address: Kratzbeersteig; O-9430 Schwarzenberg]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2014-09-07T23:28:20.000Z" lastModifiedTime="2014-09-07T23:28:20.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{238}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private Address: W.-Ullbricht-Str. 36; Schwarzenberg O-9430]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:26:51.000Z" lastModifiedTime="2012-04-28T21:26:51.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{242}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private E-Mail: sven.dorf@informatik.tu-chemnitz.de]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:31:04.000Z" lastModifiedTime="2012-04-28T21:31:04.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{245}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Old Private E-Mail: sdo@pool.informatik.rwth-aachen.de]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:30:20.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{86748CE4-902F-4C36-AF5A-1F171FCB97ED}{248}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Chemnitz #TUCh]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:27:57.000Z" lastModifiedTime="2017-10-02T08:19:42.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{14}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE creationTime="2017-10-02T08:19:42.000Z" lastModifiedTime="2017-10-02T08:20:35.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{137}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Studiengruppe 04REF90]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:20:36.000Z" lastModifiedTime="2017-10-02T08:20:43.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{162}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Nickname &quot;Trudi&quot;]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:19:45.000Z" lastModifiedTime="2017-10-02T08:20:06.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{141}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Freund Falk aus Schwarzenberg]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:28:05.000Z" lastModifiedTime="2019-04-06T21:35:01.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{17}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Presents for:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-04-06T21:35:27.000Z" lastModifiedTime="2019-04-06T21:35:38.000Z" objectID="{5CC5AB6A-035A-4202-902D-C044B416F884}{32}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Idea: Newcastle Brown Ale]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-04-06T21:35:27.000Z" lastModifiedTime="2019-04-06T21:35:43.000Z" objectID="{5CC5AB6A-035A-4202-902D-C044B416F884}{34}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[??: Guinness]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-04-06T21:35:27.000Z" lastModifiedTime="2019-04-06T21:35:46.000Z" objectID="{5CC5AB6A-035A-4202-902D-C044B416F884}{36}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[??: Old Peculiar]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-04-06T21:35:27.000Z" lastModifiedTime="2019-04-06T21:35:50.000Z" objectID="{5CC5AB6A-035A-4202-902D-C044B416F884}{38}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[??: Dart-Game]]></one:T>
+              </one:OE>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2019-04-06T21:35:53.000Z" lastModifiedTime="2019-04-06T21:35:53.000Z" objectID="{5CC5AB6A-035A-4202-902D-C044B416F884}{26}{B0}" alignment="left" quickStyleIndex="1">
+                <one:T><![CDATA[]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2014-09-04T08:10:43.000Z" lastModifiedTime="2014-09-04T08:10:43.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{53}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Dörl, Gabriele]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-01-02T23:10:40.000Z" lastModifiedTime="2019-04-06T21:22:18.000Z" objectID="{EA8D7BEB-C7B7-428C-BF6D-60304EAC040C}{10}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Birthdate: 1957-11-26]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2015-02-04T20:37:42.000Z" lastModifiedTime="2015-02-04T20:37:42.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{54}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: Grimmaer Str. 23; 04703 Fischendorf; T+49.34321.13139 (?)]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2014-09-04T08:11:52.000Z" lastModifiedTime="2014-09-04T08:11:52.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{57}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[PF 510 (?)]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2014-09-04T08:12:00.000Z" lastModifiedTime="2014-09-04T08:12:00.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{60}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Nickname: Gabi]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:10:27.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{6909C45F-F108-4C32-A0AD-309C86458867}{20}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Leisnig #MariaEulitz #KlausEulitz]]></one:T>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-01-02T23:11:39.000Z" lastModifiedTime="2016-01-02T23:11:39.000Z" objectID="{438E7F04-01A0-4D80-B8C2-DA4513C24ECD}{13}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-01-02T23:11:50.000Z" lastModifiedTime="2016-01-02T23:11:50.000Z" objectID="{438E7F04-01A0-4D80-B8C2-DA4513C24ECD}{18}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Dörl, Elfriede]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2016-01-02T23:12:04.000Z" lastModifiedTime="2019-04-06T21:22:22.000Z" objectID="{438E7F04-01A0-4D80-B8C2-DA4513C24ECD}{19}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Birthdate: 19xx-12-03]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-01-02T23:12:16.000Z" lastModifiedTime="2016-01-02T23:12:16.000Z" objectID="{438E7F04-01A0-4D80-B8C2-DA4513C24ECD}{38}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Children: Gabriele Dörl]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:10:27.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{6909C45F-F108-4C32-A0AD-309C86458867}{28}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Leisnig #MariaEulitz #KlausEulitz]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:10:34.000Z" lastModifiedTime="2017-10-02T08:22:05.000Z" objectID="{6909C45F-F108-4C32-A0AD-309C86458867}{23}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-01-02T23:12:59.000Z" lastModifiedTime="2016-01-02T23:12:59.000Z" objectID="{438E7F04-01A0-4D80-B8C2-DA4513C24ECD}{44}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Rolf Kahlert ist Vater von Gabriele Dörl]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-01-02T23:11:39.000Z" lastModifiedTime="2016-01-02T23:11:39.000Z" objectID="{438E7F04-01A0-4D80-B8C2-DA4513C24ECD}{15}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[]]></one:T>
+      </one:OE>
+      <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:22:18.000Z" lastModifiedTime="2012-04-28T21:22:18.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{66}{B0}" alignment="left" quickStyleIndex="1">
+        <one:T><![CDATA[Drescher, Sabine]]></one:T>
+        <one:OEChildren>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:23:42.000Z" lastModifiedTime="2017-10-02T08:22:50.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{210}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Siblings: Christian]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" creationTime="2012-04-28T21:23:22.000Z" lastModifiedTime="2012-04-28T21:23:22.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{70}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Parents: Chemnitzer Str. 63; 04703 Leisnig; Deutschland; T+49.34321.12357]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:22:39.000Z" lastModifiedTime="2017-10-02T08:22:46.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{202}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Private Address: Döhlitzer Str. 37; 04???  Leipzig ; Deutschland]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2016-08-20T21:10:47.000Z" lastModifiedTime="2018-12-16T18:55:09.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{194}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Tags: #Leisnig #Leipzig]]></one:T>
+          </one:OE>
+          <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:23:45.000Z" lastModifiedTime="2017-10-02T08:23:01.000Z" objectID="{9904CCDD-3E1E-4C49-B835-583EE3C9D302}{79}{B0}" alignment="left" quickStyleIndex="1">
+            <one:List>
+              <one:Bullet bullet="2" fontSize="11.0"/>
+            </one:List>
+            <one:T><![CDATA[Notes:]]></one:T>
+            <one:OEChildren>
+              <one:OE author="Andreas Eulitz" authorInitials="AE" creationTime="2012-04-28T21:24:20.000Z" lastModifiedTime="2017-10-02T08:22:25.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{182}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Nickname: Masine]]></one:T>
+              </one:OE>
+              <one:OE creationTime="2017-10-02T08:22:23.000Z" lastModifiedTime="2017-10-02T08:22:23.000Z" objectID="{3ECD8F88-0E83-4EF0-8B46-0DAE759F66AF}{177}{B0}" alignment="left" quickStyleIndex="1">
+                <one:List>
+                  <one:Bullet bullet="3" fontSize="11.0"/>
+                </one:List>
+                <one:T><![CDATA[Connewitzer Buchhandlung, Specks Hof]]></one:T>
+              </one:OE>
+            </one:OEChildren>
+          </one:OE>
+        </one:OEChildren>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+</one:Page>

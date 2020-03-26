@@ -15,6 +15,7 @@ namespace Sidenote.Serialization
 				if (!(
 					QuickStyleDefParser.Instance.Parse(reader, parent) ||
 					TagDefParser.Instance.Parse(reader, parent) ||
+					MediaPlaylistParser.Instance.Parse(reader, parent) ||
 					PageSettingsParser.Instance.Parse(reader, parent) ||
 					TitleParser.Instance.Parse(reader, parent) ||
 					OutlineParser.Instance.Parse(reader, parent) ||

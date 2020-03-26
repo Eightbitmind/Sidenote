@@ -78,6 +78,8 @@
     <Compile Include="PowerShell\GetONRootCmdlet.cs" />
     <Compile Include="PowerShell\TestCmdlet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\MediaPlaylistParser.cs" />
+    <Compile Include="Serialization\MediaFileParser.cs" />
     <Compile Include="Serialization\NumberedListItemParser.cs" />
     <Compile Include="Serialization\ImageParser.cs" />
     <Compile Include="Serialization\InkWordParser.cs" />

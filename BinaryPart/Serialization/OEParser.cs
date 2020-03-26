@@ -53,6 +53,7 @@ namespace Sidenote.Serialization
 					ListParser.Instance.Parse(reader, this.outlineElement) ||
 					TagParser.Instance.Parse(reader, this.outlineElement) ||
 					TableParser.Instance.Parse(reader, this.outlineElement) ||
+					MediaFileParser.Instance.Parse(reader, this.outlineElement) ||
 					ImageParser.Instance.Parse(reader, this.outlineElement) ||
 					InkParagraphParser.Instance.Parse(reader, this.outlineElement) ||
 					InkWordParser.Instance.Parse(reader, this.outlineElement) ||
