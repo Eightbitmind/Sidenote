@@ -6,7 +6,9 @@ using module TreeView
 using module Window
 
 param(
-	[switch] $SelectInGUI = $false
+	[switch] $SelectInGUI = $false,
+	[ValidateSet("SetLocation", "ReturnNode")]
+	$Action = "ReturnNode"
 )
 
 $debug = $true
@@ -116,7 +118,11 @@ function Select-ONObjectVisually() {
 
 		if (($tv.Run() -eq [WindowResult]::OK) -and ($tv.SelectedIndex() -lt $tv.ItemCount())) {
 			# Write-Host (Get-ONObjectPath $tv.SelectedItem().Value())
-			Set-Location (Get-ONObjectPath $tv.SelectedItem().Value())
+
+			switch($Action) {
+				"ReturnNode" { return $tv.SelectedItem().Value() }
+				"SetLocation" { Set-Location (Get-ONObjectPath $tv.SelectedItem().Value()) }
+			}
 		}
 
 	} finally {

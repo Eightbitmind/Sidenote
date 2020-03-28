@@ -72,3 +72,63 @@ function GetBirthdate($Node) {
 # function IsX3($n) { $_ % 3 -eq 0 }
 
 # 1,2,3 | where{ if((IsEven $_) -or (IsX3 $_)) { $_ }}
+
+function WriteAsMD($StartNode) {
+	$listItemStack = [System.Collections.Stack]::new()
+
+	GetDescendants $StartNode -MinDepth $StartNode.Depth | ForEach-Object {
+
+		$node = $_
+
+		# Write-Host "dbg: $($node.Type)"
+		switch ($node.Type) {
+			"Page" {
+				$notebook = $node.Parent.Parent
+				$section = $node.Parent
+				Write-Output "___"
+				Write-Output "# Book `"$($notebook.Name)`" / Section `"$($section.Name)`" / Page `"$($node.Name)`""
+				Write-Output "<sub><sup>Author: $($node.Author), CreationTime: $($node.CreationTime); LastModifiedTime: $($node.LastModifiedTime)</sup></sub>"
+				Write-Output "___"
+				break
+			}
+
+			"OutlineElement" {
+				if ($node.Parent.Type -eq "Title") {
+					# TODO: output the path down to the page
+					# Write-Output "___"
+					# Write-Output "# Page: $($node.Text)"
+					# Write-Output ""
+					break
+				}
+
+				$indentation = ""
+				$listItemPrefix = ""
+				$EOLSuffix = "  "
+				if ($node.ListItem) {
+
+					if (($listItemStack.Count -eq 0) -or ($node.Depth -gt $listItemStack.Peek().Depth)) {
+						$listItemStack.Push(@{Depth = $node.Depth; Index = 1})
+					} elseif ($node.Depth -lt $listItemStack.Peek().Depth) {
+						[void]($listItemStack.Pop())
+					}
+
+					$indentation = "   " * ($listItemStack.Count - 1)
+					switch ($node.ListItem.Type) {
+						([Sidenote.DOM.ListItemType]::BulletListItem) { $listItemPrefix = "- " }
+						([Sidenote.DOM.ListItemType]::NumberedListItem) {
+							$index = $listItemStack.Peek().Index++
+							$listItemPrefix = "$index. "
+						}
+					}
+
+					$EOLSuffix = ""
+				} else {
+					$listItemStack.Clear()
+				}
+
+				Write-Output "$indentation$listItemPrefix$($node.Text)$EOLSuffix"
+				break
+			}
+		}
+	}
+}
