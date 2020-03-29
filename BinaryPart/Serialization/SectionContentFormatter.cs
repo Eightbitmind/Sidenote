@@ -49,15 +49,15 @@ namespace Sidenote.Serialization
 
 			reader.ReadStartElement();
 
-			while (ParsePage(reader, parent)) ;
+			while (ParsePageEntry(reader, parent)) ;
 
 			if (expectEndElement) reader.ReadEndElement();
 
 			return true;
 		}
 
-		// TODO: Replace with PageParser?
-		private static bool ParsePage(XmlReader reader, INode parent)
+		// TODO: Replace with PageEntryParser?
+		private static bool ParsePageEntry(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Page") != 0)
 			{
@@ -68,13 +68,13 @@ namespace Sidenote.Serialization
 
 			string name = reader.GetAttribute("name");
 			string id = reader.GetAttribute("ID");
+			var creationTime = DateTime.Parse(reader.GetAttribute("dateTime"));
 			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
-			var dateTime = DateTime.Parse(reader.GetAttribute("dateTime"));
 			var pageLevel = uint.Parse(reader.GetAttribute("pageLevel"));
 
 			reader.ReadStartElement();
 
-			parent.Children.Add(new Page(parent.Depth + 1, parent, name, id, lastModifiedTime, dateTime, pageLevel));
+			parent.Children.Add(new Page(parent.Depth + 1, parent, name, id, creationTime, lastModifiedTime, pageLevel));
 
 			if (expectEndElement) reader.ReadEndElement();
 

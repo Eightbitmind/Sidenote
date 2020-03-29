@@ -18,10 +18,5 @@
 		{
 			get { return new SectionContentFormatter(); }
 		}
-
-		public static IFormatter PageContentFormatter
-		{
-			get { return new PageContentFormatter(); }
-		}
 	}
 }

@@ -3,6 +3,8 @@ using Sidenote.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Xml;
 
 namespace Sidenote.DOM
 {
@@ -14,14 +16,42 @@ namespace Sidenote.DOM
 		{
 			get
 			{
+				//if (this.children == null)
+				//{
+				//	this.children = new List<INode>();
+				//	IFormatter formatter = FormatterManager.PageContentFormatter;
+				//	bool success = formatter.Deserialize(this);
+				//	Debug.Assert(success);
+				//}
+
+				//return this.children;
+
 				if (this.children == null)
 				{
 					this.children = new List<INode>();
-					IFormatter formatter = FormatterManager.PageContentFormatter;
-					bool success = formatter.Deserialize(this);
-					Debug.Assert(success);
-				}
 
+					string pageXml;
+					ApplicationManager.Application.GetPageContent(
+						this.ID,
+						out pageXml,
+						PageInfo.piBasic, // 'piBasic' is the default
+						XMLSchema.xs2013);
+
+					Debug.Assert(!string.IsNullOrEmpty(pageXml));
+					var textReader = new StringReader(pageXml);
+
+					var xmlReaderSettings = new XmlReaderSettings();
+					xmlReaderSettings.IgnoreComments = true;
+					xmlReaderSettings.IgnoreWhitespace = true;
+					xmlReaderSettings.IgnoreProcessingInstructions = true;
+					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
+
+
+					if (!PageContentParser.Instance.Parse(xmlReader, this))
+					{
+						throw new Exception("could not parse page content");
+					}
+				}
 				return this.children;
 			}
 		}
@@ -51,7 +81,6 @@ namespace Sidenote.DOM
 
 		#region IPage members
 
-		public DateTime DateTime { get; }
 		public uint PageLevel { get; }
 
 		#endregion
@@ -61,15 +90,15 @@ namespace Sidenote.DOM
 			INode parent,
 			string name,
 			string id,
+			DateTime creationTime,
 			DateTime lastModifiedTime,
-			DateTime dateTime,
 			uint pageLevel)
 			: base(type: "Page", depth: depth, parent: parent)
 		{
 			this.ID = id;
 			this.Name = name;
+			this.CreationTime = creationTime;
 			this.LastModifiedTime = lastModifiedTime;
-			this.DateTime = dateTime;
 			this.PageLevel = pageLevel;
 		}
 	}
