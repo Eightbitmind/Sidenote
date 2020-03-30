@@ -73,7 +73,7 @@ function GetBirthdate($Node) {
 
 # 1,2,3 | where{ if((IsEven $_) -or (IsX3 $_)) { $_ }}
 
-function WriteAsMD($StartNode) {
+function _WriteAsMD($StartNode) {
 	$listItemStack = [System.Collections.Stack]::new()
 
 	GetDescendants $StartNode -MinDepth $StartNode.Depth | ForEach-Object {

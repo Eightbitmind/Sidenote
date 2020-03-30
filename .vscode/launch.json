@@ -1,0 +1,47 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "MD Page1",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${file}",
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"-StartNode",
+				"(Get-Item 'ON:\\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}')",
+				"-File",
+				"$env:TEMP\\test.md"
+			]
+		},
+		{
+			"name": "MD Page2",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${file}",
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"-StartNode",
+				"(Get-Item ON:\\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1950332892422071365901913002503383206122461})",
+				"-File",
+				"$env:TEMP\\test.md"
+			]
+		},
+		{
+			"name": "MD Page3",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${file}",
+			"cwd": "${workspaceFolder}",
+			"args": [
+				"-StartNode",
+				"(Get-Item \"ON:\\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E19575807749711838861720114584735546980975681}\")",
+				"-File",
+				"$env:TEMP\\test.md"
+			]
+		}
+	]
+}

@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="DOM\ITableCell.cs" />
+    <Compile Include="DOM\ITable.cs" />
     <Compile Include="DOM\INumberedListItem.cs" />
     <Compile Include="DOM\ListItemType.cs" />
     <Compile Include="DOM\IListItem.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="DOM\Node.cs" />
     <Compile Include="DOM\Notebook.cs" />
     <Compile Include="DOM\Outline.cs" />
+    <Compile Include="DOM\TableCell.cs" />
+    <Compile Include="DOM\Table.cs" />
     <Compile Include="DOM\OutlineElement.cs" />
     <Compile Include="DOM\Title.cs" />
     <Compile Include="DOM\Page.cs" />
@@ -78,6 +82,8 @@
     <Compile Include="PowerShell\GetONRootCmdlet.cs" />
     <Compile Include="PowerShell\TestCmdlet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\TableColumnParser.cs" />
+    <Compile Include="Serialization\TableRowParser.cs" />
     <Compile Include="Serialization\MediaPlaylistParser.cs" />
     <Compile Include="Serialization\MediaFileParser.cs" />
     <Compile Include="Serialization\NumberedListItemParser.cs" />
@@ -86,9 +92,11 @@
     <Compile Include="Serialization\InkParagraphParser.cs" />
     <Compile Include="Serialization\InkDrawingParser.cs" />
     <Compile Include="Serialization\BulletListItemParser.cs" />
+    <Compile Include="Serialization\TableColumnsParser.cs" />
+    <Compile Include="Serialization\TableCellParser.cs" />
     <Compile Include="Serialization\TableParser.cs" />
     <Compile Include="Serialization\TagParser.cs" />
-    <Compile Include="Serialization\PageParser.cs" />
+    <Compile Include="Serialization\PageContentParser.cs" />
     <Compile Include="Serialization\OutlineParser.cs" />
     <Compile Include="Serialization\IndentsParser.cs" />
     <Compile Include="Serialization\ListParser.cs" />
@@ -101,7 +109,6 @@
     <Compile Include="Serialization\OEParser.cs" />
     <Compile Include="Serialization\TextParser.cs" />
     <Compile Include="Serialization\OEChildrenParser.cs" />
-    <Compile Include="Serialization\PageContentFormatter.cs" />
     <Compile Include="Serialization\ParserBase.cs" />
     <Compile Include="Serialization\FormatterManager.cs" />
     <Compile Include="Serialization\IFormatter.cs" />

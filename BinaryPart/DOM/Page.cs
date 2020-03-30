@@ -16,16 +16,6 @@ namespace Sidenote.DOM
 		{
 			get
 			{
-				//if (this.children == null)
-				//{
-				//	this.children = new List<INode>();
-				//	IFormatter formatter = FormatterManager.PageContentFormatter;
-				//	bool success = formatter.Deserialize(this);
-				//	Debug.Assert(success);
-				//}
-
-				//return this.children;
-
 				if (this.children == null)
 				{
 					this.children = new List<INode>();
@@ -45,7 +35,6 @@ namespace Sidenote.DOM
 					xmlReaderSettings.IgnoreWhitespace = true;
 					xmlReaderSettings.IgnoreProcessingInstructions = true;
 					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
-
 
 					if (!PageContentParser.Instance.Parse(xmlReader, this))
 					{
