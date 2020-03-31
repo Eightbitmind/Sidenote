@@ -16,9 +16,9 @@ function WritePage($Node) {
 	$section = $Node.Parent
 	WriteOutput "___"
 	WriteOutput "## $($Node.Name)"
-	WriteOutput "<sub><sup>Book `"$($notebook.Name)`" / Section `"$($section.Name)`" / Page `"$($Node.Name)`"</sup></sub>  "
-	WriteOutput "<sub><sup>Author: $($Node.Author), CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime)</sup></sub>  "
-	# WriteOutput "___"
+	WriteOutput "> <sub><sup>Book `"$($notebook.Name)`" / Section `"$($section.Name)`" / Page `"$($Node.Name)`"</sup></sub>  "
+	WriteOutput "> <sub><sup>Author: $($Node.Author), CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime)</sup></sub>  "
+	WriteOutput ""
 
 	foreach ($child in $Node.Children) {
 		if (!(
@@ -53,36 +53,21 @@ function WriteOutline($Node) {
 $ListItemStack = [System.Collections.Stack]::new()
 
 function WriteOutlineElement($Node) {
-	if ($Node.Type -ne "OutlineElement") { return $false }
+	return `
+		(WriteNonListItemOutlineElement $Node) -or
+		(WriteBulletListItem $Node) -or
+		(WriteNumberedListItem $Node)
+}
 
-	# WriteOutput "$($Node.Text)  " # trailing spaces result in a line break
-
-	$indentation = ""
-	$listItemPrefix = ""
-	$EOLSuffix = "  "
-	if ($Node.ListItem) {
-
-		if (($ListItemStack.Count -eq 0) -or ($Node.Depth -gt $ListItemStack.Peek().Depth)) {
-			$ListItemStack.Push(@{Depth = $node.Depth; Index = 1})
-		} elseif ($Node.Depth -lt $ListItemStack.Peek().Depth) {
-			[void]($ListItemStack.Pop())
-		}
-
-		$indentation = "   " * ($ListItemStack.Count - 1)
-		switch ($Node.ListItem.Type) {
-			([Sidenote.DOM.ListItemType]::BulletListItem) { $listItemPrefix = "- " }
-			([Sidenote.DOM.ListItemType]::NumberedListItem) {
-				$index = $ListItemStack.Peek().Index++
-				$listItemPrefix = "$index. "
-			}
-		}
-
-		$EOLSuffix = ""
-	} else {
-		$ListItemStack.Clear()
+function WriteNonListItemOutlineElement($Node) {
+	if (!(
+		$Node.Type -eq "OutlineElement" -and
+		!($Node.ListItem)
+	)) {
+		return $false
 	}
 
-	WriteOutput "$indentation$listItemPrefix$($Node.Text)$EOLSuffix"
+	WriteOutput "$($Node.Text)  "
 
 	foreach ($child in $Node.Children) {
 		if (!(
@@ -97,10 +82,75 @@ function WriteOutlineElement($Node) {
 	return $true
 }
 
+function WriteBulletListItem($Node) {
+	if (!(
+		$Node.Type -eq "OutlineElement" -and
+		$Node.ListItem -and
+		($Node.ListItem.Type -eq ([Sidenote.DOM.ListItemType]::BulletListItem))
+	)) {
+		return $false
+	}
+
+	if (($ListItemStack.Count -eq 0) -or ($Node.Depth -gt $ListItemStack.Peek().Depth)) {
+		$ListItemStack.Push(@{Depth = $node.Depth; Index = 1})
+	} elseif ($Node.Depth -lt $ListItemStack.Peek().Depth) {
+		[void]($ListItemStack.Pop())
+	}
+
+	$indentation = "   " * ($ListItemStack.Count - 1)
+	$listItemPrefix = "- "
+
+	WriteOutput "$indentation$listItemPrefix$($Node.Text)"
+
+	foreach ($child in $Node.Children) {
+		if (!(
+			(WriteOutlineElement $child) -or
+			(WriteTable $child)
+		)) {
+			Write-Error "unexpected OutlineElement child $($child.Type)"
+			return $false
+		}
+	}
+
+	return $true
+}
+
+function WriteNumberedListItem($Node) {
+	if (!(
+		$Node.Type -eq "OutlineElement" -and
+		$Node.ListItem -and
+		($Node.ListItem.Type -eq ([Sidenote.DOM.ListItemType]::NumberedListItem))
+	)) {
+		return $false
+	}
+
+	if (($ListItemStack.Count -eq 0) -or ($Node.Depth -gt $ListItemStack.Peek().Depth)) {
+		$ListItemStack.Push(@{Depth = $node.Depth; Index = 1})
+	} elseif ($Node.Depth -lt $ListItemStack.Peek().Depth) {
+		[void]($ListItemStack.Pop())
+	}
+
+	$indentation = "   " * ($ListItemStack.Count - 1)
+	$index = $ListItemStack.Peek().Index++
+	$listItemPrefix = "$index. "
+
+	WriteOutput "$indentation$listItemPrefix$($Node.Text)"
+
+	foreach ($child in $Node.Children) {
+		if (!(
+			(WriteOutlineElement $child) -or
+			(WriteTable $child)
+		)) {
+			Write-Error "unexpected OutlineElement child $($child.Type)"
+			return $false
+		}
+	}
+
+	return $true
+}
 
 function WriteTable($Node) {
 	if ($Node.Type -ne "Table") { return $false }
-
 
 	function GetCellText($cell) {
 		$sb = [System.Text.StringBuilder]::new()
