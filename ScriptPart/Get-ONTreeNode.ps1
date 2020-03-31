@@ -5,10 +5,8 @@ using module Sidenote # script doesn't seem to load if we haven't imported this 
 using module TreeView
 using module Window
 
-param(
-	[switch] $SelectInGUI = $false,
-	[ValidateSet("SetLocation", "ReturnNode")]
-	$Action = "ReturnNode"
+param (
+	[switch] $SelectInGUI = $false
 )
 
 $debug = $true
@@ -77,22 +75,7 @@ class OneNoteTVItem : TVItemBase {
 	hidden [System.Collections.Generic.IList`1[TVItemBase]] $_children = $null
 }
 
-function Get-ONObjectPath($Node) {
-	$sb = [System.Text.StringBuilder]::new()
-
-	for(; $Node; $Node = $Node.Parent) {
-		$identifiableObject = $Node -as [Sidenote.DOM.IIdentifiableObject]
-		if ($identifiableObject) {
-			[void]($sb.Insert(0, '\').Insert(0, $identifiableObject.ID))
-		}
-	}
-
-	[void]($sb.Insert(0, 'ON:\'))
-
-	return $sb.ToString(0, $sb.Length - 1)
-}
-
-function Select-ONObjectVisually() {
+function Main() {
 	$fll = $null
 	if ($debug) {
 		$logFileName = "$env:TEMP\$(PathFileBaseName $PSCommandPath).log"
@@ -117,12 +100,9 @@ function Select-ONObjectVisually() {
 		$tv.Title = 'Select OneNote Object'
 
 		if (($tv.Run() -eq [WindowResult]::OK) -and ($tv.SelectedIndex() -lt $tv.ItemCount())) {
-			# Write-Host (Get-ONObjectPath $tv.SelectedItem().Value())
-
-			switch($Action) {
-				"ReturnNode" { return $tv.SelectedItem().Value() }
-				"SetLocation" { Set-Location (Get-ONObjectPath $tv.SelectedItem().Value()) }
-			}
+			return $tv.SelectedItem().Value()
+		} else {
+			return $null
 		}
 
 	} finally {
@@ -130,4 +110,4 @@ function Select-ONObjectVisually() {
 	}
 }
 
-Select-ONObjectVisually
+Main

@@ -1,83 +1,83 @@
-using module Gumby.Log
-using module Gumby.Path
-using module TreeView
-using module Window
+using module Sidenote
+#using module Gumby.Log
+#using module Gumby.Path
 
-$debug = $true
+function Get-ONPath {
+	[CmdletBinding()]
 
-class OneNoteTVItem : TVItemBase {
-	OneNoteTVItem([Sidenote.DOM.INode] $node) : base(<# level #> 0) {
-		$this.node = $node
-	}
+	param (
+		[Parameter(ValueFromPipeline)]
+		[Sidenote.DOM.INode]$Node
+	)
 
-	hidden OneNoteTVItem([Sidenote.DOM.INode] $node, [uint32] $level) : base($level) {
-		$this.node = $node
-	}
+	process {
+		$sb = [System.Text.StringBuilder]::new()
 
-	[string] Name() { return $this.node.Name }
-
-	[object] Value() { return $this.node }
-
-	[bool] IsContainer() {
-		# TODO: refine
-		return $true
-	}
-
-	[TVItemBase] Parent() {
-		if ($this.node.Parent) {
-			return [OneNoteTVItem]::new($this.node.Parent, $this.Level() - 1)
-		} else {
-			return $null
-		}
-	}
-
-	[Collections.Generic.IList`1[TVItemBase]] Children() {
-		if ($this._children -eq $null) {
-
-			$this._children = [Collections.Generic.List`1[TVItemBase]]::new()
-
-			foreach ($child in $this.node.Children) {
-				$this._children.Add([OneNoteTVItem]::new($child, $this.Level() + 1))
+		for (; $Node; $Node = $Node.Parent) {
+			$identifiableObject = $Node -as [Sidenote.DOM.IIdentifiableObject]
+			if ($identifiableObject) {
+				[void]($sb.Insert(0, '\').Insert(0, $identifiableObject.ID))
 			}
-
 		}
 
-		return $this._children
-	}
+		[void]($sb.Insert(0, 'ON:\'))
 
-	hidden [Sidenote.DOM.INode] $node
-	hidden [System.Collections.Generic.IList`1[TVItemBase]] $_children = $null
+		Write-Output $sb.ToString(0, $sb.Length - 1)
+	}
 }
 
+function Set-ONLocation {
+	[CmdletBinding()]
 
-function Select-ONObjectVisually() {
-	$fll = $null
-	if ($debug) {
-		$logFileName = "$env:TEMP\$(PathFileBaseName $PSCommandPath).log"
-		if (Test-Path $logFileName) { Remove-Item $logFileName }
-		$fll = [FileLogListener]::new($logFileName)
-		[void][Log]::Listeners.Add($fll)
+	param (
+		[Parameter(ValueFromPipeline)]
+		$Object
+	)
+
+	process {
+		if ($Object -is [Sidenote.DOM.INode]) {
+			Set-Location (Get-ONPath $Object)
+		} else {
+			Set-Location $Object
+		}
+	}
+}
+
+function Get-ONDescendants(
+	$StartNode,
+	[int] $MinDepth = ($StartNode.Depth + 1),
+	[int] $MaxDepth = ([int]::MaxValue)) {
+	# depth-first traversal
+	$stack = [System.Collections.Stack]::new()
+
+	if (($StartNode.Depth -ge $MinDepth) -and ($StartNode.Depth -le $MaxDepth)) {
+		Write-Output $StartNode
 	}
 
-	try {
-
-		$items = (Get-ONRoot).Children
-
-		$horizontalPercent = 0.8
-		$verticalPercent = 0.8
-
-		$width = [console]::WindowWidth * $horizontalPercent
-		$left = [int](([console]::WindowWidth - $width) / 2)
-
-		$height = [console]::WindowHeight * $verticalPercent
-		$top = [int](([console]::WindowHeight - $height) / 2)
-
-		$tv = [TreeView]::new($items, ([OneNoteTVItem]), $left, $top, $width, $height, ([console]::BackgroundColor), ([console]::ForegroundColor))
-		$tv.Title = 'Select OneNote Object'
-
-		[void]($tv.Run())
-
-	} finally {
-		if ($fll -ne $null) { [Log]::Listeners.Remove($fll) }
+	if (($StartNode.Depth -lt $MaxDepth) -and $StartNode.Children) {
+		$stack.Push($StartNode.Children.GetEnumerator())
 	}
+
+	while ($stack.Count -gt 0) {
+		$enum = $stack.Pop()
+		if (!$enum.MoveNext()) { continue }
+
+		if (($enum.Current.Depth -ge $MinDepth) -and ($enum.Current.Depth -le $MaxDepth)) {
+			Write-Output $enum.Current
+		}
+
+		$stack.Push($enum)
+		if (($enum.Current.Depth -lt $MaxDepth) -and $enum.Current.Children) {
+			$stack.Push($enum.Current.Children.GetEnumerator()) 
+		}
+	}
+}
+
+function Test-ONNodeContainsMatch($Node, $Pattern) {
+	foreach ($descendant in (Get-ONDescendants -StartNode $Node -MinDepth ($Node.Depth + 1) -MaxDepth ([int]::MaxValue))) {
+		if ($descendant.Type -eq "OutlineElement" -and $descendant.Text -and ($descendant.Text -match $Pattern)) {
+			return $true
+		}
+	}
+	return $false
 }
