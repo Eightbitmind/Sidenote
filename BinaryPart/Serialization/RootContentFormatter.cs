@@ -18,7 +18,11 @@ namespace Sidenote.Serialization
 		public bool Deserialize(INode root)
 		{
 			string childrenXml;
-			ApplicationManager.Application.GetHierarchy(null, HierarchyScope.hsChildren, out childrenXml);
+			ApplicationManager.Application.GetHierarchy(
+				null,
+				Microsoft.Office.Interop.OneNote.HierarchyScope.hsChildren,
+				out childrenXml);
+
 			Debug.Assert(!string.IsNullOrEmpty(childrenXml));
 			var textReader = new StringReader(childrenXml);
 

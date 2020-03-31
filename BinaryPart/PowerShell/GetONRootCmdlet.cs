@@ -2,7 +2,7 @@
 using Sidenote.Serialization;
 using System.Management.Automation;
 
-namespace Sidenote.Client
+namespace Sidenote.PowerShell
 {
 	[Cmdlet("Get", "ONRoot")]
 	public class GetONRootCmdlet : Cmdlet

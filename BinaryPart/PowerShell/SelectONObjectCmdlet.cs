@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Management.Automation;
 
-namespace Sidenote.Client
+namespace Sidenote.PowerShell
 {
 	// Objects addressable with the 'HierarchyObjectId' parameter
 	// - Section

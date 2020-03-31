@@ -15,7 +15,7 @@ function WritePage($Node) {
 	$notebook = $Node.Parent.Parent
 	$section = $Node.Parent
 	WriteOutput "___"
-	WriteOutput "# $($Node.Name)"
+	WriteOutput "## $($Node.Name)"
 	WriteOutput "<sub><sup>Book `"$($notebook.Name)`" / Section `"$($section.Name)`" / Page `"$($Node.Name)`"</sup></sub>  "
 	WriteOutput "<sub><sup>Author: $($Node.Author), CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime)</sup></sub>  "
 	# WriteOutput "___"
