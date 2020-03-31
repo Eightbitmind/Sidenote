@@ -29,6 +29,30 @@ function GetDescendants(
 	}
 }
 
+function Get-ONPath {
+	[CmdletBinding()]
+
+	param (
+		[Parameter(ValueFromPipeline)]
+		[Sidenote.DOM.INode]$Node
+	)
+
+	process {
+		$sb = [System.Text.StringBuilder]::new()
+
+		for(; $Node; $Node = $Node.Parent) {
+			$identifiableObject = $Node -as [Sidenote.DOM.IIdentifiableObject]
+			if ($identifiableObject) {
+				[void]($sb.Insert(0, '\').Insert(0, $identifiableObject.ID))
+			}
+		}
+
+		[void]($sb.Insert(0, 'ON:\'))
+
+		Write-Output $sb.ToString(0, $sb.Length - 1)
+	}
+}
+
 filter CanonicalPeople {
 	if (
 		($_.Type -eq "OutlineElement") -and
