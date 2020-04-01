@@ -79,14 +79,14 @@ namespace Sidenote.DOM
 			string id,
 			DateTime lastModifiedTime,
 			string path,
-			string Color)
+			string color)
 			: base(type: "Section", depth: depth, parent: parent)
 		{
 			this.ID = id;
 			this.Name = name;
 			this.LastModifiedTime = lastModifiedTime;
 			this.Path = path;
-			this.Color = Color;
+			this.Color = color;
 		}
 	}
 }

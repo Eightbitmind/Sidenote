@@ -194,7 +194,7 @@ process {
 		WriteOutput "___"
 		WriteOutput "### $($Node.Name)"
 		WriteOutput "> <sub><sup>Book `"$($notebook.Name)`" / Section `"$($section.Name)`" / Page `"$($Node.Name)`"</sup></sub>  "
-		WriteOutput "> <sub><sup>Author: $($Node.Author), CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime)</sup></sub>  "
+		WriteOutput "> <sub><sup>CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime); ID: `"$($Node.ID)`"</sup></sub>  "
 		WriteOutput ""
 	
 		foreach ($child in $Node.Children) {
@@ -210,24 +210,6 @@ process {
 		return $true
 	}
 
-	function WriteNotebook($Node) {
-		if ($Node.Type -ne "Notebook") { return $false }
-
-		WriteOutput "___"
-		WriteOutput "# $($Node.Name)"
-		WriteOutput "> <sub><sup>Author: $($Node.Author), CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime)</sup></sub>  "
-		WriteOutput ""
-
-		foreach ($child in $Node.Children) {
-			if (!(WriteSection $child)) {
-				Write-Error "unexpected Notebook child $($child.Type)"
-				return $false
-			}
-		}
-
-		return $true
-	}
-
 	function WriteSection($Node) {
 		if ($Node.Type -ne "Section") { return $false }
 
@@ -235,7 +217,7 @@ process {
 		WriteOutput "___"
 		WriteOutput "## $($Node.Name)"
 		WriteOutput "> <sub><sup>Book `"$($notebook.Name)`" / Section `"$($Node.Name)`" </sup></sub>  "
-		WriteOutput "> <sub><sup>Author: $($Node.Author), CreationTime: $($Node.CreationTime); LastModifiedTime: $($Node.LastModifiedTime)</sup></sub>  "
+		WriteOutput "> <sub><sup>LastModifiedTime: $($Node.LastModifiedTime); Path: `"$($Node.Path)`"; Color: $($Node.Color); ID: `"$($Node.ID)`"</sup></sub>  "
 		WriteOutput ""
 
 		foreach ($child in $Node.Children) {
@@ -248,11 +230,32 @@ process {
 		return $true
 	}
 
+	function WriteNotebook($Node) {
+		if ($Node.Type -ne "Notebook") { return $false }
+
+		WriteOutput "___"
+		WriteOutput "# $($Node.Name)"
+		WriteOutput "> <sub><sup>LastModifiedTime: $($Node.LastModifiedTime); Path: `"$($Node.Path)`"; Color: $($Node.Color); ID: `"$($Node.ID)`"</sup></sub>  "
+		WriteOutput ""
+
+		foreach ($child in $Node.Children) {
+			if (!(WriteSection $child)) {
+				Write-Error "unexpected Notebook child $($child.Type)"
+				return $false
+			}
+		}
+
+		return $true
+	}
+
 	# TODO: accommodate different types of start nodes
 	switch ($StartNode.Type) {
 		"Notebook" { [void](WriteNotebook $StartNode) }
+		"Outline" {[void](WriteOutline $StartNode)}
+		"OutlineElement" { [void](WriteOutline $StartNode) }
 		"Page" { [void](WritePage $StartNode) }
 		"Section" { [void](WriteSection $StartNode) }
+		"Table" { [void](WriteTable $StartNode) }
 		default { Write-Error "writing of `"$($StartNode.Type)`" nodes NYI" }
 	}
 }
