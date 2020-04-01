@@ -312,10 +312,8 @@ namespace Sidenote.PowerShell
 		{
 			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
 
-			IFormatter notebooksFormatter = FormatterManager.RootContentFormatter;
-
 			INode currentNode = new Node(type: "Root", depth: 0, parent: null);
-			bool success = notebooksFormatter.Deserialize(currentNode);
+			bool success = RootContentParser.Parse(currentNode);
 			Debug.Assert(success);
 
 			for (int i = 1; i < pathParts.Length; ++i)

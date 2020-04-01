@@ -1,19 +1,13 @@
 ﻿using Sidenote.DOM;
 using System.Diagnostics;
 using System.IO;
-using System.Text;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class RootContentFormatter : IFormatter
+	internal static class RootContentParser
 	{
-		public void Serialize(INode root, StringBuilder xml)
-		{
-			// TODO: implement
-		}
-
-		public bool Deserialize(INode root)
+		public static bool Parse(INode root)
 		{
 			string childrenXml;
 			ApplicationManager.Application.GetHierarchy(

@@ -87,6 +87,7 @@
     <Compile Include="Serialization\NotebooksParser.cs" />
     <Compile Include="Serialization\NotebookContentParser.cs" />
     <Compile Include="Serialization\PageEntryParser.cs" />
+    <Compile Include="Serialization\RootContentParser.cs" />
     <Compile Include="Serialization\SectionGroupParser.cs" />
     <Compile Include="Serialization\SectionEntryParser.cs" />
     <Compile Include="Serialization\SectionContentParser.cs" />
@@ -118,9 +119,6 @@
     <Compile Include="Serialization\TextParser.cs" />
     <Compile Include="Serialization\OEChildrenParser.cs" />
     <Compile Include="Serialization\ParserBase.cs" />
-    <Compile Include="Serialization\FormatterManager.cs" />
-    <Compile Include="Serialization\IFormatter.cs" />
-    <Compile Include="Serialization\RootContentFormatter.cs" />
     <Compile Include="Utilities\Validator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
