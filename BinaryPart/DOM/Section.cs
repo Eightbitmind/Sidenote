@@ -3,6 +3,8 @@ using Sidenote.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Xml;
 
 namespace Sidenote.DOM
 {
@@ -17,11 +19,25 @@ namespace Sidenote.DOM
 				if (this.children == null)
 				{
 					this.children = new List<INode>();
-					IFormatter formatter = FormatterManager.SectionContentFormatter;
-					bool success = formatter.Deserialize(this);
-					Debug.Assert(success);
-				}
+					string childrenXml;
+					ApplicationManager.Application.GetHierarchy(
+						this.ID,
+						Microsoft.Office.Interop.OneNote.HierarchyScope.hsChildren,
+						out childrenXml);
+					Debug.Assert(!string.IsNullOrEmpty(childrenXml));
+					var textReader = new StringReader(childrenXml);
 
+					var xmlReaderSettings = new XmlReaderSettings();
+					xmlReaderSettings.IgnoreComments = true;
+					xmlReaderSettings.IgnoreWhitespace = true;
+					xmlReaderSettings.IgnoreProcessingInstructions = true;
+					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
+
+					if (!SectionContentParser.Instance.Parse(xmlReader, this))
+					{
+						throw new Exception("could not parse section content");
+					}
+				}
 				return this.children;
 			}
 		}

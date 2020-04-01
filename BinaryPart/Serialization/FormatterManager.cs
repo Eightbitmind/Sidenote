@@ -9,14 +9,14 @@
 			get { return new RootContentFormatter(); }
 		}
 
-		public static IFormatter NotebookContentFormatter
-		{
-			get { return new NotebookContentFormatter(); }
-		}
+		//public static IFormatter NotebookContentFormatter
+		//{
+		//	get { return new NotebookContentFormatter(); }
+		//}
 
-		public static IFormatter SectionContentFormatter
-		{
-			get { return new SectionContentFormatter(); }
-		}
+		//public static IFormatter SectionContentFormatter
+		//{
+		//	get { return new SectionContentFormatter(); }
+		//}
 	}
 }

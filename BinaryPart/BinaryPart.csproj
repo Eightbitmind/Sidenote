@@ -83,6 +83,11 @@
     <Compile Include="PowerShell\DriveProvider.cs" />
     <Compile Include="PowerShell\GetONRootCmdlet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\NotebookContentParser.cs" />
+    <Compile Include="Serialization\PageEntryParser.cs" />
+    <Compile Include="Serialization\SectionGroupParser.cs" />
+    <Compile Include="Serialization\SectionEntryParser.cs" />
+    <Compile Include="Serialization\SectionContentParser.cs" />
     <Compile Include="Serialization\TableColumnParser.cs" />
     <Compile Include="Serialization\TableRowParser.cs" />
     <Compile Include="Serialization\MediaPlaylistParser.cs" />
@@ -114,8 +119,6 @@
     <Compile Include="Serialization\FormatterManager.cs" />
     <Compile Include="Serialization\IFormatter.cs" />
     <Compile Include="Serialization\RootContentFormatter.cs" />
-    <Compile Include="Serialization\SectionContentFormatter.cs" />
-    <Compile Include="Serialization\NotebookContentFormatter.cs" />
     <Compile Include="Utilities\Validator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

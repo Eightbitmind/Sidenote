@@ -3,6 +3,8 @@ using Sidenote.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Xml;
 
 namespace Sidenote.DOM
 {
@@ -17,9 +19,26 @@ namespace Sidenote.DOM
 				if (this.children == null)
 				{
 					this.children = new List<INode>();
-					IFormatter formatter = FormatterManager.NotebookContentFormatter;
-					bool success = formatter.Deserialize(this);
-					Debug.Assert(success);
+
+					string childrenXml;
+					ApplicationManager.Application.GetHierarchy(
+						this.ID,
+						Microsoft.Office.Interop.OneNote.HierarchyScope.hsChildren,
+						out childrenXml);
+
+					Debug.Assert(!string.IsNullOrEmpty(childrenXml));
+					var textReader = new StringReader(childrenXml);
+
+					var xmlReaderSettings = new XmlReaderSettings();
+					xmlReaderSettings.IgnoreComments = true;
+					xmlReaderSettings.IgnoreWhitespace = true;
+					xmlReaderSettings.IgnoreProcessingInstructions = true;
+					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
+
+					if (!NotebookContentParser.Instance.Parse(xmlReader, this))
+					{
+						throw new Exception("could not notebook page content");
+					}
 				}
 
 				return this.children;
@@ -58,12 +77,14 @@ namespace Sidenote.DOM
 
 		#endregion
 
-		internal Notebook(INode parent, string name, string id, DateTime lastModifiedTime)
+		internal Notebook(INode parent, string name, string id, DateTime lastModifiedTime, string path, string color)
 			: base(type: "Notebook", depth: 1, parent: parent)
 		{
 			this.Name = name;
 			this.ID = id;
 			this.LastModifiedTime = lastModifiedTime;
+			this.Path = path;
+			this.Color = color;
 		}
 	}
 }

@@ -26,7 +26,6 @@ namespace Sidenote.DOM
 						out pageXml,
 						PageInfo.piBasic, // 'piBasic' is the default
 						XMLSchema.xs2013);
-
 					Debug.Assert(!string.IsNullOrEmpty(pageXml));
 					var textReader = new StringReader(pageXml);
 

@@ -5,16 +5,14 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "MD Page1",
+			"name": "Debug Current",
 			"type": "PowerShell",
 			"request": "launch",
 			"script": "${file}",
 			"cwd": "${workspaceFolder}",
 			"args": [
 				"-StartNode",
-				"(Get-Item 'ON:\\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}')",
-				"-File",
-				"$env:TEMP\\test.md"
+				"(Get-Item \"ON:\\{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}\\{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}\")"
 			]
 		},
 		{

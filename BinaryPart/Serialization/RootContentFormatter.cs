@@ -1,5 +1,4 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -79,8 +78,10 @@ namespace Sidenote.Serialization
 			// string nickname = reader.GetAttribute("nickname");
 			string id = reader.GetAttribute("ID");
 			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
+			string path = reader.GetAttribute("path");
+			string color = reader.GetAttribute("color");
 
-			var notebook = new Notebook(root, name, id, lastModifiedTime);
+			var notebook = new Notebook(root, name, id, lastModifiedTime, path, color);
 			root.Children.Add(notebook);
 
 			reader.ReadStartElement();
