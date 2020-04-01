@@ -1,5 +1,4 @@
 ﻿using Sidenote.DOM;
-using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -31,62 +30,11 @@ namespace Sidenote.Serialization
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!ParseNotebooks(xmlReader, root))
+			if (!NotebooksParser.Instance.Parse(xmlReader, root))
 			{
 				Debug.Assert(false, "unexpected root content");
 				return false;
 			}
-
-			return true;
-		}
-
-		// TODO: Replace with NotebookParser?
-		private static bool ParseNotebooks(XmlReader reader, INode root)
-		{
-			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Notebooks") != 0)
-			{
-				return false;
-			}
-
-			bool expectEndElement = !reader.IsEmptyElement;
-			reader.ReadStartElement();
-
-			bool parsedAtLeastOneNotebook = false;
-
-			while (ParseNotebook(reader, root))
-			{
-				parsedAtLeastOneNotebook = true;
-			}
-
-			Debug.Assert(parsedAtLeastOneNotebook);
-
-			if (expectEndElement) reader.ReadEndElement();
-
-			return true;
-		}
-
-		private static bool ParseNotebook(XmlReader reader, INode root)
-		{
-			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, "Notebook") != 0)
-			{
-				return false;
-			}
-
-			bool expectEndElement = !reader.IsEmptyElement;
-
-			string name = reader.GetAttribute("name");
-			// string nickname = reader.GetAttribute("nickname");
-			string id = reader.GetAttribute("ID");
-			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
-			string path = reader.GetAttribute("path");
-			string color = reader.GetAttribute("color");
-
-			var notebook = new Notebook(root, name, id, lastModifiedTime, path, color);
-			root.Children.Add(notebook);
-
-			reader.ReadStartElement();
-
-			if (expectEndElement) reader.ReadEndElement();
 
 			return true;
 		}
