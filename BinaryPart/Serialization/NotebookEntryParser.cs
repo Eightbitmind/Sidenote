@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class NotebookEntryParser : ParserBase<NotebookEntryParser>
+	internal class NotebookEntryParser : ParserBase<Notebook, NotebookEntryParser>
 	{
 		public NotebookEntryParser() : base("Notebook") { }
 
@@ -21,6 +21,11 @@ namespace Sidenote.Serialization
 			parent.Children.Add(notebook);
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using System.Xml;
 
 namespace Sidenote.DOM
@@ -62,8 +63,8 @@ namespace Sidenote.DOM
 
 		public string Author { get; }
 		public string AuthorInitials { get; }
-		public DateTime CreationTime { get; }
-		public DateTime LastModifiedTime { get; }
+		public DateTime CreationTime { get; set; }
+		public DateTime LastModifiedTime { get; set; }
 
 		#endregion
 
@@ -71,22 +72,41 @@ namespace Sidenote.DOM
 
 		public uint PageLevel { get; }
 
+		public void Save()
+		{
+			StringBuilder pageContent = new StringBuilder();
+
+			XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
+			xmlWriterSettings.Indent = true;
+
+			XmlWriter xmlWriter = XmlWriter.Create(
+				pageContent,
+				// @"C:\Users\aeulitz\AppData\Local\Temp\Sidenote.SerializationTest.xml",
+				xmlWriterSettings);
+
+			PageContentParser.Instance.Serialize(this, xmlWriter);
+
+			xmlWriter.Flush();
+			xmlWriter.Close();
+
+			ApplicationManager.Application.UpdatePageContent(pageContent.ToString(), this.LastModifiedTime.ToUniversalTime(), XMLSchema.xs2013, false);
+		}
+
 		#endregion
+
+		public DateTime EntryCreationTime { get; set; }
+		public DateTime EntryLastModifiedTime { get; set; }
 
 		internal Page(
 			uint depth,
 			INode parent,
 			string name,
 			string id,
-			DateTime creationTime,
-			DateTime lastModifiedTime,
 			uint pageLevel)
 			: base(type: "Page", depth: depth, parent: parent)
 		{
 			this.ID = id;
 			this.Name = name;
-			this.CreationTime = creationTime;
-			this.LastModifiedTime = lastModifiedTime;
 			this.PageLevel = pageLevel;
 		}
 	}

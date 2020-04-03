@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class SectionEntryParser : ParserBase<SectionEntryParser>
+	internal class SectionEntryParser : ParserBase<Section, SectionEntryParser>
 	{
 		public SectionEntryParser() : base("Section") { }
 
@@ -21,6 +21,11 @@ namespace Sidenote.Serialization
 			parent.Children.Add(new Section(parent.Depth + 1, parent, name, id, lastModifiedTime, path, color));
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

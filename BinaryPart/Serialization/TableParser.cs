@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class TableParser : ParserBase<TableParser>
+	internal class TableParser : ParserBase<Table, TableParser>
 	{
 		public TableParser() : base("Table") { }
 
@@ -62,6 +62,11 @@ namespace Sidenote.Serialization
 			this.table.RowCount = rowCount;
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 
 		private Table table;

@@ -25,7 +25,7 @@ namespace Sidenote.DOM
 		public IListItem ListItem { get; internal set; }
 		public string Alignment { get; }
 		public int QuickStyleIndex { get; set; }
-		public string Text { get; private set; }
+		public string Text { get; set; }
 
 		#endregion
 

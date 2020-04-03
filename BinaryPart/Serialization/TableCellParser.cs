@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class TableCellParser : ParserBase<TableCellParser>
+	internal class TableCellParser : ParserBase<TableCell, TableCellParser>
 	{
 		public TableCellParser() : base("Cell") { }
 
@@ -42,6 +42,11 @@ namespace Sidenote.Serialization
 		{
 			while (OEChildrenParser.Instance.Parse(reader, this.tableCell)) ;
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 
 		private TableCell tableCell;

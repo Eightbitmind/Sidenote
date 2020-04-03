@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class TitleParser : ParserBase<TitleParser>
+	internal class TitleParser : ParserBase<Title, TitleParser>
 	{
 		public TitleParser() : base("Title") { }
 
@@ -24,6 +24,15 @@ namespace Sidenote.Serialization
 
 			parent.Children.Add(title);
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			// throw new System.Exception("not expected/implemented");
+			// return false;
+			// return true;
+
+			return (node is Title);
 		}
 	}
 }

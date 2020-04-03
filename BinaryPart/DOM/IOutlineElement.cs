@@ -10,6 +10,6 @@
 		// TODO: 'enum' instead of 'string'
 		string Alignment { get; }
 		int QuickStyleIndex { get; set; }
-		string Text { get; }
+		string Text { get; set; }
 	}
 }

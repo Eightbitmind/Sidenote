@@ -71,6 +71,7 @@
     <Compile Include="DOM\Node.cs" />
     <Compile Include="DOM\Notebook.cs" />
     <Compile Include="DOM\Outline.cs" />
+    <Compile Include="DOM\NonexistentNode.cs" />
     <Compile Include="DOM\TableCell.cs" />
     <Compile Include="DOM\Table.cs" />
     <Compile Include="DOM\OutlineElement.cs" />

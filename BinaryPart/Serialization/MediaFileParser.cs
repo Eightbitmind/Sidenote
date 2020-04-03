@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class MediaFileParser : ParserBase<MediaFileParser>
+	internal class MediaFileParser : ParserBase<NonexistentNode, MediaFileParser>
 	{
 		public MediaFileParser() : base("MediaFile") { }
 
@@ -18,6 +18,11 @@ namespace Sidenote.Serialization
 			reader.Skip();
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class NumberedListItemParser : ParserBase<NumberedListItemParser>
+	internal class NumberedListItemParser : ParserBase<NonexistentNode, NumberedListItemParser>
 	{
 		public NumberedListItemParser() : base("Number") { }
 
@@ -13,6 +13,11 @@ namespace Sidenote.Serialization
 			string text = reader.GetAttribute("text");
 			((OutlineElement)parent).ListItem = new NumberedListItem(text);
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

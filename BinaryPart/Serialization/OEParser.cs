@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class OEParser : ParserBase<OEParser>
+	internal class OEParser : ParserBase<OutlineElement, OEParser>
 	{
 		public OEParser() : base("OE") { }
 
@@ -65,6 +65,23 @@ namespace Sidenote.Serialization
 			}
 
 			return true;
+		}
+
+		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		{
+			OutlineElement outlineElement = (OutlineElement)node;
+
+			// TODO: serialize author, authorInitials ... if present
+
+			writer.WriteAttributeString("creationTime", FormatDateTime(outlineElement.CreationTime));
+			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(outlineElement.LastModifiedTime));
+			writer.WriteAttributeString("objectID", outlineElement.ID);
+		}
+
+		protected override void SerializeChildren(INode node, XmlWriter writer)
+		{
+			TextParser.Instance.Serialize(node, writer);
+			OEChildrenParser.Instance.Serialize(node, writer);
 		}
 
 		private OutlineElement outlineElement;

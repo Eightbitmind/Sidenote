@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class InkParagraphParser : ParserBase<InkParagraphParser>
+	internal class InkParagraphParser : ParserBase<NonexistentNode, InkParagraphParser>
 	{
 		public InkParagraphParser() : base("InkParagraph") { }
 
@@ -18,6 +18,11 @@ namespace Sidenote.Serialization
 			reader.Skip();
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

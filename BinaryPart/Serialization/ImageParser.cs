@@ -1,10 +1,9 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using Sidenote.DOM;
+﻿using Sidenote.DOM;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class ImageParser : ParserBase<ImageParser>
+	internal class ImageParser : ParserBase<NonexistentNode, ImageParser>
 	{
 		public ImageParser() : base("Image") { }
 
@@ -19,6 +18,11 @@ namespace Sidenote.Serialization
 			reader.Skip();
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

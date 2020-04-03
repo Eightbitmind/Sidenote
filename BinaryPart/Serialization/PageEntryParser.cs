@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PageEntryParser : ParserBase<PageEntryParser>
+	internal class PageEntryParser : ParserBase<Page, PageEntryParser>
 	{
 		public PageEntryParser() : base("Page") { }
 
@@ -16,10 +16,19 @@ namespace Sidenote.Serialization
 			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 			var pageLevel = uint.Parse(reader.GetAttribute("pageLevel"));
 
+			Page page = new Page(parent.Depth + 1, parent, name, id, pageLevel);
 
-			parent.Children.Add(new Page(parent.Depth + 1, parent, name, id, creationTime, lastModifiedTime, pageLevel));
+			page.EntryCreationTime = creationTime;
+			page.EntryLastModifiedTime = lastModifiedTime;
+
+			parent.Children.Add(page);
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }

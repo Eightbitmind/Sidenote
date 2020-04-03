@@ -4,7 +4,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class ListParser : ParserBase<ListParser>
+	internal class ListParser : ParserBase<NonexistentNode, ListParser>
 	{
 		public ListParser() : base("List") { }
 
@@ -19,6 +19,11 @@ namespace Sidenote.Serialization
 			}
 
 			return true;
+		}
+
+		internal override bool Serialize(INode node, XmlWriter writer)
+		{
+			throw new System.Exception("not expected/implemented");
 		}
 	}
 }
