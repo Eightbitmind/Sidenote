@@ -313,7 +313,7 @@ namespace Sidenote.PowerShell
 			string[] pathParts = path.Split(new[] { DriveProvider.pathSeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
 
 			INode currentNode = new Node(type: "Root", depth: 0, parent: null);
-			bool success = RootContentParser.Parse(currentNode);
+			bool success = RootContentFormatter.Deserialize(currentNode);
 			Debug.Assert(success);
 
 			for (int i = 1; i < pathParts.Length; ++i)

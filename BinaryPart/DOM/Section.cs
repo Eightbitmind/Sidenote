@@ -33,7 +33,7 @@ namespace Sidenote.DOM
 					xmlReaderSettings.IgnoreProcessingInstructions = true;
 					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-					if (!SectionContentParser.Instance.Parse(xmlReader, this))
+					if (!SectionContentFormatter.Instance.Deserialize(xmlReader, this))
 					{
 						throw new Exception("could not parse section content");
 					}

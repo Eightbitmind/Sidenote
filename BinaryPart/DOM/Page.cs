@@ -36,7 +36,7 @@ namespace Sidenote.DOM
 					xmlReaderSettings.IgnoreProcessingInstructions = true;
 					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-					if (!PageContentParser.Instance.Parse(xmlReader, this))
+					if (!PageContentFormatter.Instance.Deserialize(xmlReader, this))
 					{
 						throw new Exception("could not parse page content");
 					}
@@ -84,7 +84,7 @@ namespace Sidenote.DOM
 				// @"C:\Users\aeulitz\AppData\Local\Temp\Sidenote.SerializationTest.xml",
 				xmlWriterSettings);
 
-			PageContentParser.Instance.Serialize(this, xmlWriter);
+			PageContentFormatter.Instance.Serialize(this, xmlWriter);
 
 			xmlWriter.Flush();
 			xmlWriter.Close();

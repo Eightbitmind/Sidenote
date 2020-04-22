@@ -10,7 +10,7 @@ namespace Sidenote.PowerShell
 		protected override void ProcessRecord()
 		{
 			INode root = new Node(type: "Root", depth: 0, parent: null);
-			RootContentParser.Parse(root);
+			RootContentFormatter.Deserialize(root);
 			WriteObject(root);
 		}
 	}

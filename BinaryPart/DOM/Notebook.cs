@@ -35,7 +35,7 @@ namespace Sidenote.DOM
 					xmlReaderSettings.IgnoreProcessingInstructions = true;
 					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-					if (!NotebookContentParser.Instance.Parse(xmlReader, this))
+					if (!NotebookContentFormatter.Instance.Deserialize(xmlReader, this))
 					{
 						throw new Exception("could not notebook page content");
 					}
