@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1957044400004184714941980202037146765866721}" name="Page3" dateTime="2020-03-31T00:43:14.000Z" lastModifiedTime="2020-04-06T02:59:50.000Z" pageLevel="1" isCurrentlyViewed="true" lang="en-US">
+	<one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Calibri Light" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0"/>
+	<one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Calibri" fontSize="11.0" spaceBefore="0.0" spaceAfter="0.0"/>
+	<one:PageSettings RTL="false" color="automatic">
+		<one:PageSize>
+			<one:Automatic/>
+		</one:PageSize>
+		<one:RuleLines visible="false"/>
+	</one:PageSettings>
+	<one:Title lang="en-US">
+		<one:OE author="Andreas Eulitz" authorInitials="AE" authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-04-02T21:16:44.000Z" lastModifiedTime="2020-04-02T21:16:44.000Z" objectID="{05A9CA81-6948-43A4-8E34-4465AC6D3788}{17}{B0}" alignment="left" quickStyleIndex="0">
+			<one:T><![CDATA[Page3]]></one:T>
+		</one:OE>
+	</one:Title>
+	<one:Outline author="Andreas Eulitz" authorInitials="AE" lastModifiedBy="Andreas Eulitz" lastModifiedByInitials="AE" lastModifiedTime="2020-04-06T02:59:47.000Z" objectID="{67A91392-F9F0-415A-A884-C00450DC0663}{10}{B0}">
+		<one:Position x="36.0" y="86.4000015258789" z="0"/>
+		<one:Size width="281.0674743652344" height="67.13858032226562"/>
+		<one:Indents>
+			<one:Indent level="0" indent="1.36757667102575E-34"/>
+		</one:Indents>
+		<one:OEChildren indent="2">
+			<one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-31T01:37:44.000Z" lastModifiedTime="2020-03-31T01:37:44.000Z" objectID="{67A91392-F9F0-415A-A884-C00450DC0663}{11}{B0}" alignment="left" quickStyleIndex="1">
+				<one:List>
+					<one:Bullet bullet="2" fontSize="11.0"/>
+				</one:List>
+				<one:T><![CDATA[Anchor01]]></one:T>
+			</one:OE>
+			<one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-31T01:38:05.000Z" lastModifiedTime="2020-04-06T02:59:20.000Z" objectID="{67A91392-F9F0-415A-A884-C00450DC0663}{16}{B0}" alignment="left" quickStyleIndex="1">
+				<one:List>
+					<one:Bullet bullet="2" fontSize="11.0"/>
+				</one:List>
+				<one:T><![CDATA[Intra-page link before <a href="onenote:#Page4&amp;section-id={09BAACBD-0DF5-407A-8C1E-E285B55A09A5}&amp;page-id={A8ABD475-DF52-4C31-9C12-70A29BDCC09D}&amp;object-id={5A8BFC19-34F5-44BC-9F75-49011BCCD9A0}&amp;C&amp;base-path=https://d.docs.live.net/af0dac0f0ee7dfec/Notebooks/SidenoteTest/Section1.one">Anchor01</a> after]]></one:T>
+			</one:OE>
+			<one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-03-31T01:38:35.000Z" lastModifiedTime="2020-04-06T02:59:00.000Z" objectID="{67A91392-F9F0-415A-A884-C00450DC0663}{21}{B0}" alignment="left" quickStyleIndex="1">
+				<one:List>
+					<one:Bullet bullet="2" fontSize="11.0"/>
+				</one:List>
+				<one:T><![CDATA[Page link before <a href="onenote:#Page1&amp;section-id={09BAACBD-0DF5-407A-8C1E-E285B55A09A5}&amp;page-id={01BB5E41-FBB4-4D60-9293-6DFF1FBBE232}&amp;object-id={A6A68DF3-79FB-453A-A819-2FBCD533BCEC}&amp;3E&amp;base-path=https://d.docs.live.net/af0dac0f0ee7dfec/Notebooks/SidenoteTest/Section1.one">Page1/Seattle</a> after]]></one:T>
+			</one:OE>
+			<one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-04-06T02:58:43.000Z" lastModifiedTime="2020-04-06T02:58:43.000Z" objectID="{D0778FB1-134B-4DEB-822F-64A30311AD6B}{10}{B0}" alignment="left" quickStyleIndex="1">
+				<one:List>
+					<one:Bullet bullet="2" fontSize="11.0"/>
+				</one:List>
+				<one:T><![CDATA[Telephone link before <a href="tel:+1.234.567.8901">tel:+1.234.567.8901</a> after]]></one:T>
+			</one:OE>
+			<one:OE authorResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" lastModifiedByResolutionID="&lt;resolutionId provider=&quot;Windows Live&quot; hash=&quot;nZWzTii0hd0YIzqRg1Y8fg==&quot;&gt;&lt;localId cid=&quot;af0dac0f0ee7dfec&quot;/&gt;&lt;/resolutionId&gt;" creationTime="2020-04-06T02:59:47.000Z" lastModifiedTime="2020-04-06T02:59:47.000Z" objectID="{D0778FB1-134B-4DEB-822F-64A30311AD6B}{15}{B0}" alignment="left" quickStyleIndex="1">
+				<one:List>
+					<one:Bullet bullet="2" fontSize="11.0"/>
+				</one:List>
+				<one:T><![CDATA[Mail link before <a href="mailto:abc@def.com">mailto:abc@def.com</a> after]]></one:T>
+			</one:OE>
+		</one:OEChildren>
+	</one:Outline>
+</one:Page>
+
