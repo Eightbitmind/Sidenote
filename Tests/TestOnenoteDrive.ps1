@@ -7,18 +7,18 @@ using module Sidenote
 $PathElements = @{
 	drive                      = 'ON:'
 	  SidenoteTest             = "{84247725-824B-42F7-B86D-3971948BAA47}{1}{B0}"
-	    Section1               = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{B0}"
-	      Page1                = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1953763139101400170501939065809574157669171}"
-	        Outline1           = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{10}{B0}"
-	          USA              = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{52}{B0}"
-	            Oregon         = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{54}{B0}"
-	            Washington     = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{59}{B0}"
-	        Outline2           = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{14}{B0}"
-	          Germany          = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{64}{B0}"
-	            Brandenburg    = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{40}{B0}"
-	            Sachsen        = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{15}{B0}"
-	      Page2                = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E1950332892422071365901913002503383206122461}"
-	      Wikipedia_2020_01_02 = "{A8BB95B1-5BEE-4BB0-98D4-FB42485B52CB}{1}{E19504986836828639411420151256186268821782351}"
+	    UTData                 = "{E8BD8F63-7C83-4A55-B8A3-45E701727063}{1}{B0}"
+	      Page1                = "{E8BD8F63-7C83-4A55-B8A3-45E701727063}{1}{E19473654813312029312920169532295347629710431}"
+	        Outline1           = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{15}{B0}"
+	          USA              = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{16}{B0}"
+	            Oregon         = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{18}{B0}"
+	            Washington     = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{41}{B0}"
+	        Outline2           = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{69}{B0}"
+	          Germany          = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{70}{B0}"
+	            Brandenburg    = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{71}{B0}"
+	            Sachsen        = "{DB124992-BF07-4883-B8F2-A914F742DCBB}{92}{B0}"
+	      Page2                = "{E8BD8F63-7C83-4A55-B8A3-45E701727063}{1}{E1951502003092150449381989883320034793440611}"
+	      Wikipedia_2020_01_02 = "{E8BD8F63-7C83-4A55-B8A3-45E701727063}{1}{E1948152843360785065021997889921752203513891}"
 	    Section2               = "{1D9410FF-2441-4C34-9919-88C047E9A38A}{1}{B0}"
 }
 
@@ -28,6 +28,10 @@ function GetPath() {
 		[void]($sb.Append("\").Append($PathElements[$elementName]))
 	}
 	return $sb.ToString().Substring(1)
+}
+
+function GetPathElement($name) {
+	return $PathElements[$name]
 }
 
 Set-Alias p GetPath
@@ -55,29 +59,29 @@ class DriveTests {
 
 	[TestMethod()]
 	[void] GetChildItem_Section_YieldsExpectedPages() {
-		$pages = Get-ChildItem (p 'drive' 'SidenoteTest' 'Section1')
+		$pages = Get-ChildItem (p 'drive' 'SidenoteTest' 'UTData')
 		[DriveTests]::TestSectionViaPages($pages)
 	}
 
 	[TestMethod()]
 	[void] GetChildItem_Page_YieldsExpectedOutlines() {
-		$outlines = Get-ChildItem (p 'drive' 'SidenoteTest' 'Section1' 'Page1')
+		$outlines = Get-ChildItem (p 'drive' 'SidenoteTest' 'UTData' 'Page1')
 		[DriveTests]::TestPageViaOutlines($outlines)
 	}
 
 	[TestMethod()]
 	[void] GetChildItem_Outline_YieldsExpectedOutlineElements() {
-		$outlineElements = Get-ChildItem (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+		$outlineElements = Get-ChildItem (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 		Test `
 			(ExpectAnd `
 				(ExpectCountGreaterOrEqual 1) `
-				(ExpectContains @{ID = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{52}{B0}"; Text = "USA"})) `
+				(ExpectContains @{ID = (GetPathElement "USA"); Text = "USA"})) `
 			$outlineElements
 	}
 
 	[TestMethod()]
 	[void] GetChildItem_OutlineRecurse_YieldsExpectedOutlineElements() {
-		$outlineElements = Get-ChildItem -Recurse (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+		$outlineElements = Get-ChildItem -Recurse (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 		Test @(
 				@{Text = "USA"},
 				@{Text = "Oregon"},
@@ -128,7 +132,7 @@ class DriveTests {
 	[void] SetLocation_AbsolutePathToSection() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData')
 			$pages = Get-ChildItem
 			[DriveTests]::TestSectionViaPages($pages)
 		} finally {
@@ -140,7 +144,7 @@ class DriveTests {
 	[void] SetLocation_AbsolutePathToPage() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1')
 			$outlines = Get-ChildItem
 			[DriveTests]::TestPageViaOutlines($outlines)
 		} finally {
@@ -152,7 +156,7 @@ class DriveTests {
 	[void] SetLocation_AbsolutePathToOutline() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 			Test (ExpectContains @{Text = "USA"}) (Get-ChildItem)
 		} finally {
 			Pop-Location
@@ -177,7 +181,7 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location 'ON:\'
-			Set-Location (p 'SidenoteTest' 'Section1')
+			Set-Location (p 'SidenoteTest' 'UTData')
 			Test (ExpectAnd (ExpectContains @{Name = 'Page1'}) (ExpectContains @{Name = 'Page2'})) (Get-ChildItem)
 		} finally {
 			Pop-Location
@@ -189,11 +193,11 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location 'ON:\'
-			Set-Location (p 'SidenoteTest' 'Section1' 'Page1')
+			Set-Location (p 'SidenoteTest' 'UTData' 'Page1')
 			Test `
 				(ExpectAnd `
-					(ExpectContains @{ID = '{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{10}{B0}'}) `
-					(ExpectContains @{ID = '{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{14}{B0}'})) `
+					(ExpectContains @{ID = (GetPathElement 'Outline1')}) `
+					(ExpectContains @{ID = (GetPathElement 'Outline2')})) `
 				(Get-ChildItem)
 		} finally {
 			Pop-Location
@@ -205,7 +209,7 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location 'ON:\'
-			Set-Location (p 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+			Set-Location (p 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 			Test (ExpectContains @{Text = "USA"}) (Get-ChildItem)
 		} finally {
 			Pop-Location
@@ -217,7 +221,7 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location 'ON:\'
-			Set-Location (p 'SidenoteTest' 'Section1' 'Page1' 'Outline1' 'USA')
+			Set-Location (p 'SidenoteTest' 'UTData' 'Page1' 'Outline1' 'USA')
 			Test `
 				(ExpectAnd `
 					(ExpectContains @{Text = "Oregon"}) `
@@ -246,7 +250,7 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location (p 'drive' 'SidenoteTest')
-			Set-Location (p 'Section1')
+			Set-Location (p 'UTData')
 			$pages = Get-ChildItem
 			[DriveTests]::TestSectionViaPages($pages)
 		} finally {
@@ -259,11 +263,11 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location (p 'drive' 'SidenoteTest')
-			Set-Location (p 'Section1' 'Page1')
+			Set-Location (p 'UTData' 'Page1')
 			Test `
 				(ExpectAnd `
-					(ExpectContains @{ID = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{10}{B0}"}) `
-					(ExpectContains @{ID = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{14}{B0}"})) `
+					(ExpectContains @{ID = (GetPathElement 'Outline1')}) `
+					(ExpectContains @{ID = (GetPathElement 'Outline2')})) `
 				(Get-ChildItem)
 		} finally {
 			Pop-Location
@@ -275,7 +279,7 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location (p 'drive' 'SidenoteTest')
-			Set-Location (p 'Section1' 'Page1' 'Outline1')
+			Set-Location (p 'UTData' 'Page1' 'Outline1')
 			Test (ExpectContains @{Text = "USA"}) (Get-ChildItem)
 		} finally {
 			Pop-Location
@@ -287,7 +291,7 @@ class DriveTests {
 		Push-Location
 		try {
 			Set-Location (p 'drive' 'SidenoteTest')
-			Set-Location (p 'Section1' 'Page1' 'Outline1' 'USA')
+			Set-Location (p 'UTData' 'Page1' 'Outline1' 'USA')
 			Test `
 				(ExpectAnd `
 					(ExpectContains @{Text = "Oregon"}) `
@@ -302,7 +306,7 @@ class DriveTests {
 	[void] SetLocation_FromSectionToRoot() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData')
 			Set-Location '..\..'
 			$notebooks = Get-ChildItem
 			Test (ExpectAnd (ExpectCountGreaterOrEqual 1) (ExpectContains @{Name = 'SidenoteTest'})) $notebooks
@@ -315,7 +319,7 @@ class DriveTests {
 	[void] SetLocation_FromSectionToNotebook() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData')
 			Set-Location '..'
 			$sections = Get-ChildItem
 			[DriveTests]::TestNotebookViaSections($sections)
@@ -328,7 +332,7 @@ class DriveTests {
 	[void] SetLocation_FromSectionToPage() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData')
 			Set-Location (p 'Page1')
 			$outlines = Get-ChildItem
 			[DriveTests]::TestPageViaOutlines($outlines)
@@ -341,7 +345,7 @@ class DriveTests {
 	[void] SetLocation_FromSectionToOutline() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData')
 			Set-Location (p 'Page1' 'Outline1')
 			Test (ExpectContains @{Text = "USA"}) (Get-ChildItem)
 		} finally {
@@ -353,7 +357,7 @@ class DriveTests {
 	[void] SetLocation_FromSectionToOE() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData')
 			Set-Location (p 'Page1' 'Outline1' 'USA')
 			Test `
 				(ExpectAnd `
@@ -369,7 +373,7 @@ class DriveTests {
 	[void] SetLocation_FromPageToRoot() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1')
 			Set-Location '..\..\..'
 			Test (ExpectContains @{Name = "SidenoteTest"}) (Get-ChildItem)
 		} finally {
@@ -381,7 +385,7 @@ class DriveTests {
 	[void] SetLocation_FromPageToNotebook() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1')
 			Set-Location '..\..'
 			$sections = Get-ChildItem
 			[DriveTests]::TestNotebookViaSections($sections)
@@ -394,7 +398,7 @@ class DriveTests {
 	[void] SetLocation_FromPageToSection() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1')
 			Set-Location '..'
 			$pages = Get-ChildItem
 			[DriveTests]::TestSectionViaPages($pages)
@@ -407,7 +411,7 @@ class DriveTests {
 	[void] SetLocation_FromPageToOutline() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1')
 			Set-Location (p 'Outline1')
 			Test (ExpectContains @{Text = 'USA'}) (Get-ChildItem)
 		} finally {
@@ -419,7 +423,7 @@ class DriveTests {
 	[void] SetLocation_FromOutlineToSection() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 			Set-Location '..\..'
 			$pages = Get-ChildItem
 			[DriveTests]::TestSectionViaPages($pages)
@@ -432,7 +436,7 @@ class DriveTests {
 	[void] SetLocation_FromOutlineToPage() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 			Set-Location '..'
 			$outlines = Get-ChildItem
 			[DriveTests]::TestPageViaOutlines($outlines)
@@ -445,7 +449,7 @@ class DriveTests {
 	[void] SetLocation_FromOutlineToOE() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1')
 			Set-Location (p 'USA')
 			Test `
 				(ExpectAnd `
@@ -461,7 +465,7 @@ class DriveTests {
 	[void] SetLocation_FromOEToPage() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1' 'USA')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1' 'USA')
 			Set-Location '..\..'
 			$outlines = Get-ChildItem
 			[DriveTests]::TestPageViaOutlines($outlines)
@@ -474,7 +478,7 @@ class DriveTests {
 	[void] SetLocation_FromOEToOutline() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1' 'USA')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1' 'USA')
 			Set-Location '..'
 			Test (ExpectContains @{Text = "USA"}) (Get-ChildItem)
 		} finally {
@@ -486,13 +490,13 @@ class DriveTests {
 	[void] SetLocation_FromOEToOEInOtherOutline() {
 		Push-Location
 		try {
-			Set-Location (p 'drive' 'SidenoteTest' 'Section1' 'Page1' 'Outline1' 'USA')
+			Set-Location (p 'drive' 'SidenoteTest' 'UTData' 'Page1' 'Outline1' 'USA')
 			Set-Location ('..\..\' + (p 'Outline2' 'Germany'))
 			$outlineElements = Get-ChildItem
 			Test `
 				(ExpectAnd `
-					(ExpectContains @{Text = "Brandenburg"; ID = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{40}{B0}"}) `
-					(ExpectContains @{Text = "Sachsen"; ID = "{9B846278-B4FE-40DC-9FE8-A6B99E23632F}{15}{B0}"})) `
+					(ExpectContains @{Text = "Brandenburg"; ID = (GetPathElement 'Brandenburg')}) `
+					(ExpectContains @{Text = "Sachsen"; ID = (GetPathElement 'Sachsen')})) `
 				$outlineElements
 		} finally {
 			Pop-Location
@@ -512,8 +516,8 @@ class DriveTests {
 		Test `
 			(ExpectAnd `
 				(ExpectCountGreaterOrEqual 2) `
-				(ExpectContains @{ID = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{10}{B0}"; Author="Andreas Eulitz"; AuthorInitials="AE"}) `
-				(ExpectContains @{ID = "{5DA5AC0E-BF64-490A-A961-2340FF1DAD9B}{14}{B0}"; Author="Andreas Eulitz"; AuthorInitials="AE"})) `
+				(ExpectContains @{ID = (GetPathElement 'Outline1'); Author="Andreas Eulitz"; AuthorInitials="AE"}) `
+				(ExpectContains @{ID = (GetPathElement 'Outline2'); Author="Andreas Eulitz"; AuthorInitials="AE"})) `
 			$outlines
 	}
 }
