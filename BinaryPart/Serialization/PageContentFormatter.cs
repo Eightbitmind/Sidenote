@@ -12,11 +12,9 @@ namespace Sidenote.Serialization
 		{
 			Page page = (Page)parent;
 
-			var dateTime = DateTime.Parse(reader.GetAttribute("dateTime"));
-			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
-
-			page.CreationTime = dateTime;
-			page.LastModifiedTime = lastModifiedTime;
+			page.CreationTime = DateTime.Parse(reader.GetAttribute("dateTime"));
+			page.LastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
+			page.Language = reader.GetAttribute("lang");
 
 			// REVIEW: Any other attributes on the page content we should add to the Page object?
 			// old code:
@@ -56,6 +54,11 @@ namespace Sidenote.Serialization
 			writer.WriteAttributeString("dateTime", FormatDateTime(page.CreationTime));
 			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(page.LastModifiedTime));
 			writer.WriteAttributeString("pageLevel", page.PageLevel.ToString());
+
+			if (!string.IsNullOrEmpty(page.Language))
+			{
+				writer.WriteAttributeString("lang", page.Language);
+			}
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)

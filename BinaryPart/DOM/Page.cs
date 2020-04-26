@@ -115,6 +115,20 @@ namespace Sidenote.DOM
 			}
 		}
 
+		public string Language
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.language;
+			}
+
+			set
+			{
+				this.language = value;
+			}
+		}
+
 		public void Save()
 		{
 			this.DeserializeContent();
@@ -123,6 +137,7 @@ namespace Sidenote.DOM
 
 			XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
 			xmlWriterSettings.Indent = true;
+			xmlWriterSettings.IndentChars = "\t";
 
 			string fileName = Path.GetTempPath() + "\\Sidenote.xml";
 			if (File.Exists(fileName))
@@ -168,6 +183,7 @@ namespace Sidenote.DOM
 		private DateTime creationTime;
 		private DateTime lastModifiedTime;
 		private uint pageLevel;
+		private string language;
 
 		private bool contentDeserialized = false;
 
