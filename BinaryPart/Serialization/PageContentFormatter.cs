@@ -54,7 +54,8 @@ namespace Sidenote.Serialization
 			writer.WriteAttributeString("ID", page.ID);
 			writer.WriteAttributeString("name", page.Name);
 			writer.WriteAttributeString("dateTime", FormatDateTime(page.CreationTime));
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(page.CreationTime));
+			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(page.LastModifiedTime));
+			writer.WriteAttributeString("pageLevel", page.PageLevel.ToString());
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)

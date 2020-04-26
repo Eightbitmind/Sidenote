@@ -20,26 +20,7 @@ namespace Sidenote.DOM
 				if (this.children == null)
 				{
 					this.children = new List<INode>();
-
-					string pageXml;
-					ApplicationManager.Application.GetPageContent(
-						this.ID,
-						out pageXml,
-						PageInfo.piBasic, // 'piBasic' is the default
-						XMLSchema.xs2013);
-					Debug.Assert(!string.IsNullOrEmpty(pageXml));
-					var textReader = new StringReader(pageXml);
-
-					var xmlReaderSettings = new XmlReaderSettings();
-					xmlReaderSettings.IgnoreComments = true;
-					xmlReaderSettings.IgnoreWhitespace = true;
-					xmlReaderSettings.IgnoreProcessingInstructions = true;
-					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
-
-					if (!PageContentFormatter.Instance.Deserialize(xmlReader, this))
-					{
-						throw new Exception("could not parse page content");
-					}
+					this.DeserializeContent();
 				}
 				return this.children;
 			}
@@ -49,39 +30,109 @@ namespace Sidenote.DOM
 
 		#region IIdentifiableObject members
 
-		public string ID { get; }
+		public string ID
+		{
+			get
+			{
+				// this.DeserializeContent();
+				return this.id;
+			}
+		}
 
 		#endregion
 
 		#region INamedObject members
 
-		public string Name { get; }
+		public string Name
+		{
+			get
+			{
+				// this.DeserializeContent();
+				return this.name;
+			}
+		}
 
 		#endregion
 
 		#region IUserCreatedObject members
 
-		public string Author { get; }
-		public string AuthorInitials { get; }
-		public DateTime CreationTime { get; set; }
-		public DateTime LastModifiedTime { get; set; }
+		public string Author
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.author;
+
+			}
+		}
+
+		public string AuthorInitials
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.authorInitials;
+			}
+		}
+
+		public DateTime CreationTime
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.creationTime;
+			}
+
+			set
+			{
+				this.creationTime = value;
+			}
+		}
+
+		public DateTime LastModifiedTime
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.lastModifiedTime;
+			}
+
+			set
+			{
+				this.lastModifiedTime = value;
+			}
+		}
 
 		#endregion
 
 		#region IPage members
 
-		public uint PageLevel { get; }
+		public uint PageLevel {
+			get
+			{
+				// this.DeserializeContent();
+				return this.pageLevel;
+			}
+		}
 
 		public void Save()
 		{
+			this.DeserializeContent();
+
 			StringBuilder pageContent = new StringBuilder();
 
 			XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
 			xmlWriterSettings.Indent = true;
 
+			string fileName = Path.GetTempPath() + "\\Sidenote.xml";
+			if (File.Exists(fileName))
+			{
+				File.Delete(fileName);
+			}
+
 			XmlWriter xmlWriter = XmlWriter.Create(
-				pageContent,
-				// @"C:\Users\aeulitz\AppData\Local\Temp\Sidenote.SerializationTest.xml",
+				// pageContent,
+				fileName,
 				xmlWriterSettings);
 
 			PageContentFormatter.Instance.Serialize(this, xmlWriter);
@@ -89,7 +140,7 @@ namespace Sidenote.DOM
 			xmlWriter.Flush();
 			xmlWriter.Close();
 
-			ApplicationManager.Application.UpdatePageContent(pageContent.ToString(), this.LastModifiedTime.ToUniversalTime(), XMLSchema.xs2013, false);
+			// ApplicationManager.Application.UpdatePageContent(pageContent.ToString(), this.LastModifiedTime.ToUniversalTime(), XMLSchema.xs2013, false);
 		}
 
 		#endregion
@@ -105,9 +156,45 @@ namespace Sidenote.DOM
 			uint pageLevel)
 			: base(type: "Page", depth: depth, parent: parent)
 		{
-			this.ID = id;
-			this.Name = name;
-			this.PageLevel = pageLevel;
+			this.id = id;
+			this.name = name;
+			this.pageLevel = pageLevel;
+		}
+
+		private string id;
+		private string name;
+		private string author;
+		private string authorInitials;
+		private DateTime creationTime;
+		private DateTime lastModifiedTime;
+		private uint pageLevel;
+
+		private bool contentDeserialized = false;
+
+		private void DeserializeContent()
+		{
+			if (this.contentDeserialized) return;
+			this.contentDeserialized = true;
+
+			string pageXml;
+			ApplicationManager.Application.GetPageContent(
+				this.ID,
+				out pageXml,
+				PageInfo.piBasic, // 'piBasic' is the default
+				XMLSchema.xs2013);
+			Debug.Assert(!string.IsNullOrEmpty(pageXml));
+			var textReader = new StringReader(pageXml);
+
+			var xmlReaderSettings = new XmlReaderSettings();
+			xmlReaderSettings.IgnoreComments = true;
+			xmlReaderSettings.IgnoreWhitespace = true;
+			xmlReaderSettings.IgnoreProcessingInstructions = true;
+			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
+
+			if (!PageContentFormatter.Instance.Deserialize(xmlReader, this))
+			{
+				throw new Exception("could not parse page content");
+			}
 		}
 	}
 }
