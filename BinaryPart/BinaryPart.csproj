@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="DOM\IQuickStyle.cs" />
     <Compile Include="DOM\ITableCell.cs" />
     <Compile Include="DOM\ITable.cs" />
     <Compile Include="DOM\INumberedListItem.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="DOM\Notebook.cs" />
     <Compile Include="DOM\Outline.cs" />
     <Compile Include="DOM\NonexistentNode.cs" />
+    <Compile Include="DOM\QuickStyle.cs" />
     <Compile Include="DOM\TableCell.cs" />
     <Compile Include="DOM\Table.cs" />
     <Compile Include="DOM\OutlineElement.cs" />
@@ -115,7 +117,7 @@
     <Compile Include="Serialization\SizeFormatter.cs" />
     <Compile Include="Serialization\PositionFormatter.cs" />
     <Compile Include="Serialization\PageSettingsFormatter.cs" />
-    <Compile Include="Serialization\QuickStyleDefFormatter.cs" />
+    <Compile Include="Serialization\QuickStyleFormatter.cs" />
     <Compile Include="Serialization\TitleFormatter.cs" />
     <Compile Include="Serialization\OEFormatter.cs" />
     <Compile Include="Serialization\TextFormatter.cs" />

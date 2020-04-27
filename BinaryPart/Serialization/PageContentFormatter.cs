@@ -30,7 +30,7 @@ namespace Sidenote.Serialization
 			while (reader.IsStartElement())
 			{
 				if (!(
-					QuickStyleDefFormatter.Instance.Deserialize(reader, parent) ||
+					QuickStyleFormatter.Instance.Deserialize(reader, parent) ||
 					TagDefFormatter.Instance.Deserialize(reader,parent) ||
 					MediaPlaylistFormatter.Instance.Deserialize(reader, parent) ||
 					PageSettingsFormatter.Instance.Deserialize(reader, parent) ||
@@ -66,7 +66,7 @@ namespace Sidenote.Serialization
 			foreach(INode child in node.Children)
 			{
 				if (!(
-					QuickStyleDefFormatter.Instance.Serialize(child, writer) ||
+					QuickStyleFormatter.Instance.Serialize(child, writer) ||
 					TagDefFormatter.Instance.Serialize(child, writer) ||
 					MediaPlaylistFormatter.Instance.Serialize(child, writer) ||
 					PageSettingsFormatter.Instance.Serialize(child, writer) ||
