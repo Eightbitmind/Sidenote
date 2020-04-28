@@ -1,29 +1,58 @@
 ﻿using Sidenote.DOM;
+using System;
+using System.Globalization;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PageSettingsFormatter : FormatterBase<NonexistentNode, PageSettingsFormatter>
+	internal class PageSettingsFormatter : FormatterBase<PageSettings, PageSettingsFormatter>
 	{
 		public PageSettingsFormatter() : base("PageSettings") { }
 
-		internal override bool Deserialize(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
 		{
-			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
+			var pageSettings = new PageSettings(parent.Depth + 1, parent);
+			parent.Children.Add(pageSettings);
+
+			string rtlString = reader.GetAttribute(RtlAttributeName);
+			if (!string.IsNullOrEmpty(rtlString))
 			{
-				return false;
+				pageSettings.Rtl = bool.Parse(rtlString);
 			}
 
-			// ignore PageSettings elements for now
-			reader.Skip();
+			string color = reader.GetAttribute(ColorAttributeName);
+			if (!string.IsNullOrEmpty(color))
+			{
+				pageSettings.Color = color;
+			}
 
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent)
 		{
-			// throw new System.Exception("not expected/implemented");
-			return false;
+			while(reader.IsStartElement()) reader.Skip();
+
+			return true;
+
 		}
+
+		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		{
+			var pageSettings = (PageSettings)node;
+
+			if (pageSettings.Rtl != PageSettings.RtlDefaultValue)
+			{
+				writer.WriteAttributeString(RtlAttributeName, Convert.ToString(pageSettings.Rtl, CultureInfo.InvariantCulture));
+			}
+
+			if (string.CompareOrdinal(pageSettings.Color, PageSettings.ColorDefaultValue) != 0)
+			{
+				writer.WriteAttributeString(ColorAttributeName, pageSettings.Color);
+			}
+		}
+
+		private static string RtlAttributeName = "RTL";
+		private static string ColorAttributeName = "color";
 	}
 }

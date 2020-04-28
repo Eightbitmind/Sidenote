@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="DOM\IPageSettings.cs" />
     <Compile Include="DOM\IQuickStyle.cs" />
     <Compile Include="DOM\ITableCell.cs" />
     <Compile Include="DOM\ITable.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="DOM\Notebook.cs" />
     <Compile Include="DOM\Outline.cs" />
     <Compile Include="DOM\NonexistentNode.cs" />
+    <Compile Include="DOM\PageSettings.cs" />
     <Compile Include="DOM\QuickStyle.cs" />
     <Compile Include="DOM\TableCell.cs" />
     <Compile Include="DOM\Table.cs" />
