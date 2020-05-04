@@ -20,7 +20,7 @@ namespace Sidenote.Serialization
 			// DateTime creationTime = DateTime.Parse(reader.GetAttribute("creationTime"));
 			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 
-			this.outline = new Outline(
+			this.deserializedObject = new Outline(
 				parent.Depth + 1,
 				parent,
 				id,
@@ -29,7 +29,7 @@ namespace Sidenote.Serialization
 				lastModifiedTime, // What constitutes the creationTime?
 				lastModifiedTime);
 
-			parent.Children.Add(this.outline);
+			parent.Children.Add(this.deserializedObject);
 
 			return true;
 		}
@@ -39,10 +39,10 @@ namespace Sidenote.Serialization
 			while (reader.IsStartElement())
 			{
 				if (!(
-					PositionFormatter.Instance.Deserialize(reader, this.outline) ||
-					SizeFormatter.Instance.Deserialize(reader, this.outline) ||
-					IndentsFormatter.Instance.Deserialize(reader, this.outline) ||
-					OEChildrenFormatter.Instance.Deserialize(reader, this.outline)
+					PositionFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					SizeFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					IndentsFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject)
 				))
 				{
 					throw new Exception("unexpected Outline child " + reader.LocalName);
@@ -54,11 +54,11 @@ namespace Sidenote.Serialization
 
 		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
-			Outline outline = (Outline)node;
-			writer.WriteAttributeString("author", outline.Author);
-			writer.WriteAttributeString("authorInitials", outline.AuthorInitials);
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(outline.LastModifiedTime));
-			writer.WriteAttributeString("objectID", outline.ID);
+			Outline serializedObject = (Outline)node;
+			writer.WriteAttributeString("author", serializedObject.Author);
+			writer.WriteAttributeString("authorInitials", serializedObject.AuthorInitials);
+			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString("objectID", serializedObject.ID);
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)
@@ -67,6 +67,6 @@ namespace Sidenote.Serialization
 			OEChildrenFormatter.Instance.Serialize(node, writer);
 		}
 
-		private Outline outline;
+		private Outline deserializedObject;
 	}
 }

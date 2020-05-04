@@ -15,14 +15,14 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeChildren(XmlReader reader, INode parent)
 		{
-			Title title = new Title(parent.Depth + 1, parent);
+			Title deserializedObject = new Title(parent.Depth + 1, parent);
 
-			if (!OEFormatter.Instance.Deserialize(reader, title))
+			if (!OEFormatter.Instance.Deserialize(reader, deserializedObject))
 			{
 				throw new Exception("Title element missing OE");
 			}
 
-			parent.Children.Add(title);
+			parent.Children.Add(deserializedObject);
 			return true;
 		}
 

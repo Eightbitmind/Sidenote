@@ -23,7 +23,7 @@ namespace Sidenote.Serialization
 			bool bordersAreVisible = bool.Parse(reader.GetAttribute("bordersVisible"));
 			bool hasHeaderRow = bool.Parse(reader.GetAttribute("hasHeaderRow"));
 
-			this.table = new Table(
+			this.deserializedObject = new Table(
 				parent.Depth + 1,
 				parent,
 				id,
@@ -34,7 +34,7 @@ namespace Sidenote.Serialization
 				bordersAreVisible,
 				hasHeaderRow);
 
-			parent.Children.Add(this.table);
+			parent.Children.Add(this.deserializedObject);
 
 			return true;
 		}
@@ -47,19 +47,19 @@ namespace Sidenote.Serialization
 			while (reader.IsStartElement())
 			{
 
-				if (!columnsParsed && TableColumnsFormatter.Instance.Deserialize(reader, this.table))
+				if (!columnsParsed && TableColumnsFormatter.Instance.Deserialize(reader, this.deserializedObject))
 				{
 					columnsParsed = true;
 					continue;
 				}
 
-				if (TableRowFormatter.Instance.Deserialize(reader, this.table))
+				if (TableRowFormatter.Instance.Deserialize(reader, this.deserializedObject))
 				{
 					++rowCount;
 				}
 			}
 
-			this.table.RowCount = rowCount;
+			this.deserializedObject.RowCount = rowCount;
 
 			return true;
 		}
@@ -69,6 +69,6 @@ namespace Sidenote.Serialization
 			throw new System.Exception("not expected/implemented");
 		}
 
-		private Table table;
+		private Table deserializedObject;
 	}
 }

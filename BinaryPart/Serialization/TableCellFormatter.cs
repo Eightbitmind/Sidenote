@@ -23,7 +23,7 @@ namespace Sidenote.Serialization
 
 			string shadingColor = reader.GetAttribute("shadingColor");
 
-			this.tableCell = new TableCell(
+			this.deserializedObject = new TableCell(
 				parent.Depth + 1,
 				parent,
 				id,
@@ -33,14 +33,14 @@ namespace Sidenote.Serialization
 				lastModifiedTime,
 				shadingColor);
 
-			((Table)parent).AddCell(this.tableCell);
+			((Table)parent).AddCell(this.deserializedObject);
 
 			return true;
 		}
 
 		protected override bool DeserializeChildren(XmlReader reader, INode parent)
 		{
-			while (OEChildrenFormatter.Instance.Deserialize(reader, this.tableCell)) ;
+			while (OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject)) ;
 			return true;
 		}
 
@@ -49,6 +49,6 @@ namespace Sidenote.Serialization
 			throw new System.Exception("not expected/implemented");
 		}
 
-		private TableCell tableCell;
+		private TableCell deserializedObject;
 	}
 }

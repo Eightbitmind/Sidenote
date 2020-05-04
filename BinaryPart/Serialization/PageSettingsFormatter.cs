@@ -11,19 +11,19 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
 		{
-			var pageSettings = new PageSettings(parent.Depth + 1, parent);
-			parent.Children.Add(pageSettings);
+			this.deserializedObject = new PageSettings(parent.Depth + 1, parent);
+			parent.Children.Add(this.deserializedObject);
 
 			string rtlString = reader.GetAttribute(RtlAttributeName);
 			if (!string.IsNullOrEmpty(rtlString))
 			{
-				pageSettings.Rtl = bool.Parse(rtlString);
+				this.deserializedObject.Rtl = bool.Parse(rtlString);
 			}
 
 			string color = reader.GetAttribute(ColorAttributeName);
 			if (!string.IsNullOrEmpty(color))
 			{
-				pageSettings.Color = color;
+				this.deserializedObject.Color = color;
 			}
 
 			return true;
@@ -31,7 +31,9 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeChildren(XmlReader reader, INode parent)
 		{
-			while(reader.IsStartElement()) reader.Skip();
+			while (
+				PageSizeFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+				RuleLinesFormatter.Instance.Deserialize(reader, this.deserializedObject)) ;
 
 			return true;
 
@@ -39,20 +41,36 @@ namespace Sidenote.Serialization
 
 		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
-			var pageSettings = (PageSettings)node;
+			var serializedObject = (PageSettings)node;
 
-			if (pageSettings.Rtl != PageSettings.RtlDefaultValue)
+			if (serializedObject.Rtl != PageSettings.RtlDefaultValue)
 			{
-				writer.WriteAttributeString(RtlAttributeName, Convert.ToString(pageSettings.Rtl, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(RtlAttributeName, Converter.ToString(serializedObject.Rtl));
 			}
 
-			if (string.CompareOrdinal(pageSettings.Color, PageSettings.ColorDefaultValue) != 0)
+			if (string.CompareOrdinal(serializedObject.Color, PageSettings.ColorDefaultValue) != 0)
 			{
-				writer.WriteAttributeString(ColorAttributeName, pageSettings.Color);
+				writer.WriteAttributeString(ColorAttributeName, serializedObject.Color);
+			}
+		}
+
+		protected override void SerializeChildren(INode node, XmlWriter writer)
+		{
+			foreach (INode child in node.Children)
+			{
+				if (!(
+					PageSizeFormatter.Instance.Serialize(child, writer) ||
+					RuleLinesFormatter.Instance.Serialize(child, writer)))
+				{
+					throw new Exception("unexpected PageSettings child " + child.Type);
+
+				}
 			}
 		}
 
 		private static string RtlAttributeName = "RTL";
 		private static string ColorAttributeName = "color";
+
+		private PageSettings deserializedObject;
 	}
 }

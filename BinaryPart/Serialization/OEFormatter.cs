@@ -21,7 +21,7 @@ namespace Sidenote.Serialization
 			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 			string alignment = reader.GetAttribute("alignment");
 
-			this.outlineElement = new OutlineElement(
+			this.deserializedObject = new OutlineElement(
 				parent.Depth + 1,
 				parent,
 				id,
@@ -35,11 +35,11 @@ namespace Sidenote.Serialization
 
 			if (!string.IsNullOrEmpty(quickStyleIndexStr))
 			{
-				this.outlineElement.QuickStyleIndex = int.Parse(quickStyleIndexStr);
+				this.deserializedObject.QuickStyleIndex = int.Parse(quickStyleIndexStr);
 			}
 
 
-			parent.Children.Add(this.outlineElement);
+			parent.Children.Add(this.deserializedObject);
 
 			return true;
 		}
@@ -49,15 +49,15 @@ namespace Sidenote.Serialization
 			while (reader.IsStartElement())
 			{
 				if (!(
-					TextFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					ListFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					TagFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					TableFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					MediaFileFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					ImageFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					InkParagraphFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					InkWordFormatter.Instance.Deserialize(reader, this.outlineElement) ||
-					OEChildrenFormatter.Instance.Deserialize(reader, this.outlineElement)
+					TextFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					ListFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					TagFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					TableFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					MediaFileFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					ImageFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					InkParagraphFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					InkWordFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
+					OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject)
 				))
 				{
 					throw new Exception("unexpected OE child " + reader.LocalName);
@@ -69,13 +69,13 @@ namespace Sidenote.Serialization
 
 		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
-			OutlineElement outlineElement = (OutlineElement)node;
+			OutlineElement serializedObject = (OutlineElement)node;
 
 			// TODO: serialize author, authorInitials ... if present
 
-			writer.WriteAttributeString("creationTime", FormatDateTime(outlineElement.CreationTime));
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(outlineElement.LastModifiedTime));
-			writer.WriteAttributeString("objectID", outlineElement.ID);
+			writer.WriteAttributeString("creationTime", FormatDateTime(serializedObject.CreationTime));
+			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString("objectID", serializedObject.ID);
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)
@@ -84,6 +84,6 @@ namespace Sidenote.Serialization
 			OEChildrenFormatter.Instance.Serialize(node, writer);
 		}
 
-		private OutlineElement outlineElement;
+		private OutlineElement deserializedObject;
 	}
 }

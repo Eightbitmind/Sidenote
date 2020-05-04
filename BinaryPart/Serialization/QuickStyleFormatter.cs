@@ -18,7 +18,7 @@ namespace Sidenote.Serialization
 			string fontName = reader.GetAttribute(FontNameAttributeName);
 			double fontSize = double.Parse(reader.GetAttribute(FontSizeAttributeName));
 
-			var quickStyle = new QuickStyle(
+			var deserializedObject = new QuickStyle(
 				index,
 				name,
 				fontName,
@@ -31,135 +31,135 @@ namespace Sidenote.Serialization
 			string fontColor = reader.GetAttribute(FontColorAttributeName);
 			if (!string.IsNullOrEmpty(fontColor))
 			{
-				quickStyle.FontColor = fontColor;
+				deserializedObject.FontColor = fontColor;
 			}
 
 			string highlightColor = reader.GetAttribute(HighlightColorAttributeName);
 			if (!string.IsNullOrEmpty(highlightColor))
 			{
-				quickStyle.HighlightColor = highlightColor;
+				deserializedObject.HighlightColor = highlightColor;
 			}
 
 			string fontSizeString = reader.GetAttribute(FontSizeAttributeName);
 			if (!string.IsNullOrEmpty(fontSizeString))
 			{
-				quickStyle.FontSize = double.Parse(fontSizeString);
+				deserializedObject.FontSize = double.Parse(fontSizeString);
 			}
 
 			string boldString = reader.GetAttribute(BoldAttributeName);
 			if (!string.IsNullOrEmpty(boldString))
 			{
-				quickStyle.Bold = bool.Parse(boldString);
+				deserializedObject.Bold = bool.Parse(boldString);
 			}
 
 			string italicString = reader.GetAttribute(ItalicAttributeName);
 			if (!string.IsNullOrEmpty(italicString))
 			{
-				quickStyle.Italic = bool.Parse(italicString);
+				deserializedObject.Italic = bool.Parse(italicString);
 			}
 
 			string underlineString = reader.GetAttribute(UnderlineAttributeName);
 			if (!string.IsNullOrEmpty(underlineString))
 			{
-				quickStyle.Underline = bool.Parse(underlineString);
+				deserializedObject.Underline = bool.Parse(underlineString);
 			}
 
 			string strikethroughString = reader.GetAttribute(StrikethroughAttributeName);
 			if (!string.IsNullOrEmpty(strikethroughString))
 			{
-				quickStyle.Strikethrough = bool.Parse(strikethroughString);
+				deserializedObject.Strikethrough = bool.Parse(strikethroughString);
 			}
 
 			string superscriptString = reader.GetAttribute(SuperscriptAttributeName);
 			if (!string.IsNullOrEmpty(superscriptString))
 			{
-				quickStyle.Superscript = bool.Parse(superscriptString);
+				deserializedObject.Superscript = bool.Parse(superscriptString);
 			}
 
 			string subscriptString = reader.GetAttribute(SubscriptAttributeName);
 			if (!string.IsNullOrEmpty(subscriptString))
 			{
-				quickStyle.Subscript = bool.Parse(subscriptString);
+				deserializedObject.Subscript = bool.Parse(subscriptString);
 			}
 
 			string spaceBeforeString = reader.GetAttribute(SpaceBeforeAttributeName);
 			if (!string.IsNullOrEmpty(spaceBeforeString))
 			{
-				quickStyle.SpaceBefore = float.Parse(spaceBeforeString);
+				deserializedObject.SpaceBefore = float.Parse(spaceBeforeString);
 			}
 
 			string spaceAfterString = reader.GetAttribute(SpaceAfterAttributeName);
 			if (!string.IsNullOrEmpty(spaceAfterString))
 			{
-				quickStyle.SpaceAfter = float.Parse(spaceAfterString);
+				deserializedObject.SpaceAfter = float.Parse(spaceAfterString);
 			}
 
-			parent.Children.Add(quickStyle);
+			parent.Children.Add(deserializedObject);
 
 			return true;
 		}
 
 		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
-			var quickStyle = (QuickStyle)node;
+			var serializedObject = (QuickStyle)node;
 
 			// required attributes
 
-			writer.WriteAttributeString(IndexAttributeName, Convert.ToString(quickStyle.Index, CultureInfo.InvariantCulture));
-			writer.WriteAttributeString(NameAttributeName, quickStyle.Name);
-			writer.WriteAttributeString(FontNameAttributeName, quickStyle.FontName);
-			writer.WriteAttributeString(FontSizeAttributeName, quickStyle.FontSize.ToString("N1"));
+			writer.WriteAttributeString(IndexAttributeName, Convert.ToString(serializedObject.Index, CultureInfo.InvariantCulture));
+			writer.WriteAttributeString(NameAttributeName, serializedObject.Name);
+			writer.WriteAttributeString(FontNameAttributeName, serializedObject.FontName);
+			writer.WriteAttributeString(FontSizeAttributeName, serializedObject.FontSize.ToString("N1"));
 
 			// optional attributes
 
-			if (string.CompareOrdinal(quickStyle.FontColor, QuickStyle.FontColorDefaultValue) != 0)
+			if (string.CompareOrdinal(serializedObject.FontColor, QuickStyle.FontColorDefaultValue) != 0)
 			{
-				writer.WriteAttributeString(FontColorAttributeName, quickStyle.FontColor);
+				writer.WriteAttributeString(FontColorAttributeName, serializedObject.FontColor);
 			}
 
-			if (string.CompareOrdinal(quickStyle.HighlightColor, QuickStyle.HighlightColorDefaultValue) != 0)
+			if (string.CompareOrdinal(serializedObject.HighlightColor, QuickStyle.HighlightColorDefaultValue) != 0)
 			{
-				writer.WriteAttributeString(HighlightColorAttributeName, quickStyle.HighlightColor);
+				writer.WriteAttributeString(HighlightColorAttributeName, serializedObject.HighlightColor);
 			}
 
-			if (quickStyle.Bold != QuickStyle.BoldDefaultValue)
+			if (serializedObject.Bold != QuickStyle.BoldDefaultValue)
 			{
-				writer.WriteAttributeString(BoldAttributeName, Convert.ToString(quickStyle.Bold, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(BoldAttributeName, Converter.ToString(serializedObject.Bold));
 			}
 
-			if (quickStyle.Italic != QuickStyle.ItalicDefaultValue)
+			if (serializedObject.Italic != QuickStyle.ItalicDefaultValue)
 			{
-				writer.WriteAttributeString(ItalicAttributeName, Convert.ToString(quickStyle.Italic, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(ItalicAttributeName, Converter.ToString(serializedObject.Italic));
 			}
 
-			if (quickStyle.Underline != QuickStyle.UnderlineDefaultValue)
+			if (serializedObject.Underline != QuickStyle.UnderlineDefaultValue)
 			{
-				writer.WriteAttributeString(UnderlineAttributeName, Convert.ToString(quickStyle.Underline, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(UnderlineAttributeName, Converter.ToString(serializedObject.Underline));
 			}
 
-			if (quickStyle.Strikethrough != QuickStyle.StrikethroughDefaultValue)
+			if (serializedObject.Strikethrough != QuickStyle.StrikethroughDefaultValue)
 			{
-				writer.WriteAttributeString(StrikethroughAttributeName, Convert.ToString(quickStyle.Strikethrough, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(StrikethroughAttributeName, Converter.ToString(serializedObject.Strikethrough));
 			}
 
-			if (quickStyle.Superscript != QuickStyle.SuperscriptDefaultValue)
+			if (serializedObject.Superscript != QuickStyle.SuperscriptDefaultValue)
 			{
-				writer.WriteAttributeString(SuperscriptAttributeName, Convert.ToString(quickStyle.Superscript, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(SuperscriptAttributeName, Converter.ToString(serializedObject.Superscript));
 			}
 
-			if (quickStyle.Subscript != QuickStyle.SubscriptDefaultValue)
+			if (serializedObject.Subscript != QuickStyle.SubscriptDefaultValue)
 			{
-				writer.WriteAttributeString(SubscriptAttributeName, Convert.ToString(quickStyle.Subscript, CultureInfo.InvariantCulture));
+				writer.WriteAttributeString(SubscriptAttributeName, Converter.ToString(serializedObject.Subscript));
 			}
 
-			if (quickStyle.SpaceBefore != QuickStyle.SpaceBeforeDefaultValue)
+			if (serializedObject.SpaceBefore != QuickStyle.SpaceBeforeDefaultValue)
 			{
-				writer.WriteAttributeString(SpaceBeforeAttributeName, quickStyle.SpaceBefore.ToString("N1"));
+				writer.WriteAttributeString(SpaceBeforeAttributeName, Converter.ToString(serializedObject.SpaceBefore));
 			}
 
-			if (quickStyle.SpaceAfter != QuickStyle.SpaceAfterDefaultValue)
+			if (serializedObject.SpaceAfter != QuickStyle.SpaceAfterDefaultValue)
 			{
-				writer.WriteAttributeString(SpaceAfterAttributeName, quickStyle.SpaceAfter.ToString("N1"));
+				writer.WriteAttributeString(SpaceAfterAttributeName, Converter.ToString(serializedObject.SpaceAfter));
 			}
 		}
 

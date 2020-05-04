@@ -17,8 +17,8 @@ namespace Sidenote.Serialization
 			string path = reader.GetAttribute("path");
 			string color = reader.GetAttribute("color");
 
-			var notebook = new Notebook(parent, name, id, lastModifiedTime, path, color);
-			parent.Children.Add(notebook);
+			var deserializedObject = new Notebook(parent, name, id, lastModifiedTime, path, color);
+			parent.Children.Add(deserializedObject);
 
 			return true;
 		}

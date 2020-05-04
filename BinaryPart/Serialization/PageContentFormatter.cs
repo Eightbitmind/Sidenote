@@ -10,11 +10,11 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
 		{
-			Page page = (Page)parent;
+			Page deserializedObject = (Page)parent;
 
-			page.CreationTime = DateTime.Parse(reader.GetAttribute("dateTime"));
-			page.LastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
-			page.Language = reader.GetAttribute("lang");
+			deserializedObject.CreationTime = DateTime.Parse(reader.GetAttribute("dateTime"));
+			deserializedObject.LastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
+			deserializedObject.Language = reader.GetAttribute("lang");
 
 			// REVIEW: Any other attributes on the page content we should add to the Page object?
 			// old code:
@@ -48,16 +48,16 @@ namespace Sidenote.Serialization
 
 		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
-			Page page = (Page)node;
-			writer.WriteAttributeString("ID", page.ID);
-			writer.WriteAttributeString("name", page.Name);
-			writer.WriteAttributeString("dateTime", FormatDateTime(page.CreationTime));
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(page.LastModifiedTime));
-			writer.WriteAttributeString("pageLevel", page.PageLevel.ToString());
+			Page serializedObject = (Page)node;
+			writer.WriteAttributeString("ID", serializedObject.ID);
+			writer.WriteAttributeString("name", serializedObject.Name);
+			writer.WriteAttributeString("dateTime", FormatDateTime(serializedObject.CreationTime));
+			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString("pageLevel", serializedObject.PageLevel.ToString());
 
-			if (!string.IsNullOrEmpty(page.Language))
+			if (!string.IsNullOrEmpty(serializedObject.Language))
 			{
-				writer.WriteAttributeString("lang", page.Language);
+				writer.WriteAttributeString("lang", serializedObject.Language);
 			}
 		}
 

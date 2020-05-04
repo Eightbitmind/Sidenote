@@ -16,12 +16,12 @@ namespace Sidenote.Serialization
 			var lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
 			var pageLevel = uint.Parse(reader.GetAttribute("pageLevel"));
 
-			Page page = new Page(parent.Depth + 1, parent, name, id, pageLevel);
+			Page deserializedObject = new Page(parent.Depth + 1, parent, name, id, pageLevel);
 
-			page.EntryCreationTime = creationTime;
-			page.EntryLastModifiedTime = lastModifiedTime;
+			deserializedObject.EntryCreationTime = creationTime;
+			deserializedObject.EntryLastModifiedTime = lastModifiedTime;
 
-			parent.Children.Add(page);
+			parent.Children.Add(deserializedObject);
 
 			return true;
 		}
