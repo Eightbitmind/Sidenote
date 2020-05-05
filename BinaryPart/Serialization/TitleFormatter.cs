@@ -8,31 +8,54 @@ namespace Sidenote.Serialization
 	{
 		public TitleFormatter() : base("Title") { }
 
-		// protected override bool DeserializeAttributes(XmlReader reader, Application app, INode parent)
-		// {
-		//	// Do something with 'lang' attribute?
-		// }
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		{
+			this.deserializedObject = new Title(parent.Depth + 1, parent);
+
+			string language = reader.GetAttribute(LanguageAttributeName);
+			if (!string.IsNullOrEmpty(language))
+			{
+				this.deserializedObject.Language = language;
+			}
+
+			parent.Children.Add(deserializedObject);
+
+			return true;
+		}
 
 		protected override bool DeserializeChildren(XmlReader reader, INode parent)
 		{
-			Title deserializedObject = new Title(parent.Depth + 1, parent);
-
 			if (!OEFormatter.Instance.Deserialize(reader, deserializedObject))
 			{
 				throw new Exception("Title element missing OE");
 			}
 
-			parent.Children.Add(deserializedObject);
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
-			// throw new System.Exception("not expected/implemented");
-			// return false;
-			// return true;
+			var serializedObject = (Title)node;
 
-			return (node is Title);
+			if (!string.IsNullOrEmpty(serializedObject.Language))
+			{
+				writer.WriteAttributeString(LanguageAttributeName, serializedObject.Language);
+			}
 		}
+
+		protected override void SerializeChildren(INode node, XmlWriter writer)
+		{
+			foreach (INode child in node.Children)
+			{
+				if (!OEFormatter.Instance.Serialize(child, writer))
+				{
+					throw new Exception("unexpected Title child " + child.Type);
+				}
+			}
+		}
+
+		private Title deserializedObject;
+
+		private static string LanguageAttributeName = "lang";
 	}
 }
