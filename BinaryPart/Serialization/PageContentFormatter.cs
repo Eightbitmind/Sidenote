@@ -51,8 +51,8 @@ namespace Sidenote.Serialization
 			Page serializedObject = (Page)node;
 			writer.WriteAttributeString("ID", serializedObject.ID);
 			writer.WriteAttributeString("name", serializedObject.Name);
-			writer.WriteAttributeString("dateTime", FormatDateTime(serializedObject.CreationTime));
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString("dateTime", Converter.ToString(serializedObject.CreationTime));
+			writer.WriteAttributeString("lastModifiedTime", Converter.ToString(serializedObject.LastModifiedTime));
 			writer.WriteAttributeString("pageLevel", serializedObject.PageLevel.ToString());
 
 			if (!string.IsNullOrEmpty(serializedObject.Language))

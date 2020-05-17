@@ -1,5 +1,6 @@
 ﻿using Sidenote.DOM;
 using System;
+using System.Management.Automation;
 using System.Xml;
 
 namespace Sidenote.Serialization
@@ -10,16 +11,13 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
 		{
-			string id = reader.GetAttribute("objectID");
-			string author = reader.GetAttribute("author");
-			string authorInitials = reader.GetAttribute("authorInitials");
+			string id = reader.GetAttribute(ObjectIdAttributeName);
+			string author = reader.GetAttribute(AuthorAttributeName);
+			string authorInitials = reader.GetAttribute(AuthorInitialsAttributeName);
 
-			// lastModifiedBy
-			// lastModifiedInitials
-
-			DateTime creationTime = DateTime.Parse(reader.GetAttribute("creationTime"));
-			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
-			string alignment = reader.GetAttribute("alignment");
+			DateTime creationTime = DateTime.Parse(reader.GetAttribute(CreationTimeAttributeName));
+			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute(LastModifiedTimeAttributeName));
+			string alignment = reader.GetAttribute(AlignmentAttributeName);
 
 			this.deserializedObject = new OutlineElement(
 				parent.Depth + 1,
@@ -31,13 +29,23 @@ namespace Sidenote.Serialization
 				lastModifiedTime,
 				alignment);
 
-			string quickStyleIndexStr = reader.GetAttribute("quickStyleIndex");
+			string lastModifiedBy = reader.GetAttribute(LastModifiedByAttributeName);
+			if (!string.IsNullOrEmpty(lastModifiedBy))
+			{
+				this.deserializedObject.LastModifiedBy = lastModifiedBy;
+			}
 
+			string lastModifiedByInitials = reader.GetAttribute(LastModifiedByInitialsAttributeName);
+			if (!string.IsNullOrEmpty(lastModifiedByInitials))
+			{
+				this.deserializedObject.LastModifiedByInitials = lastModifiedByInitials;
+			}
+
+			string quickStyleIndexStr = reader.GetAttribute("quickStyleIndex");
 			if (!string.IsNullOrEmpty(quickStyleIndexStr))
 			{
 				this.deserializedObject.QuickStyleIndex = int.Parse(quickStyleIndexStr);
 			}
-
 
 			parent.Children.Add(this.deserializedObject);
 
@@ -71,11 +79,14 @@ namespace Sidenote.Serialization
 		{
 			OutlineElement serializedObject = (OutlineElement)node;
 
-			// TODO: serialize author, authorInitials ... if present
-
-			writer.WriteAttributeString("creationTime", FormatDateTime(serializedObject.CreationTime));
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(serializedObject.LastModifiedTime));
-			writer.WriteAttributeString("objectID", serializedObject.ID);
+			writer.WriteAttributeString(AlignmentAttributeName, serializedObject.Alignment);
+			writer.WriteAttributeString(AuthorAttributeName, serializedObject.Author);
+			writer.WriteAttributeString(AuthorInitialsAttributeName, serializedObject.AuthorInitials);
+			writer.WriteAttributeString(CreationTimeAttributeName, Converter.ToString(serializedObject.CreationTime));
+			writer.WriteAttributeString(LastModifiedTimeAttributeName, Converter.ToString(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString(LastModifiedByAttributeName, serializedObject.LastModifiedBy);
+			writer.WriteAttributeString(LastModifiedByInitialsAttributeName, serializedObject.LastModifiedByInitials);
+			writer.WriteAttributeString(ObjectIdAttributeName, serializedObject.ID);
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)
@@ -83,6 +94,15 @@ namespace Sidenote.Serialization
 			TextFormatter.Instance.Serialize(node, writer);
 			OEChildrenFormatter.Instance.Serialize(node, writer);
 		}
+
+		private static string AlignmentAttributeName = "alignment";
+		private static string AuthorAttributeName = "author";
+		private static string AuthorInitialsAttributeName = "authorInitials";
+		private static string ObjectIdAttributeName = "objectID";
+		private static string CreationTimeAttributeName = "creationTime";
+		private static string LastModifiedTimeAttributeName = "lastModifiedTime";
+		private static string LastModifiedByAttributeName = "lastModifiedBy";
+		private static string LastModifiedByInitialsAttributeName = "lastModifiedByInitials";
 
 		private OutlineElement deserializedObject;
 	}

@@ -43,15 +43,17 @@ namespace Sidenote.Serialization
 		{
 			var serializedObject = (PageSettings)node;
 
-			if (serializedObject.Rtl != PageSettings.RtlDefaultValue)
-			{
+			// Win32 client appears to serialize this even if it has the default value
+			// if (serializedObject.Rtl != PageSettings.RtlDefaultValue)
+			// {
 				writer.WriteAttributeString(RtlAttributeName, Converter.ToString(serializedObject.Rtl));
-			}
+			// }
 
-			if (string.CompareOrdinal(serializedObject.Color, PageSettings.ColorDefaultValue) != 0)
-			{
+			// Win32 client appears to serialize this even if it has the default value
+			// if (string.CompareOrdinal(serializedObject.Color, PageSettings.ColorDefaultValue) != 0)
+			// {
 				writer.WriteAttributeString(ColorAttributeName, serializedObject.Color);
-			}
+			// }
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)

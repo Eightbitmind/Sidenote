@@ -57,7 +57,7 @@ namespace Sidenote.Serialization
 			Outline serializedObject = (Outline)node;
 			writer.WriteAttributeString("author", serializedObject.Author);
 			writer.WriteAttributeString("authorInitials", serializedObject.AuthorInitials);
-			writer.WriteAttributeString("lastModifiedTime", FormatDateTime(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString("lastModifiedTime", Converter.ToString(serializedObject.LastModifiedTime));
 			writer.WriteAttributeString("objectID", serializedObject.ID);
 		}
 

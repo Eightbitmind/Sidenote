@@ -27,6 +27,9 @@ namespace Sidenote.DOM
 		public int QuickStyleIndex { get; set; }
 		public string Text { get; set; }
 
+		public string LastModifiedBy { get; set; }
+		public string LastModifiedByInitials { get; set; }
+
 		#endregion
 
 		// Called when Get-Content processes an OutlineElement.

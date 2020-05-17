@@ -9,12 +9,6 @@ namespace Sidenote.Serialization
 		internal const string xmlNS = "http://schemas.microsoft.com/office/onenote/2013/onenote";
 		internal const string xmlNSPrefix = "one";
 
-		internal static string FormatDateTime(DateTime dateTime)
-		{
-			// https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations, "Z" - zero timezone
-			return dateTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
-		}
-
 		internal virtual bool Deserialize(XmlReader reader, INode parent)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)

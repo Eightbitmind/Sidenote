@@ -112,15 +112,17 @@ namespace Sidenote.Serialization
 
 			// optional attributes
 
-			if (string.CompareOrdinal(serializedObject.FontColor, QuickStyle.FontColorDefaultValue) != 0)
-			{
+			// Win32 client appears to serialize this even if it has the default value
+			// if (string.CompareOrdinal(serializedObject.FontColor, QuickStyle.FontColorDefaultValue) != 0)
+			// {
 				writer.WriteAttributeString(FontColorAttributeName, serializedObject.FontColor);
-			}
+			// }
 
-			if (string.CompareOrdinal(serializedObject.HighlightColor, QuickStyle.HighlightColorDefaultValue) != 0)
-			{
+			// Win32 client appears to serialize this even if it has the default value
+			// if (string.CompareOrdinal(serializedObject.HighlightColor, QuickStyle.HighlightColorDefaultValue) != 0)
+			// {
 				writer.WriteAttributeString(HighlightColorAttributeName, serializedObject.HighlightColor);
-			}
+			// }
 
 			if (serializedObject.Bold != QuickStyle.BoldDefaultValue)
 			{
@@ -152,15 +154,17 @@ namespace Sidenote.Serialization
 				writer.WriteAttributeString(SubscriptAttributeName, Converter.ToString(serializedObject.Subscript));
 			}
 
-			if (serializedObject.SpaceBefore != QuickStyle.SpaceBeforeDefaultValue)
-			{
+			// Win32 client appears to serialize even if it has the default value
+			// if (serializedObject.SpaceBefore != QuickStyle.SpaceBeforeDefaultValue)
+			// {
 				writer.WriteAttributeString(SpaceBeforeAttributeName, Converter.ToString(serializedObject.SpaceBefore));
-			}
+			// }
 
-			if (serializedObject.SpaceAfter != QuickStyle.SpaceAfterDefaultValue)
-			{
+			// Win32 client appears to serialize even if it has the default value
+			// if (serializedObject.SpaceAfter != QuickStyle.SpaceAfterDefaultValue)
+			// {
 				writer.WriteAttributeString(SpaceAfterAttributeName, Converter.ToString(serializedObject.SpaceAfter));
-			}
+			// }
 		}
 
 		private static string IndexAttributeName = "index";

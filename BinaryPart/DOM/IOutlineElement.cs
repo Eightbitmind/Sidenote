@@ -11,5 +11,10 @@
 		string Alignment { get; }
 		int QuickStyleIndex { get; set; }
 		string Text { get; set; }
+
+		// part of the "EditedByAttributes" attribute group in the schema. Should the go into the
+		// IUserCreatedObject interface instead?
+		string LastModifiedBy { get; set; }
+		string LastModifiedByInitials { get; set; }
 	}
 }
