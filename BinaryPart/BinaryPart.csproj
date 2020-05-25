@@ -55,6 +55,7 @@
     <Compile Include="DOM\IRuleLines.cs" />
     <Compile Include="DOM\IPageSettings.cs" />
     <Compile Include="DOM\IQuickStyle.cs" />
+    <Compile Include="DOM\IPageSize.cs" />
     <Compile Include="DOM\ITitle.cs" />
     <Compile Include="DOM\ITableCell.cs" />
     <Compile Include="DOM\ITable.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Serialization\NotebookEntryFormatter.cs" />
     <Compile Include="Serialization\NotebooksFormatter.cs" />
     <Compile Include="Serialization\NotebookContentFormatter.cs" />
+    <Compile Include="Serialization\AutomaticFormatter .cs" />
     <Compile Include="Serialization\PageEntryFormatter.cs" />
     <Compile Include="Serialization\RuleLinesFormatter.cs" />
     <Compile Include="Serialization\PageSizeFormatter.cs" />

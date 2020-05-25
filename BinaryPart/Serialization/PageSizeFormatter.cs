@@ -9,15 +9,40 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
 		{
-			var deserializedObject = new PageSize(parent.Depth + 1, parent);
-			parent.Children.Add(deserializedObject);
+			this.deserializedObject = new PageSize(parent.Depth + 1, parent);
+			parent.Children.Add(this.deserializedObject);
 			return true;
 		}
 
 		protected override bool DeserializeChildren(XmlReader reader, INode parent)
 		{
-			while(reader.IsStartElement()) reader.Skip();
-			return true;
+			if (AutomaticFormatter.Instance.Deserialize(reader, this.deserializedObject))
+			{
+				return true;
+			}
+			else if (/* TODO: Orientation, Dimensions, Margins*/ false)
+			{
+				return true;
+			}
+
+			return false;
 		}
+
+		protected override void SerializeChildren(INode node, XmlWriter writer)
+		{
+			var pageSize = (PageSize)node;
+			if (!AutomaticFormatter.Instance.Serialize(pageSize, writer))
+			{
+				foreach (INode child in pageSize.Children)
+				{
+					if(!(/* TODO: Orientation, Dimensions, Margins */ false))
+					{
+						throw new System.Exception("not expected/implemented");
+					}
+				}
+			}
+		}
+
+		private PageSize deserializedObject;
 	}
 }

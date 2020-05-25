@@ -1,6 +1,15 @@
 param(
 	$InFile
 )
+# Workflow
+# Get-ONTreeNode.ps1 | Get-ONXml > C:\Users\aeulitz\AppData\Local\Temp\Original.xml
+# .\Projects\Sidenote\Tools\NormalizeXml.ps1 -InFile C:\Users\aeulitz\AppData\Local\Temp\Original.xml > C:\Users\aeulitz\AppData\Local\Temp\Original-normalized.xml
+# $p = Get-ONTreeNode.ps1
+# requires modified Save method
+# $p.Save()
+# .\Projects\Sidenote\Tools\NormalizeXml.ps1 -InFile C:\Users\aeulitz\AppData\Local\Temp\Sidenote.xml > C:\Users\aeulitz\AppData\Local\Temp\Sidenote-normalized.xml
+# code --diff C:\Users\aeulitz\AppData\Local\Temp\Original-normalized.xml C:\Users\aeulitz\AppData\Local\Temp\Sidenote-normalized.xml
+
 
 function WriteOutput($text){
 	Write-Output $text
