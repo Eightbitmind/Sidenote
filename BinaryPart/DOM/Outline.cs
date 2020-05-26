@@ -14,9 +14,16 @@ namespace Sidenote.DOM
 		#region IUserCreatedObject members
 
 		public string Author { get; }
+
 		public string AuthorInitials { get; }
+
 		public DateTime CreationTime { get; }
+
 		public DateTime LastModifiedTime { get; }
+
+		public string LastModifiedBy { get; set; }
+
+		public string LastModifiedByInitials { get; set; }
 
 		#endregion
 

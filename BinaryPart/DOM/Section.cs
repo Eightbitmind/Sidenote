@@ -63,9 +63,36 @@ namespace Sidenote.DOM
 		#region IUserCreatedObject members
 
 		public string Author { get; }
+
 		public string AuthorInitials { get; }
+
 		public DateTime CreationTime { get; }
+
 		public DateTime LastModifiedTime { get; }
+
+		public string LastModifiedBy
+		{
+			get
+			{
+				throw new NotImplementedException();
+			}
+			set
+			{
+				throw new NotImplementedException();
+			}
+		}
+
+		public string LastModifiedByInitials
+		{
+			get
+			{
+				throw new NotImplementedException();
+			}
+			set
+			{
+				throw new NotImplementedException();
+			}
+		}
 
 		#endregion
 

@@ -80,12 +80,30 @@ namespace Sidenote.Serialization
 			OutlineElement serializedObject = (OutlineElement)node;
 
 			writer.WriteAttributeString(AlignmentAttributeName, serializedObject.Alignment);
-			writer.WriteAttributeString(AuthorAttributeName, serializedObject.Author);
-			writer.WriteAttributeString(AuthorInitialsAttributeName, serializedObject.AuthorInitials);
+
+			if (!string.IsNullOrEmpty(serializedObject.Author))
+			{
+				writer.WriteAttributeString(AuthorAttributeName, serializedObject.Author);
+			}
+
+			if (!string.IsNullOrEmpty(serializedObject.AuthorInitials))
+			{
+				writer.WriteAttributeString(AuthorInitialsAttributeName, serializedObject.AuthorInitials);
+			}
+
 			writer.WriteAttributeString(CreationTimeAttributeName, Converter.ToString(serializedObject.CreationTime));
 			writer.WriteAttributeString(LastModifiedTimeAttributeName, Converter.ToString(serializedObject.LastModifiedTime));
-			writer.WriteAttributeString(LastModifiedByAttributeName, serializedObject.LastModifiedBy);
-			writer.WriteAttributeString(LastModifiedByInitialsAttributeName, serializedObject.LastModifiedByInitials);
+
+			if (!string.IsNullOrEmpty(serializedObject.LastModifiedBy))
+			{
+				writer.WriteAttributeString(LastModifiedByAttributeName, serializedObject.LastModifiedBy);
+			}
+
+			if (!string.IsNullOrEmpty(serializedObject.LastModifiedByInitials))
+			{
+				writer.WriteAttributeString(LastModifiedByInitialsAttributeName, serializedObject.LastModifiedByInitials);
+			}
+
 			writer.WriteAttributeString(ObjectIdAttributeName, serializedObject.ID);
 
 			IQuickStyle quickStyle = serializedObject.QuickStyle;

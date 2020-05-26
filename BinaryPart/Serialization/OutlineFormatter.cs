@@ -10,15 +10,12 @@ namespace Sidenote.Serialization
 
 		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			string id = reader.GetAttribute("objectID");
-			string author = reader.GetAttribute("author");
-			string authorInitials = reader.GetAttribute("authorInitials");
-
-			// lastModifiedBy
-			// lastModifiedInitials
+			string id = reader.GetAttribute(ObjectIDAttributeName);
+			string author = reader.GetAttribute(AuthorAttributeName);
+			string authorInitials = reader.GetAttribute(AuthorInitialsAttributeName);
 
 			// DateTime creationTime = DateTime.Parse(reader.GetAttribute("creationTime"));
-			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute("lastModifiedTime"));
+			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute(LastModifiedTimeAttributeName));
 
 			this.deserializedObject = new Outline(
 				parent.Depth + 1,
@@ -28,6 +25,18 @@ namespace Sidenote.Serialization
 				authorInitials,
 				lastModifiedTime, // What constitutes the creationTime?
 				lastModifiedTime);
+
+			string lastModifiedBy = reader.GetAttribute(LastModifiedByAttributeName);
+			if (!string.IsNullOrEmpty(lastModifiedBy))
+			{
+				this.deserializedObject.LastModifiedBy = lastModifiedBy;
+			}
+
+			string lastModifiedByInitials = reader.GetAttribute(LastModifiedByInitialsAttributeName);
+			if (!string.IsNullOrEmpty(lastModifiedByInitials))
+			{
+				this.deserializedObject.LastModifiedByInitials = lastModifiedByInitials;
+			}
 
 			parent.Children.Add(this.deserializedObject);
 
@@ -55,10 +64,20 @@ namespace Sidenote.Serialization
 		protected override void SerializeAttributes(INode node, XmlWriter writer)
 		{
 			Outline serializedObject = (Outline)node;
-			writer.WriteAttributeString("author", serializedObject.Author);
-			writer.WriteAttributeString("authorInitials", serializedObject.AuthorInitials);
-			writer.WriteAttributeString("lastModifiedTime", Converter.ToString(serializedObject.LastModifiedTime));
-			writer.WriteAttributeString("objectID", serializedObject.ID);
+			writer.WriteAttributeString(AuthorAttributeName, serializedObject.Author);
+			writer.WriteAttributeString(AuthorInitialsAttributeName, serializedObject.AuthorInitials);
+			writer.WriteAttributeString(LastModifiedTimeAttributeName, Converter.ToString(serializedObject.LastModifiedTime));
+			writer.WriteAttributeString(ObjectIDAttributeName, serializedObject.ID);
+
+			if (!string.IsNullOrEmpty(serializedObject.LastModifiedBy))
+			{
+				writer.WriteAttributeString(LastModifiedByAttributeName, serializedObject.LastModifiedBy);
+			}
+
+			if (!string.IsNullOrEmpty(serializedObject.LastModifiedByInitials))
+			{
+				writer.WriteAttributeString(LastModifiedByInitialsAttributeName, serializedObject.LastModifiedByInitials);
+			}
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)
@@ -68,5 +87,12 @@ namespace Sidenote.Serialization
 		}
 
 		private Outline deserializedObject;
+
+		private static string AuthorAttributeName = "author";
+		private static string AuthorInitialsAttributeName = "authorInitials";
+		private static string LastModifiedTimeAttributeName = "lastModifiedTime";
+		private static string LastModifiedByAttributeName = "lastModifiedBy";
+		private static string LastModifiedByInitialsAttributeName = "lastModifiedByInitials";
+		private static string ObjectIDAttributeName = "objectID";
 	}
 }

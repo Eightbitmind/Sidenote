@@ -103,6 +103,32 @@ namespace Sidenote.DOM
 			}
 		}
 
+		public string LastModifiedBy
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.lastModifiedBy;
+			}
+			set
+			{
+				this.lastModifiedBy = value;
+			}
+		}
+
+		public string LastModifiedByInitials
+		{
+			get
+			{
+				this.DeserializeContent();
+				return this.lastModifiedByInitials;
+			}
+			set
+			{
+				this.lastModifiedByInitials = value;
+			}
+		}
+
 		#endregion
 
 		#region IPage members
@@ -182,6 +208,8 @@ namespace Sidenote.DOM
 		private string authorInitials;
 		private DateTime creationTime;
 		private DateTime lastModifiedTime;
+		private string lastModifiedBy;
+		private string lastModifiedByInitials;
 		private uint pageLevel;
 		private string language;
 

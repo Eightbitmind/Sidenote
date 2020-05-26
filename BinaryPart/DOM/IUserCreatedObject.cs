@@ -8,5 +8,7 @@ namespace Sidenote.DOM
 		string AuthorInitials { get; }
 		DateTime CreationTime { get; }
 		DateTime LastModifiedTime { get; }
+		string LastModifiedBy { get; set; }
+		string LastModifiedByInitials { get; set; }
 	}
 }
