@@ -8,10 +8,10 @@ namespace Sidenote.Serialization
 	{
 		public NotebooksFormatter() : base("Notebooks") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			bool parsedAtLeastOneNotebook = false;
-			while (NotebookEntryFormatter.Instance.Deserialize(reader, parent))
+			while (NotebookEntryFormatter.Instance.Deserialize(reader, parent, patchStore))
 			{
 				parsedAtLeastOneNotebook = true;
 			}

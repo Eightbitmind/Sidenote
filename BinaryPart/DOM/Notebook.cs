@@ -35,10 +35,14 @@ namespace Sidenote.DOM
 					xmlReaderSettings.IgnoreProcessingInstructions = true;
 					XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-					if (!NotebookContentFormatter.Instance.Deserialize(xmlReader, this))
+					var patchStore = new PatchStore();
+
+					if (!NotebookContentFormatter.Instance.Deserialize(xmlReader, this, patchStore))
 					{
 						throw new Exception("could not notebook page content");
 					}
+
+					patchStore.PerformPatchOperations(this);
 				}
 
 				return this.children;

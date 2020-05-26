@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public TitleFormatter() : base("Title") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			this.deserializedObject = new Title(parent.Depth + 1, parent);
 
@@ -23,9 +23,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			if (!OEFormatter.Instance.Deserialize(reader, deserializedObject))
+			if (!OEFormatter.Instance.Deserialize(reader, deserializedObject, patchStore))
 			{
 				throw new Exception("Title element missing OE");
 			}

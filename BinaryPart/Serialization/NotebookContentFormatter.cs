@@ -8,13 +8,13 @@ namespace Sidenote.Serialization
 	{
 		public NotebookContentFormatter() : base("Notebook") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					SectionEntryFormatter.Instance.Deserialize(reader, parent) ||
-					SectionGroupFormatter.Instance.Deserialize(reader,parent)
+					SectionEntryFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					SectionGroupFormatter.Instance.Deserialize(reader, parent, patchStore)
 				))
 				{
 					throw new Exception("unexpected Notebook child " + reader.LocalName);

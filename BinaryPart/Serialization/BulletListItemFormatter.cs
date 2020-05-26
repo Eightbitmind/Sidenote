@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public BulletListItemFormatter() : base("Bullet") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			// TODO: read attributes
 

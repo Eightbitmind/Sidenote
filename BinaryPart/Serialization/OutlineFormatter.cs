@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public OutlineFormatter() : base("Outline") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			string id = reader.GetAttribute("objectID");
 			string author = reader.GetAttribute("author");
@@ -34,15 +34,15 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					PositionFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					SizeFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					IndentsFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject)
+					PositionFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					SizeFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					IndentsFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore)
 				))
 				{
 					throw new Exception("unexpected Outline child " + reader.LocalName);

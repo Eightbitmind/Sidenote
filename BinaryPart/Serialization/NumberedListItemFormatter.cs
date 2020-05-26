@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public NumberedListItemFormatter() : base("Number") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			// TODO: read more attributes
 			string text = reader.GetAttribute("text");

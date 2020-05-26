@@ -9,7 +9,7 @@ namespace Sidenote.Serialization
 	{
 		public OEFormatter() : base("OE") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			string id = reader.GetAttribute(ObjectIdAttributeName);
 			string author = reader.GetAttribute(AuthorAttributeName);
@@ -52,20 +52,20 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					TextFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					ListFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					TagFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					TableFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					MediaFileFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					ImageFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					InkParagraphFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					InkWordFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-					OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject)
+					TextFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					ListFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					TagFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					TableFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					MediaFileFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					ImageFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					InkParagraphFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					InkWordFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+					OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore)
 				))
 				{
 					throw new Exception("unexpected OE child " + reader.LocalName);
@@ -87,6 +87,12 @@ namespace Sidenote.Serialization
 			writer.WriteAttributeString(LastModifiedByAttributeName, serializedObject.LastModifiedBy);
 			writer.WriteAttributeString(LastModifiedByInitialsAttributeName, serializedObject.LastModifiedByInitials);
 			writer.WriteAttributeString(ObjectIdAttributeName, serializedObject.ID);
+
+			IQuickStyle quickStyle = serializedObject.QuickStyle;
+			if (quickStyle != null)
+			{
+				writer.WriteAttributeString(QuickStyleIndexAttributeName, Converter.ToString(quickStyle.Index));
+			}
 		}
 
 		protected override void SerializeChildren(INode node, XmlWriter writer)
@@ -103,6 +109,7 @@ namespace Sidenote.Serialization
 		private static string LastModifiedTimeAttributeName = "lastModifiedTime";
 		private static string LastModifiedByAttributeName = "lastModifiedBy";
 		private static string LastModifiedByInitialsAttributeName = "lastModifiedByInitials";
+		private static string QuickStyleIndexAttributeName = "quickStyleIndex";
 
 		private OutlineElement deserializedObject;
 	}

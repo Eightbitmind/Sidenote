@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public PageEntryFormatter() : base("Page") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			string name = reader.GetAttribute("name");
 			string id = reader.GetAttribute("ID");

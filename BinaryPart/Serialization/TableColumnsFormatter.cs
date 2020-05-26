@@ -7,10 +7,10 @@ namespace Sidenote.Serialization
 	{
 		public TableColumnsFormatter() : base("Columns") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			int columnCount = 0;
-			while (TableColumnFormatter.Instance.Deserialize(reader, parent)) ++columnCount;
+			while (TableColumnFormatter.Instance.Deserialize(reader, parent, patchStore)) ++columnCount;
 			((Table)parent).ColumnCount = columnCount;
 			return true;
 		}

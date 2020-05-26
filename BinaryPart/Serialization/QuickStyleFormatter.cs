@@ -9,7 +9,7 @@ namespace Sidenote.Serialization
 	{
 		public QuickStyleFormatter() : base("QuickStyleDef") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			// required attributes
 
@@ -95,6 +95,16 @@ namespace Sidenote.Serialization
 			}
 
 			parent.Children.Add(deserializedObject);
+
+			patchStore.AddPatchOperation(node =>
+			{
+				var outlineElement = node as OutlineElement;
+				if (outlineElement != null && outlineElement.QuickStyleIndex != -1 && outlineElement.QuickStyleIndex == index)
+				{
+					outlineElement.QuickStyle = deserializedObject;
+					outlineElement.QuickStyleIndex = -1;
+				}
+			});
 
 			return true;
 		}

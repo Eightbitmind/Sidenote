@@ -8,12 +8,12 @@ namespace Sidenote.Serialization
 	{
 		public OEChildrenFormatter() : base("OEChildren") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					OEFormatter.Instance.Deserialize(reader, parent)
+					OEFormatter.Instance.Deserialize(reader, parent, patchStore)
 				))
 				{
 					throw new Exception("unexpected OEChildren child element " + reader.LocalName);

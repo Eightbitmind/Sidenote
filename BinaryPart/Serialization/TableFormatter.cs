@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public TableFormatter() : base("Table") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			string id = reader.GetAttribute("objectID");
 
@@ -39,7 +39,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			bool columnsParsed = false;
 			int rowCount = 0;
@@ -47,13 +47,13 @@ namespace Sidenote.Serialization
 			while (reader.IsStartElement())
 			{
 
-				if (!columnsParsed && TableColumnsFormatter.Instance.Deserialize(reader, this.deserializedObject))
+				if (!columnsParsed && TableColumnsFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore))
 				{
 					columnsParsed = true;
 					continue;
 				}
 
-				if (TableRowFormatter.Instance.Deserialize(reader, this.deserializedObject))
+				if (TableRowFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore))
 				{
 					++rowCount;
 				}

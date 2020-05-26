@@ -207,10 +207,14 @@ namespace Sidenote.DOM
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!PageContentFormatter.Instance.Deserialize(xmlReader, this))
+			var patchStore = new PatchStore();
+
+			if (!PageContentFormatter.Instance.Deserialize(xmlReader, this, patchStore))
 			{
 				throw new Exception("could not parse page content");
 			}
+
+			patchStore.PerformPatchOperations(this);
 		}
 	}
 }

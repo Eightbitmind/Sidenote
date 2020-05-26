@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public PageContentFormatter() : base("Page") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			Page deserializedObject = (Page)parent;
 
@@ -25,18 +25,18 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
 				if (!(
-					QuickStyleFormatter.Instance.Deserialize(reader, parent) ||
-					TagDefFormatter.Instance.Deserialize(reader,parent) ||
-					MediaPlaylistFormatter.Instance.Deserialize(reader, parent) ||
-					PageSettingsFormatter.Instance.Deserialize(reader, parent) ||
-					TitleFormatter.Instance.Deserialize(reader, parent) ||
-					OutlineFormatter.Instance.Deserialize(reader, parent) ||
-					InkDrawingFormatter.Instance.Deserialize(reader, parent)
+					QuickStyleFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					TagDefFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					MediaPlaylistFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					PageSettingsFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					TitleFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					OutlineFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+					InkDrawingFormatter.Instance.Deserialize(reader, parent, patchStore)
 				))
 				{
 					throw new Exception("unexpected Page child " + reader.LocalName);

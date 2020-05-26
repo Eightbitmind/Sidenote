@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public NotebookEntryFormatter() : base("Notebook") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			string name = reader.GetAttribute("name");
 			// string nickname = reader.GetAttribute("nickname");

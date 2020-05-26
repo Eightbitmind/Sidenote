@@ -8,11 +8,11 @@ namespace Sidenote.Serialization
 	{
 		public ListFormatter() : base("List") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			if (!(
-				BulletListItemFormatter.Instance.Deserialize(reader, parent) ||
-				NumberedListItemFormatter.Instance.Deserialize(reader, parent)
+				BulletListItemFormatter.Instance.Deserialize(reader, parent, patchStore) ||
+				NumberedListItemFormatter.Instance.Deserialize(reader, parent, patchStore)
 			))
 			{
 				throw new Exception("unexpected List child " + reader.LocalName);

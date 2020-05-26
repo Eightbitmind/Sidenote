@@ -9,7 +9,7 @@
 
 		// TODO: 'enum' instead of 'string'
 		string Alignment { get; }
-		int QuickStyleIndex { get; set; }
+		IQuickStyle QuickStyle { get; set; }
 		string Text { get; set; }
 
 		// part of the "EditedByAttributes" attribute group in the schema. Should the go into the

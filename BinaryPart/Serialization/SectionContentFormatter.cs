@@ -7,9 +7,9 @@ namespace Sidenote.Serialization
 	{
 		public SectionContentFormatter() : base("Section") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			while (PageEntryFormatter.Instance.Deserialize(reader, parent)) ;
+			while (PageEntryFormatter.Instance.Deserialize(reader, parent, patchStore)) ;
 
 			return true;
 		}

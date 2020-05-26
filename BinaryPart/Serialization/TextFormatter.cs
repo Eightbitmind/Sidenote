@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public TextFormatter() : base("T") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			// Big TODO: As Omer pointed out, the content is actually HTML (or presumably a subset
 			// thereof).

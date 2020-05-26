@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public AutomaticFormatter() : base("Automatic") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			((PageSize)parent).IsAutomatic = true;
 			return true;

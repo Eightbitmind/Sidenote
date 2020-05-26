@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public TableCellFormatter() : base("Cell") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			string id = reader.GetAttribute("objectID");
 			string author = reader.GetAttribute("author");
@@ -38,9 +38,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			while (OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject)) ;
+			while (OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore)) ;
 			return true;
 		}
 

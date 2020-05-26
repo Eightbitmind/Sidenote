@@ -9,7 +9,7 @@ namespace Sidenote.Serialization
 	{
 		public PageSettingsFormatter() : base("PageSettings") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			this.deserializedObject = new PageSettings(parent.Depth + 1, parent);
 			parent.Children.Add(this.deserializedObject);
@@ -29,11 +29,11 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			while (
-				PageSizeFormatter.Instance.Deserialize(reader, this.deserializedObject) ||
-				RuleLinesFormatter.Instance.Deserialize(reader, this.deserializedObject)) ;
+				PageSizeFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
+				RuleLinesFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore)) ;
 
 			return true;
 

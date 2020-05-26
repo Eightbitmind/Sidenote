@@ -9,6 +9,11 @@ namespace Sidenote.Serialization
 			return val ? "true" : "false";
 		}
 
+		internal static string ToString(uint val)
+		{
+			return val.ToString();
+		}
+
 		internal static string ToString(float val)
 		{
 			return val.ToString("N1");

@@ -9,7 +9,7 @@ namespace Sidenote.Serialization
 	{
 		public RuleLinesFormatter() : base("RuleLines") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			// required attribute
 			bool isVisible = bool.Parse(reader.GetAttribute(VisibleAttributeName));
@@ -20,7 +20,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			// ignore content for now
 			while(reader.IsStartElement()) reader.Skip();

@@ -24,11 +24,15 @@ namespace Sidenote.Serialization
 			xmlReaderSettings.IgnoreProcessingInstructions = true;
 			XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 
-			if (!NotebooksFormatter.Instance.Deserialize(xmlReader, root))
+			var patchStore = new PatchStore();
+
+			if (!NotebooksFormatter.Instance.Deserialize(xmlReader, root, patchStore))
 			{
 				Debug.Assert(false, "unexpected root content");
 				return false;
 			}
+
+			patchStore.PerformPatchOperations(root);
 
 			return true;
 		}

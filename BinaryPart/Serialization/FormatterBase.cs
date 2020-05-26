@@ -9,7 +9,7 @@ namespace Sidenote.Serialization
 		internal const string xmlNS = "http://schemas.microsoft.com/office/onenote/2013/onenote";
 		internal const string xmlNSPrefix = "one";
 
-		internal virtual bool Deserialize(XmlReader reader, INode parent)
+		internal virtual bool Deserialize(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
 			{
@@ -18,14 +18,14 @@ namespace Sidenote.Serialization
 
 			bool expectEndElement = !reader.IsEmptyElement;
 
-			if (!DeserializeAttributes(reader, parent))
+			if (!DeserializeAttributes(reader, parent, patchStore))
 			{
 				return false;
 			}
 
 			reader.ReadStartElement();
 
-			if (!DeserializeChildren(reader, parent))
+			if (!DeserializeChildren(reader, parent, patchStore))
 			{
 				return false;
 			}
@@ -34,12 +34,12 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected virtual bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected virtual bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			return true;
 		}
 
-		protected virtual bool DeserializeChildren(XmlReader reader, INode parent)
+		protected virtual bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			return true;
 		}

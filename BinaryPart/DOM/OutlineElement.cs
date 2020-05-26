@@ -24,13 +24,32 @@ namespace Sidenote.DOM
 
 		public IListItem ListItem { get; internal set; }
 		public string Alignment { get; }
-		public int QuickStyleIndex { get; set; }
+		public IQuickStyle QuickStyle
+		{
+			get
+			{
+				IQuickStyle quickStyle;
+				this.weakQuickStyle.TryGetTarget(out quickStyle);
+				return quickStyle;
+			}
+			set
+			{
+				this.weakQuickStyle = new WeakReference<IQuickStyle>(value);
+			}
+		}
+
 		public string Text { get; set; }
 
 		public string LastModifiedBy { get; set; }
 		public string LastModifiedByInitials { get; set; }
 
 		#endregion
+
+		internal int QuickStyleIndex
+		{
+			get { return this.quickStyleIndex; }
+			set { this.quickStyleIndex = value; }
+		}
 
 		// Called when Get-Content processes an OutlineElement.
 		public override string ToString()
@@ -65,9 +84,7 @@ namespace Sidenote.DOM
 			this.Text = text;
 		}
 
-		//internal void SetListItem(IListItem listItem)
-		//{
-		//	this.ListItem = listItem;
-		//}
+		private int quickStyleIndex = -1;
+		private WeakReference<IQuickStyle> weakQuickStyle;
 	}
 }

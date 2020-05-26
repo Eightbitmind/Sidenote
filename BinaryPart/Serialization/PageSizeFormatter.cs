@@ -7,16 +7,16 @@ namespace Sidenote.Serialization
 	{
 		public PageSizeFormatter() : base("PageSize") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			this.deserializedObject = new PageSize(parent.Depth + 1, parent);
 			parent.Children.Add(this.deserializedObject);
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			if (AutomaticFormatter.Instance.Deserialize(reader, this.deserializedObject))
+			if (AutomaticFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore))
 			{
 				return true;
 			}

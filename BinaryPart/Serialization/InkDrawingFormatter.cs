@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public InkDrawingFormatter() : base("InkDrawing") { }
 
-		internal override bool Deserialize(XmlReader reader, INode parent)
+		internal override bool Deserialize(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
 			{

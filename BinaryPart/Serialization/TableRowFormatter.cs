@@ -7,10 +7,10 @@ namespace Sidenote.Serialization
 	{
 		public TableRowFormatter() : base("Row") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent)
+		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
 		{
 			((Table)parent).AddRow();
-			while (TableCellFormatter.Instance.Deserialize(reader, parent)) ;
+			while (TableCellFormatter.Instance.Deserialize(reader, parent, patchStore)) ;
 			return true;
 		}
 
