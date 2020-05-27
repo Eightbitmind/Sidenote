@@ -3,15 +3,40 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class SizeFormatter : FormatterBase<NonexistentNode, SizeFormatter>
+	internal class SizeFormatter : FormatterBase<IPositionedObject, SizeFormatter>
 	{
 		public SizeFormatter() : base("Size") { }
 
-		// ignore Size elements for now
-
-		internal override bool Serialize(INode node, XmlWriter writer)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			throw new System.Exception("not expected/implemented");
+			var deserializedObject = (IPositionedObject)parent;
+
+			Size size = new Size();
+
+			string widthStr = reader.GetAttribute(WidthAttributeName);
+			if (!string.IsNullOrEmpty(widthStr))
+			{
+				size.Width = double.Parse(widthStr);
+			}
+
+			string heightStr = reader.GetAttribute(HeightAttributeName);
+			if (!string.IsNullOrEmpty(heightStr))
+			{
+				size.Height = double.Parse(heightStr);
+			}
+
+			deserializedObject.Size = size;
+			return true;
 		}
+
+		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		{
+			var serializedObject = (IPositionedObject) node;
+			writer.WriteAttributeString(WidthAttributeName, Converter.ToString(serializedObject.Size.Width));
+			writer.WriteAttributeString(HeightAttributeName, Converter.ToString(serializedObject.Size.Height));
+		}
+
+		private static string HeightAttributeName = "height";
+		private static string WidthAttributeName = "width";
 	}
 }
