@@ -83,6 +83,14 @@ namespace Sidenote.Serialization
 		protected override void SerializeChildren(INode node, XmlWriter writer)
 		{
 			// TODO: For full fidelity, we'd need to write Position, Size, Indents ...
+			var serializedObject = (Outline)node;
+
+			Position position = serializedObject.Position;
+			if (position.X != default || position.Y != default || position.Z != default)
+			{
+				PositionFormatter.Instance.Serialize(node, writer);
+			}
+
 			OEChildrenFormatter.Instance.Serialize(node, writer);
 		}
 

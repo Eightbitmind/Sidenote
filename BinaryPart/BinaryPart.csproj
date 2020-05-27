@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="DOM\IPositionedObject.cs" />
     <Compile Include="DOM\IRuleLines.cs" />
     <Compile Include="DOM\IPageSettings.cs" />
     <Compile Include="DOM\IQuickStyle.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="DOM\Notebook.cs" />
     <Compile Include="DOM\Outline.cs" />
     <Compile Include="DOM\NonexistentNode.cs" />
+    <Compile Include="DOM\Size.cs" />
+    <Compile Include="DOM\Position.cs" />
     <Compile Include="DOM\RuleLines.cs" />
     <Compile Include="DOM\PageSize.cs" />
     <Compile Include="DOM\PageSettings.cs" />

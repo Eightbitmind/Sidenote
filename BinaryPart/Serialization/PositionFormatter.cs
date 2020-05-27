@@ -3,15 +3,48 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PositionFormatter : FormatterBase<NonexistentNode, PositionFormatter>
+	internal class PositionFormatter : FormatterBase<IPositionedObject, PositionFormatter>
 	{
 		public PositionFormatter() : base("Position") { }
 
-		// ignore Position elements for now
-
-		internal override bool Serialize(INode node, XmlWriter writer)
+		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
 		{
-			throw new System.Exception("not expected/implemented");
+			var deserializedObject = (IPositionedObject)parent;
+
+			Position position = new Position();
+
+			string xStr = reader.GetAttribute(XAttributeName);
+			if (!string.IsNullOrEmpty(xStr))
+			{
+				position.X = double.Parse(xStr);
+			}
+
+			string yStr = reader.GetAttribute(YAttributeName);
+			if (!string.IsNullOrEmpty(xStr))
+			{
+				position.Y = double.Parse(yStr);
+			}
+
+			string zStr = reader.GetAttribute(ZAttributeName);
+			if (!string.IsNullOrEmpty(zStr))
+			{
+				position.Z = uint.Parse(zStr);
+			}
+
+			deserializedObject.Position = position;
+			return true;
 		}
+
+		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		{
+			var serializedObject = (IPositionedObject)node;
+			writer.WriteAttributeString(XAttributeName, Converter.ToString(serializedObject.Position.X));
+			writer.WriteAttributeString(YAttributeName, Converter.ToString(serializedObject.Position.Y));
+			writer.WriteAttributeString(ZAttributeName, Converter.ToString(serializedObject.Position.Z));
+		}
+
+		private static string XAttributeName = "x";
+		private static string YAttributeName = "y";
+		private static string ZAttributeName = "z";
 	}
 }

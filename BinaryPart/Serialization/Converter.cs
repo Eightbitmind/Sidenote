@@ -19,6 +19,11 @@ namespace Sidenote.Serialization
 			return val.ToString("N1");
 		}
 
+		internal static string ToString(double val)
+		{
+			return val.ToString();
+		}
+
 		internal static string ToString(DateTime val)
 		{
 			// https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations, "Z" - zero timezone

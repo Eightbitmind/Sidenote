@@ -3,7 +3,7 @@ using System;
 
 namespace Sidenote.DOM
 {
-	internal class Outline : Node, IIdentifiableObject, IUserCreatedObject
+	internal class Outline : Node, IIdentifiableObject, IUserCreatedObject, IPositionedObject
 	{
 		#region IIdentifiableObject members
 
@@ -24,6 +24,13 @@ namespace Sidenote.DOM
 		public string LastModifiedBy { get; set; }
 
 		public string LastModifiedByInitials { get; set; }
+
+		#endregion
+
+		#region IPositionedObject members
+
+		public Position Position { get; set; }
+		public Size Size { get; set; }
 
 		#endregion
 
