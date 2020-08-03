@@ -1,18 +1,35 @@
-﻿using module Gumby.File
+﻿<#
+.SYNOPSIS
+	Installs or uninstalls development artifacts.
+
+.DESCRIPTION
+	This script aims to expedite the inner dev loop by installing development artifacts in such a
+	way that they can be used right out of their respective source or target folders. For non-built
+	artifacts such as scripts or module manifests, this typically means creating symbolic links from
+	the module directory to the source locations; for built artifacts such as DLLs, this typically
+	means creating symbolic links from the module directory to a file in the build target folder.
+#>
+
+using module Gumby.File
 using module Gumby.Install
 using module Gumby.Log
 using module Gumby.Path
 
 param(
+	# Determines whether the script installs or uninstalls development artifacts.
 	[ValidateSet("Install", "Uninstall")]
 	[string] $Action = "Install",
 
+	# Build target platform (needed for built development artifacts).
 	[ValidateSet("AnyCPU")]
 	[string] $Platform = "AnyCPU",
 
+	# Build target configuration (needed for built development artifacts).
 	[ValidateSet("Debug", "Release")]
 	[string] $Configuration = "Debug",
 
+	# Directory into which to install the module. Defaults to "WindowsPowerShell\Modules\Sidenote"
+	# under the current users "MyDocuments" folder.
 	[string] $TargetDir = "$([System.Environment]::GetFolderPath(`"MyDocuments`"))\WindowsPowerShell\Modules\Sidenote"
 )
 
