@@ -61,6 +61,13 @@ Set-Alias p GetPath
 
 [TestClass()]
 class DriveTests {
+
+	[TestClassSetup()]
+	[void] Setup() {
+		# ensure that UT Notebook is open
+		Open-ONHierarchy -Path "$PSScriptRoot\SidenoteTest"
+	}
+
 	[TestMethod()]
 	[void] Drive_Exists() {
 		$driveInfo = Get-PSDrive "ON"
