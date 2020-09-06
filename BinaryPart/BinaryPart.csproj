@@ -90,6 +90,7 @@
     <Compile Include="DOM\Title.cs" />
     <Compile Include="DOM\Page.cs" />
     <Compile Include="DOM\Section.cs" />
+    <Compile Include="PowerShell\OpenONHierarchyCmdlet.cs" />
     <Compile Include="PowerShell\GetXmlDoc.cs" />
     <Compile Include="PowerShell\GetONXml.cs" />
     <Compile Include="PowerShell\SelectONObjectCmdlet.cs" />

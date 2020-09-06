@@ -1,4 +1,5 @@
 .vs/
 _Build/
 _Target/
+Tests/SidenoteTest/OneNote_RecycleBin/
 *.csproj.user
