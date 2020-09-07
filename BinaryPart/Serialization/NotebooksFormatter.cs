@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public NotebooksFormatter() : base("Notebooks") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			bool parsedAtLeastOneNotebook = false;
 			while (NotebookEntryFormatter.Instance.Deserialize(reader, parent, patchStore))
@@ -20,7 +20,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
 			throw new System.Exception("not expected/implemented");
 		}

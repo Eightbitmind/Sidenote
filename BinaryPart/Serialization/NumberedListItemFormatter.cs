@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public NumberedListItemFormatter() : base("Number") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			// TODO: read more attributes
 			string text = reader.GetAttribute("text");
@@ -15,7 +15,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
 			throw new System.Exception("not expected/implemented");
 		}

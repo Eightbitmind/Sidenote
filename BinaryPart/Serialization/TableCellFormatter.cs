@@ -8,8 +8,9 @@ namespace Sidenote.Serialization
 	{
 		public TableCellFormatter() : base("Cell") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
+			var parentNode = (INode)parent;
 			string id = reader.GetAttribute("objectID");
 			string author = reader.GetAttribute("author");
 			string authorInitials = reader.GetAttribute("authorInitials");
@@ -24,8 +25,8 @@ namespace Sidenote.Serialization
 			string shadingColor = reader.GetAttribute("shadingColor");
 
 			this.deserializedObject = new TableCell(
-				parent.Depth + 1,
-				parent,
+				parentNode.Depth + 1,
+				parentNode,
 				id,
 				author,
 				authorInitials,
@@ -38,13 +39,13 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			while (OEChildrenFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore)) ;
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
 			throw new System.Exception("not expected/implemented");
 		}

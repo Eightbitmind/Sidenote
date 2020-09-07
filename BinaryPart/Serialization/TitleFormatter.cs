@@ -8,9 +8,11 @@ namespace Sidenote.Serialization
 	{
 		public TitleFormatter() : base("Title") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
-			this.deserializedObject = new Title(parent.Depth + 1, parent);
+			var parentNode = (INode)parent;
+
+			this.deserializedObject = new Title(parentNode.Depth + 1, parentNode);
 
 			string language = reader.GetAttribute(LanguageAttributeName);
 			if (!string.IsNullOrEmpty(language))
@@ -18,12 +20,12 @@ namespace Sidenote.Serialization
 				this.deserializedObject.Language = language;
 			}
 
-			parent.Children.Add(deserializedObject);
+			parentNode.Children.Add(deserializedObject);
 
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			if (!OEFormatter.Instance.Deserialize(reader, deserializedObject, patchStore))
 			{
@@ -33,9 +35,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			var serializedObject = (Title)node;
+			var serializedObject = (Title)obj;
 
 			if (!string.IsNullOrEmpty(serializedObject.Language))
 			{
@@ -43,9 +45,9 @@ namespace Sidenote.Serialization
 			}
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			foreach (INode child in node.Children)
+			foreach (INode child in ((INode)obj).Children)
 			{
 				if (!OEFormatter.Instance.Serialize(child, writer))
 				{

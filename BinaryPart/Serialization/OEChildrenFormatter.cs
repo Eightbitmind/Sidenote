@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public OEChildrenFormatter() : base("OEChildren") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
@@ -23,24 +23,24 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
-			if (!((node is Outline) || (node is OutlineElement))) return false;
+			if (!((obj is Outline) || (obj is OutlineElement))) return false;
 
-			if (node.Children.Count > 0)
+			if (((INode)obj).Children.Count > 0)
 			{
 				writer.WriteStartElement(xmlNSPrefix, this.tagName, xmlNS);
-				SerializeAttributes(node, writer);
-				SerializeChildren(node, writer);
+				SerializeAttributes(obj, writer);
+				SerializeChildren(obj, writer);
 				writer.WriteEndElement();
 			}
 
 			return true;
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			foreach(INode child in node.Children)
+			foreach(INode child in ((INode)obj).Children)
 			{
 				if (!(
 					OEFormatter.Instance.Serialize(child, writer)

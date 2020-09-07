@@ -9,8 +9,10 @@ namespace Sidenote.Serialization
 	{
 		public QuickStyleFormatter() : base("QuickStyleDef") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
+			var parentNode = (INode)parent;
+
 			// required attributes
 
 			uint index = uint.Parse(reader.GetAttribute(IndexAttributeName));
@@ -23,8 +25,8 @@ namespace Sidenote.Serialization
 				name,
 				fontName,
 				fontSize,
-				parent.Depth + 1,
-				parent);
+				parentNode.Depth + 1,
+				parentNode);
 
 			// optional attributes
 
@@ -94,7 +96,7 @@ namespace Sidenote.Serialization
 				deserializedObject.SpaceAfter = float.Parse(spaceAfterString);
 			}
 
-			parent.Children.Add(deserializedObject);
+			parentNode.Children.Add(deserializedObject);
 
 			patchStore.AddPatchOperation(node =>
 			{
@@ -109,9 +111,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			var serializedObject = (QuickStyle)node;
+			var serializedObject = (QuickStyle)obj;
 
 			// required attributes
 

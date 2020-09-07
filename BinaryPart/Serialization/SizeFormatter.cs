@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public SizeFormatter() : base("Size") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			var deserializedObject = (IPositionedObject)parent;
 
@@ -29,9 +29,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			var serializedObject = (IPositionedObject) node;
+			var serializedObject = (IPositionedObject) obj;
 			writer.WriteAttributeString(WidthAttributeName, Converter.ToString(serializedObject.Size.Width));
 			writer.WriteAttributeString(HeightAttributeName, Converter.ToString(serializedObject.Size.Height));
 		}

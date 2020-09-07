@@ -9,7 +9,7 @@ namespace Sidenote.Serialization
 		internal const string xmlNS = "http://schemas.microsoft.com/office/onenote/2013/onenote";
 		internal const string xmlNSPrefix = "one";
 
-		internal virtual bool Deserialize(XmlReader reader, INode parent, PatchStore patchStore)
+		internal virtual bool Deserialize(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
 			{
@@ -34,36 +34,36 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected virtual bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected virtual bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			return true;
 		}
 
-		protected virtual bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected virtual bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			return true;
 		}
 
-		internal virtual bool Serialize(INode node, XmlWriter writer)
+		internal virtual bool Serialize(object obj, XmlWriter writer)
 		{
 			// The 'is' operator matches base classes. If this is too inclusive, we can resort to
 			// type comparison.
-			if (!(node is THandledObject)) return false;
+			if (!(obj is THandledObject)) return false;
 
 			// TODO: add namespace
 			writer.WriteStartElement(xmlNSPrefix, this.tagName, xmlNS);
-			SerializeAttributes(node, writer);
-			SerializeChildren(node, writer);
+			SerializeAttributes(obj, writer);
+			SerializeChildren(obj, writer);
 			writer.WriteEndElement();
 
 			return true;
 		}
 
-		protected virtual void SerializeAttributes(INode node, XmlWriter writer)
+		protected virtual void SerializeAttributes(object obj, XmlWriter writer)
 		{
 		}
 
-		protected virtual void SerializeChildren(INode node, XmlWriter writer)
+		protected virtual void SerializeChildren(object obj, XmlWriter writer)
 		{
 		}
 

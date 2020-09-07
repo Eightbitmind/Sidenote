@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public PageContentFormatter() : base("Page") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			Page deserializedObject = (Page)parent;
 
@@ -25,7 +25,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
@@ -46,9 +46,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			Page serializedObject = (Page)node;
+			Page serializedObject = (Page)obj;
 			writer.WriteAttributeString("ID", serializedObject.ID);
 			writer.WriteAttributeString("name", serializedObject.Name);
 			writer.WriteAttributeString("dateTime", Converter.ToString(serializedObject.CreationTime));
@@ -61,9 +61,9 @@ namespace Sidenote.Serialization
 			}
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			foreach(INode child in node.Children)
+			foreach(INode child in ((INode)obj).Children)
 			{
 				if (!(
 					QuickStyleFormatter.Instance.Serialize(child, writer) ||

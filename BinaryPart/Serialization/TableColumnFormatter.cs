@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public TableColumnFormatter() : base("Column") { }
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
 			throw new System.Exception("not expected/implemented");
 		}

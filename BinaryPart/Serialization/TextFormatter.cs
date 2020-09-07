@@ -8,7 +8,7 @@ namespace Sidenote.Serialization
 	{
 		public TextFormatter() : base("T") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			// Big TODO: As Omer pointed out, the content is actually HTML (or presumably a subset
 			// thereof).
@@ -17,11 +17,11 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
 			// TODO: encode characters that need it as charecter entity references
 			// big TODO: Write HTML
-			writer.WriteCData(((OutlineElement)node).Text);
+			writer.WriteCData(((OutlineElement)obj).Text);
 		}
 
 		private static Regex characterEntityReferencePattern = new Regex("&(?<name>\\w+);", RegexOptions.Compiled);

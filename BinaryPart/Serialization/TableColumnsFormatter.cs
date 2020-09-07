@@ -7,7 +7,7 @@ namespace Sidenote.Serialization
 	{
 		public TableColumnsFormatter() : base("Columns") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			int columnCount = 0;
 			while (TableColumnFormatter.Instance.Deserialize(reader, parent, patchStore)) ++columnCount;
@@ -15,7 +15,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
 			throw new System.Exception("not expected/implemented");
 		}

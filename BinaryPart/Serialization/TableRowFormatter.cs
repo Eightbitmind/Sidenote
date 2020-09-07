@@ -7,14 +7,14 @@ namespace Sidenote.Serialization
 	{
 		public TableRowFormatter() : base("Row") { }
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			((Table)parent).AddRow();
 			while (TableCellFormatter.Instance.Deserialize(reader, parent, patchStore)) ;
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
 			throw new System.Exception("not expected/implemented");
 		}

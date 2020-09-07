@@ -9,10 +9,12 @@ namespace Sidenote.Serialization
 	{
 		public PageSettingsFormatter() : base("PageSettings") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
-			this.deserializedObject = new PageSettings(parent.Depth + 1, parent);
-			parent.Children.Add(this.deserializedObject);
+			var parentNode = (INode)parent;
+
+			this.deserializedObject = new PageSettings(parentNode.Depth + 1, parentNode);
+			parentNode.Children.Add(this.deserializedObject);
 
 			string rtlString = reader.GetAttribute(RtlAttributeName);
 			if (!string.IsNullOrEmpty(rtlString))
@@ -29,7 +31,7 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			while (
 				PageSizeFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore) ||
@@ -39,9 +41,9 @@ namespace Sidenote.Serialization
 
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			var serializedObject = (PageSettings)node;
+			var serializedObject = (PageSettings)obj;
 
 			// Win32 client appears to serialize this even if it has the default value
 			// if (serializedObject.Rtl != PageSettings.RtlDefaultValue)
@@ -56,9 +58,9 @@ namespace Sidenote.Serialization
 			// }
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			foreach (INode child in node.Children)
+			foreach (INode child in ((INode)obj).Children)
 			{
 				if (!(
 					PageSizeFormatter.Instance.Serialize(child, writer) ||

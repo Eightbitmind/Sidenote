@@ -7,14 +7,15 @@ namespace Sidenote.Serialization
 	{
 		public PageSizeFormatter() : base("PageSize") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
-			this.deserializedObject = new PageSize(parent.Depth + 1, parent);
-			parent.Children.Add(this.deserializedObject);
+			var parentNode = (INode)parent;
+			this.deserializedObject = new PageSize(parentNode.Depth + 1, parentNode);
+			parentNode.Children.Add(this.deserializedObject);
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			if (AutomaticFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore))
 			{
@@ -28,9 +29,9 @@ namespace Sidenote.Serialization
 			return false;
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			var pageSize = (PageSize)node;
+			var pageSize = (PageSize)obj;
 			if (!AutomaticFormatter.Instance.Serialize(pageSize, writer))
 			{
 				foreach (INode child in pageSize.Children)

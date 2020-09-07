@@ -7,15 +7,15 @@ namespace Sidenote.Serialization
 	{
 		public AutomaticFormatter() : base("Automatic") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			((PageSize)parent).IsAutomatic = true;
 			return true;
 		}
 
-		internal override bool Serialize(INode node, XmlWriter writer)
+		internal override bool Serialize(object obj, XmlWriter writer)
 		{
-			if (((PageSize)node).IsAutomatic)
+			if (((PageSize)obj).IsAutomatic)
 			{
 				writer.WriteStartElement(xmlNSPrefix, this.tagName, xmlNS);
 				writer.WriteEndElement();

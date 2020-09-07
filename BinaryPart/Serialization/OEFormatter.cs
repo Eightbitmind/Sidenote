@@ -9,8 +9,10 @@ namespace Sidenote.Serialization
 	{
 		public OEFormatter() : base("OE") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
+			var parentNode = (INode)parent;
+
 			string id = reader.GetAttribute(ObjectIdAttributeName);
 			string author = reader.GetAttribute(AuthorAttributeName);
 			string authorInitials = reader.GetAttribute(AuthorInitialsAttributeName);
@@ -20,8 +22,8 @@ namespace Sidenote.Serialization
 			string alignment = reader.GetAttribute(AlignmentAttributeName);
 
 			this.deserializedObject = new OutlineElement(
-				parent.Depth + 1,
-				parent,
+				parentNode.Depth + 1,
+				parentNode,
 				id,
 				author,
 				authorInitials,
@@ -47,12 +49,12 @@ namespace Sidenote.Serialization
 				this.deserializedObject.QuickStyleIndex = int.Parse(quickStyleIndexStr);
 			}
 
-			parent.Children.Add(this.deserializedObject);
+			parentNode.Children.Add(this.deserializedObject);
 
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object obj, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
@@ -75,9 +77,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			OutlineElement serializedObject = (OutlineElement)node;
+			OutlineElement serializedObject = (OutlineElement)obj;
 
 			writer.WriteAttributeString(AlignmentAttributeName, serializedObject.Alignment);
 
@@ -113,10 +115,10 @@ namespace Sidenote.Serialization
 			}
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			TextFormatter.Instance.Serialize(node, writer);
-			OEChildrenFormatter.Instance.Serialize(node, writer);
+			TextFormatter.Instance.Serialize(obj, writer);
+			OEChildrenFormatter.Instance.Serialize(obj, writer);
 		}
 
 		private static string AlignmentAttributeName = "alignment";

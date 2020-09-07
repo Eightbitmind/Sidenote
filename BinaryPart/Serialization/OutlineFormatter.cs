@@ -8,8 +8,10 @@ namespace Sidenote.Serialization
 	{
 		public OutlineFormatter() : base("Outline") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
+			var parentNode = (INode)parent;
+
 			string id = reader.GetAttribute(ObjectIDAttributeName);
 			string author = reader.GetAttribute(AuthorAttributeName);
 			string authorInitials = reader.GetAttribute(AuthorInitialsAttributeName);
@@ -18,8 +20,8 @@ namespace Sidenote.Serialization
 			DateTime lastModifiedTime = DateTime.Parse(reader.GetAttribute(LastModifiedTimeAttributeName));
 
 			this.deserializedObject = new Outline(
-				parent.Depth + 1,
-				parent,
+				parentNode.Depth + 1,
+				parentNode,
 				id,
 				author,
 				authorInitials,
@@ -38,12 +40,12 @@ namespace Sidenote.Serialization
 				this.deserializedObject.LastModifiedByInitials = lastModifiedByInitials;
 			}
 
-			parent.Children.Add(this.deserializedObject);
+			parentNode.Children.Add(this.deserializedObject);
 
 			return true;
 		}
 
-		protected override bool DeserializeChildren(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			while (reader.IsStartElement())
 			{
@@ -61,9 +63,9 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			Outline serializedObject = (Outline)node;
+			Outline serializedObject = (Outline)obj;
 			writer.WriteAttributeString(AuthorAttributeName, serializedObject.Author);
 			writer.WriteAttributeString(AuthorInitialsAttributeName, serializedObject.AuthorInitials);
 			writer.WriteAttributeString(LastModifiedTimeAttributeName, Converter.ToString(serializedObject.LastModifiedTime));
@@ -80,25 +82,25 @@ namespace Sidenote.Serialization
 			}
 		}
 
-		protected override void SerializeChildren(INode node, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			var serializedObject = (Outline)node;
+			var serializedObject = (Outline)obj;
 
 			Position position = serializedObject.Position;
 			if (position.X != default || position.Y != default || position.Z != default)
 			{
-				PositionFormatter.Instance.Serialize(node, writer);
+				PositionFormatter.Instance.Serialize(obj, writer);
 			}
 
 			Size size = serializedObject.Size;
 			if (size.Width != default || size.Height != default)
 			{
-				SizeFormatter.Instance.Serialize(node, writer);
+				SizeFormatter.Instance.Serialize(obj, writer);
 			}
 
 			// TODO: For full fidelity, we'd need to write Indents ...
 
-			OEChildrenFormatter.Instance.Serialize(node, writer);
+			OEChildrenFormatter.Instance.Serialize(obj, writer);
 		}
 
 		private Outline deserializedObject;
