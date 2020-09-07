@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="DOM\IOutline.cs" />
     <Compile Include="DOM\IPositionedObject.cs" />
     <Compile Include="DOM\IRuleLines.cs" />
     <Compile Include="DOM\IPageSettings.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="DOM\Notebook.cs" />
     <Compile Include="DOM\Outline.cs" />
     <Compile Include="DOM\NonexistentNode.cs" />
+    <Compile Include="DOM\Indent.cs" />
     <Compile Include="DOM\Size.cs" />
     <Compile Include="DOM\Position.cs" />
     <Compile Include="DOM\RuleLines.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Serialization\AutomaticFormatter .cs" />
     <Compile Include="Serialization\PageEntryFormatter.cs" />
     <Compile Include="Serialization\PatchStore.cs" />
+    <Compile Include="Serialization\IndentFormatter.cs" />
     <Compile Include="Serialization\RuleLinesFormatter.cs" />
     <Compile Include="Serialization\PageSizeFormatter.cs" />
     <Compile Include="Serialization\RootContentFormatter.cs" />

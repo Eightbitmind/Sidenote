@@ -1,9 +1,9 @@
-﻿using Microsoft.Office.Interop.OneNote;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Sidenote.DOM
 {
-	internal class Outline : Node, IIdentifiableObject, IUserCreatedObject, IPositionedObject
+	internal class Outline : Node, IIdentifiableObject, IUserCreatedObject, IPositionedObject, IOutline
 	{
 		#region IIdentifiableObject members
 
@@ -34,6 +34,15 @@ namespace Sidenote.DOM
 
 		#endregion
 
+		#region IOutline
+
+		public IList<Indent> Indents
+		{
+			get { return this.indents; }
+		}
+
+		#endregion
+
 		internal Outline(
 			uint depth,
 			INode parent,
@@ -51,5 +60,7 @@ namespace Sidenote.DOM
 			this.CreationTime = creationTime;
 			this.LastModifiedTime = lastModifiedTime;
 		}
+
+		private List<Indent> indents = new List<Indent>();
 	}
 }
