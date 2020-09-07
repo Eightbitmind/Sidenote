@@ -1,4 +1,5 @@
 ﻿using Sidenote.DOM;
+using System;
 using System.Xml;
 
 namespace Sidenote.Serialization
@@ -7,22 +8,45 @@ namespace Sidenote.Serialization
 	{
 		public IndentsFormatter() : base("Indents") { }
 
-		internal override bool Deserialize(XmlReader reader, object parent, PatchStore patchStore)
+
+		//internal override bool Deserialize(XmlReader reader, object parent, PatchStore patchStore)
+		//{
+		//	if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
+		//	{
+		//		return false;
+		//	}
+
+		//	// ignore Indents elements for now
+		//	// reader.Skip();
+		//	while (reader.IsStartElement())
+		//	{
+		//		if (!IndentFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore))
+		//		{
+		//			throw new Exception("unexpected Indents child " + reader.LocalName);
+		//		}
+		//	}
+
+		//	return true;
+		//}
+
+		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
-			if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
+			if (!IndentFormatter.Instance.Deserialize(reader, parent, patchStore))
 			{
-				return false;
+				throw new Exception("expecting at least one Indent element");
 			}
-
-			// ignore Indents elements for now
-			reader.Skip();
-
+			while (IndentFormatter.Instance.Deserialize(reader, parent, patchStore)) ;
 			return true;
 		}
 
-		internal override bool Serialize(object obj, XmlWriter writer)
+		protected override void SerializeChildren(object obj, XmlWriter writer)
 		{
-			throw new System.Exception("not expected/implemented");
+			var outline = (IOutline)obj;
+
+			foreach (Indent indent in outline.Indents)
+			{
+				IndentFormatter.Instance.Serialize()
+			}
 		}
 	}
 }
