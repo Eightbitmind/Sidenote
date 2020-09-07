@@ -52,6 +52,14 @@ function DepthFirstDescendants ($Root) {
 }
 
 function WriteAttributeValue($value) {
+
+	# round fractional numeric values
+	[int] $dummyInt = 0
+	[double] $valueAsDouble = 0
+	if (!([int]::TryParse($value, [ref] $dummyInt)) -and ([double]::TryParse($value, [ref] $valueAsDouble))) {
+		$value = [System.Math]::Round($valueAsDouble, 11)
+	}
+
 	$stringWriter = [System.IO.StringWriter]::new()
 	$xmlWriter = [System.Xml.XmlTextWriter]::new($stringWriter)
 	$xmlWriter.WriteString($value)

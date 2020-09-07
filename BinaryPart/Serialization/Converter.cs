@@ -21,6 +21,13 @@ namespace Sidenote.Serialization
 
 		internal static string ToString(double val)
 		{
+			if (val - (int)val == 0)
+			{
+				// This mimics ON serialization behavior. This case should only be needed when
+				// we're analyzing serialization fidelity.
+				return val.ToString("F1");
+			}
+
 			return val.ToString();
 		}
 
