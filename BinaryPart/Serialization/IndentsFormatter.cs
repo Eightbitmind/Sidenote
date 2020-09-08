@@ -4,9 +4,14 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class IndentsFormatter : FormatterBase<Outline, IndentsFormatter>
+	internal class IndentsFormatter : FormatterBase<IndentsFormatter>
 	{
 		public IndentsFormatter() : base("Indents") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is Outline;
+		}
 
 		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{

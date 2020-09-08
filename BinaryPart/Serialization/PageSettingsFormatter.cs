@@ -1,13 +1,17 @@
 ﻿using Sidenote.DOM;
 using System;
-using System.Globalization;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PageSettingsFormatter : FormatterBase<PageSettings, PageSettingsFormatter>
+	internal class PageSettingsFormatter : FormatterBase<PageSettingsFormatter>
 	{
 		public PageSettingsFormatter() : base("PageSettings") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is PageSettings;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

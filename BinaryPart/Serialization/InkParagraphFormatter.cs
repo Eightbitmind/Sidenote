@@ -1,9 +1,8 @@
-﻿using Sidenote.DOM;
-using System.Xml;
+﻿using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class InkParagraphFormatter : FormatterBase<NonexistentNode, InkParagraphFormatter>
+	internal class InkParagraphFormatter : FormatterBase<InkParagraphFormatter>
 	{
 		public InkParagraphFormatter() : base("InkParagraph") { }
 

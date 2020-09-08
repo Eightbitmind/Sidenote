@@ -1,9 +1,8 @@
-﻿using Sidenote.DOM;
-using System.Xml;
+﻿using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class MediaFileFormatter : FormatterBase<NonexistentNode, MediaFileFormatter>
+	internal class MediaFileFormatter : FormatterBase<MediaFileFormatter>
 	{
 		public MediaFileFormatter() : base("MediaFile") { }
 

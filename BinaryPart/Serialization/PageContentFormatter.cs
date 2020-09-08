@@ -4,9 +4,14 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PageContentFormatter : FormatterBase<Page, PageContentFormatter>
+	internal class PageContentFormatter : FormatterBase<PageContentFormatter>
 	{
 		public PageContentFormatter() : base("Page") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is Page;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

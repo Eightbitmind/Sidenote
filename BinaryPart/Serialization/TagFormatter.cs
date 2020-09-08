@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class TagFormatter : FormatterBase<NonexistentNode, TagFormatter>
+	internal class TagFormatter : FormatterBase<TagFormatter>
 	{
 		public TagFormatter() : base("Tag") { }
 

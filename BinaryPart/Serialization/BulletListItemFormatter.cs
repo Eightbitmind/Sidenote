@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class BulletListItemFormatter : FormatterBase<NonexistentNode, BulletListItemFormatter>
+	internal class BulletListItemFormatter : FormatterBase<BulletListItemFormatter>
 	{
 		public BulletListItemFormatter() : base("Bullet") { }
 

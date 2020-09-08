@@ -1,9 +1,8 @@
-﻿using Sidenote.DOM;
-using System.Xml;
+﻿using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class ImageFormatter : FormatterBase<NonexistentNode, ImageFormatter>
+	internal class ImageFormatter : FormatterBase<ImageFormatter>
 	{
 		public ImageFormatter() : base("Image") { }
 

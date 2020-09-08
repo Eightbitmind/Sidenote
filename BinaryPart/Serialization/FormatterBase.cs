@@ -1,13 +1,16 @@
-﻿using Sidenote.DOM;
-using System;
-using System.Xml;
+﻿using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal abstract class FormatterBase<THandledObject, TDerivedFormatter> where TDerivedFormatter : new()
+	internal abstract class FormatterBase<TDerivedFormatter> where TDerivedFormatter : new()
 	{
 		internal const string xmlNS = "http://schemas.microsoft.com/office/onenote/2013/onenote";
 		internal const string xmlNSPrefix = "one";
+
+		protected virtual bool IsHandledObject(object obj)
+		{
+			return false;
+		}
 
 		internal virtual bool Deserialize(XmlReader reader, object parent, PatchStore patchStore)
 		{
@@ -46,9 +49,7 @@ namespace Sidenote.Serialization
 
 		internal virtual bool Serialize(object obj, XmlWriter writer)
 		{
-			// The 'is' operator matches base classes. If this is too inclusive, we can resort to
-			// type comparison.
-			if (!(obj is THandledObject)) return false;
+			if (!IsHandledObject(obj)) return false;
 
 			// TODO: add namespace
 			writer.WriteStartElement(xmlNSPrefix, this.tagName, xmlNS);

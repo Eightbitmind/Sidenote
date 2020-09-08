@@ -1,10 +1,9 @@
-﻿using Sidenote.DOM;
-using System;
+﻿using System;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class ListFormatter : FormatterBase<NonexistentNode, ListFormatter>
+	internal class ListFormatter : FormatterBase<ListFormatter>
 	{
 		public ListFormatter() : base("List") { }
 

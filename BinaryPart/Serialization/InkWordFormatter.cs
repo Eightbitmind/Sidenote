@@ -1,9 +1,8 @@
-﻿using Sidenote.DOM;
-using System.Xml;
+﻿using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class InkWordFormatter : FormatterBase<NonexistentNode, InkWordFormatter>
+	internal class InkWordFormatter : FormatterBase<InkWordFormatter>
 	{
 		public InkWordFormatter() : base("InkWord") { }
 

@@ -1,10 +1,9 @@
-﻿using Sidenote.DOM;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class NotebooksFormatter : FormatterBase<NonexistentNode, NotebooksFormatter>
+	internal class NotebooksFormatter : FormatterBase<NotebooksFormatter>
 	{
 		public NotebooksFormatter() : base("Notebooks") { }
 

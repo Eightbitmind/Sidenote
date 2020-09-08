@@ -4,9 +4,14 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class OutlineFormatter : FormatterBase<Outline, OutlineFormatter>
+	internal class OutlineFormatter : FormatterBase<OutlineFormatter>
 	{
 		public OutlineFormatter() : base("Outline") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is Outline;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

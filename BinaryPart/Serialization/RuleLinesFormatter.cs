@@ -5,9 +5,14 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class RuleLinesFormatter : FormatterBase<RuleLines, RuleLinesFormatter>
+	internal class RuleLinesFormatter : FormatterBase<RuleLinesFormatter>
 	{
 		public RuleLinesFormatter() : base("RuleLines") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is RuleLines;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

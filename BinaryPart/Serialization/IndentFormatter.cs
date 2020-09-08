@@ -3,9 +3,14 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class IndentFormatter : FormatterBase<Indent, IndentFormatter>
+	internal class IndentFormatter : FormatterBase<IndentFormatter>
 	{
 		public IndentFormatter() : base("Indent") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is Indent;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

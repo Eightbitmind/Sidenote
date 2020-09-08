@@ -4,9 +4,14 @@ using System.Text.RegularExpressions;
 
 namespace Sidenote.Serialization
 {
-	internal class TextFormatter : FormatterBase<OutlineElement, TextFormatter>
+	internal class TextFormatter : FormatterBase<TextFormatter>
 	{
 		public TextFormatter() : base("T") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is OutlineElement;
+		}
 
 		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{

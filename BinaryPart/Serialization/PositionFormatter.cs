@@ -3,9 +3,14 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class PositionFormatter : FormatterBase<IPositionedObject, PositionFormatter>
+	internal class PositionFormatter : FormatterBase<PositionFormatter>
 	{
 		public PositionFormatter() : base("Position") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is IPositionedObject;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

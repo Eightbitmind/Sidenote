@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class TableRowFormatter : FormatterBase<NonexistentNode, TableRowFormatter>
+	internal class TableRowFormatter : FormatterBase<TableRowFormatter>
 	{
 		public TableRowFormatter() : base("Row") { }
 

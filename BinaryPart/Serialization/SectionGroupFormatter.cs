@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class SectionGroupFormatter : FormatterBase<NonexistentNode, SectionGroupFormatter>
+	internal class SectionGroupFormatter : FormatterBase<SectionGroupFormatter>
 	{
 		public SectionGroupFormatter() : base("SectionGroup") { }
 

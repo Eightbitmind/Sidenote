@@ -1,13 +1,17 @@
 ﻿using Sidenote.DOM;
 using System;
-using System.Management.Automation;
 using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class OEFormatter : FormatterBase<OutlineElement, OEFormatter>
+	internal class OEFormatter : FormatterBase<OEFormatter>
 	{
 		public OEFormatter() : base("OE") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is OutlineElement;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{

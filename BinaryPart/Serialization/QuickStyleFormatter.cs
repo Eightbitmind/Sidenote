@@ -5,9 +5,14 @@ using System;
 
 namespace Sidenote.Serialization
 {
-	internal class QuickStyleFormatter : FormatterBase<QuickStyle, QuickStyleFormatter>
+	internal class QuickStyleFormatter : FormatterBase<QuickStyleFormatter>
 	{
 		public QuickStyleFormatter() : base("QuickStyleDef") { }
+
+		protected override bool IsHandledObject(object obj)
+		{
+			return obj is QuickStyle;
+		}
 
 		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
