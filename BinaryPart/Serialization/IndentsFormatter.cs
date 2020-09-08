@@ -4,30 +4,9 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class IndentsFormatter : FormatterBase<NonexistentNode, IndentsFormatter>
+	internal class IndentsFormatter : FormatterBase<Outline, IndentsFormatter>
 	{
 		public IndentsFormatter() : base("Indents") { }
-
-
-		//internal override bool Deserialize(XmlReader reader, object parent, PatchStore patchStore)
-		//{
-		//	if (!reader.IsStartElement() || string.CompareOrdinal(reader.LocalName, this.tagName) != 0)
-		//	{
-		//		return false;
-		//	}
-
-		//	// ignore Indents elements for now
-		//	// reader.Skip();
-		//	while (reader.IsStartElement())
-		//	{
-		//		if (!IndentFormatter.Instance.Deserialize(reader, this.deserializedObject, patchStore))
-		//		{
-		//			throw new Exception("unexpected Indents child " + reader.LocalName);
-		//		}
-		//	}
-
-		//	return true;
-		//}
 
 		protected override bool DeserializeChildren(XmlReader reader, object parent, PatchStore patchStore)
 		{
@@ -45,7 +24,7 @@ namespace Sidenote.Serialization
 
 			foreach (Indent indent in outline.Indents)
 			{
-				IndentFormatter.Instance.Serialize()
+				IndentFormatter.Instance.Serialize(indent, writer);
 			}
 		}
 	}

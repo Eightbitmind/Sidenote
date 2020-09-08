@@ -3,11 +3,11 @@ using System.Xml;
 
 namespace Sidenote.Serialization
 {
-	internal class IndentFormatter : FormatterBase<IPositionedObject, IndentFormatter>
+	internal class IndentFormatter : FormatterBase<Indent, IndentFormatter>
 	{
-		public IndentFormatter() : base("Ident") { }
+		public IndentFormatter() : base("Indent") { }
 
-		protected override bool DeserializeAttributes(XmlReader reader, INode parent, PatchStore patchStore)
+		protected override bool DeserializeAttributes(XmlReader reader, object parent, PatchStore patchStore)
 		{
 			var deserializedObject = (IOutline)parent;
 
@@ -29,15 +29,14 @@ namespace Sidenote.Serialization
 			return true;
 		}
 
-		protected override void SerializeAttributes(INode node, XmlWriter writer)
+		protected override void SerializeAttributes(object obj, XmlWriter writer)
 		{
-			var serializedObject = (Indent)node;
+			var serializedObject = (Indent)obj;
 			writer.WriteAttributeString(IndentAttributeName, Converter.ToString(serializedObject.Indentation));
 			writer.WriteAttributeString(LevelAttributeName, Converter.ToString(serializedObject.Level));
 		}
 
 		private static string IndentAttributeName = "indent";
 		private static string LevelAttributeName = "level";
-
 	}
 }

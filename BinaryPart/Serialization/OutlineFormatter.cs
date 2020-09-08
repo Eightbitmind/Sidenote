@@ -98,8 +98,7 @@ namespace Sidenote.Serialization
 				SizeFormatter.Instance.Serialize(obj, writer);
 			}
 
-			// TODO: For full fidelity, we'd need to write Indents ...
-
+			IndentsFormatter.Instance.Serialize(obj, writer);
 			OEChildrenFormatter.Instance.Serialize(obj, writer);
 		}
 
